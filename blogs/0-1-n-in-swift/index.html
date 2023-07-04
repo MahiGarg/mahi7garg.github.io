@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>$0, $1 … $n in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,182 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ May 29, 2022 / 2 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				$0, $1 … $n in Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</p>
+<p>The syntax looks like the below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> evenNumbers = array.filter { item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(evenNumbers)
+</span></span></code></pre></div><p>This filter function takes a single argument which is another function that is of <code>(Int) -&gt; Bool</code> type. The inner function takes every element of the array one by one and checks if that is an even number or not. It returns true if the condition is <code>true</code> else it returns <code>false</code>.</p>
+<p>The parameter passed inside the function can be replaced with <code>$0</code>.</p>
+<p><code>$0</code> represents the first parameter of closure or higher-order function.</p>
+<p>It can be used with both closers or higher-order functions.</p>
+<p>The same syntax will look like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> evenNumbers = array.filter {
+</span></span><span style="display:flex;"><span>    $0 <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(evenNumbers)
+</span></span></code></pre></div><hr>
+<p>In case the number of parameters are more than one,</p>
+<p><code>$0</code>, <code>$1</code> up to <code>$n</code> can be used.</p>
+<p>For example, look at the below case where there are two parameters passed to the higher-order function namely <code>index</code> and <code>item</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filterArray = array.enumerated().filter {index, item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I am doing some rocket science here</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Item at </span><span style="color:#e6db74">\(</span>index<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>item<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> index <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filterArray)
+</span></span></code></pre></div><p>We can use <code>$0</code> for <code>index</code> and <code>$1</code> for item in the same example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filterArray = array.enumerated().filter {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I am doing some rocket science here</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Item at </span><span style="color:#e6db74">\(</span>$0<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>$1<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $0 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> $1 <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filterArray)
+</span></span></code></pre></div><p>These numbers can go up to any number of parameters passed to the inner function.</p>
+<p>I’ll personally suggest using named parameters if the parameters are more than three as it&rsquo;s difficult to remember which $ variable is what. Up to three is really helpful.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="$0, $1 … $n in Swift" data-url="https://mahigarg.github.io/blogs/0-1-n-in-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/0-1-n-in-swift\/";   
+									this.page.identifier = "043f4893126246b1f756f2809cbd3066";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/enumerated-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Enumerated in Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>

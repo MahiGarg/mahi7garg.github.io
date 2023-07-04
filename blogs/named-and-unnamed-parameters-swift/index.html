@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>Named and Unnamed Parameters: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,187 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ May 28, 2022 / 3 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Named and Unnamed Parameters: Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>Functions are something that every developer uses daily. A function can of with or without parameters. Swift has multiple ways of passing the parameters to a function. we can alias the parameter name or we can even skip the parameter name while calling the function.</p>
+<p>The parameter inside the function will still be used by its own name only but while calling the function, the name of the parameter can be replaced or even removed based on the function signature.</p>
+<p>Let&rsquo;s look at them one by one.</p>
+<p>Below is a normal function with a single parameter and calling it using the parameter name</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">doSomething</span>(number : Int){
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//I&#39;ll do some rocket science here,</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//and at the end, will just print the param</span>
+</span></span><span style="display:flex;"><span>            print (number)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    doSomething(number: <span style="color:#ae81ff">100</span>)
+</span></span></code></pre></div><p>In order to call the above function, we need to write the parameter name. In the above case the parameter name was <code>number</code> .</p>
+<hr>
+<p>Sometimes it&rsquo;s tedious to write the parameter name again and again or sometimes the function name itself is enough to make understand what that function is responsible for.</p>
+<p>In those cases, in order to skip the parameter name every time we call that function, it can be preceded with an underscore <code>_</code> which will make the parameter name unnamed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">doSomethingWithNumber</span>(<span style="color:#66d9ef">_</span> number : Int){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I&#39;ll do some rocket science here,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//and at the end, will just print the param</span>
+</span></span><span style="display:flex;"><span>    print (number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>doSomethingWithNumber(<span style="color:#ae81ff">100</span>)
+</span></span></code></pre></div><p>Here in the above example, we added an underscore <code>_</code> in front of the parameter name which made the parameter unnamed. In order to call this function now, we don’t have to add the parameter name ie number in our case.</p>
+<p>Keep in mind that we can’t even use the parameter name now. Underscore <code>_</code> <b>doesn’t</b> make it <b>optional</b> but it actually made it <b>unnamed</b>.</p>
+<hr>
+<p>We can even provide an alias to the parameter after which the parameter will be used with the new alias name instead of the original parameter name.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">doSomething</span>(with number : Int){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I&#39;ll do some rocket science here,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//and at the end, will just print the param</span>
+</span></span><span style="display:flex;"><span>    print (number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>doSomething(with: <span style="color:#ae81ff">100</span>)
+</span></span></code></pre></div><p>In the above example, we added <code>with</code> as an alias name for the parameter. Now in order to call this function, we need to use <code>with</code> as the parameter name instead of <code>number</code>.</p>
+<p>Keep in mind that this is <b>not optional</b> to use as a parameter name but it is <b>mandatory</b>.</p>
+<hr>
+<p>Also, in all the cases, the parameter inside that function will still be used as its own name only. There is no change in that.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="Named and Unnamed Parameters: Swift" data-url="https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/named-and-unnamed-parameters-swift\/";   
+									this.page.identifier = "f0d3a27980f185e697816a011acd827f";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/labeled-statement-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Labeled Statement : Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/enumerated-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Enumerated in Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>

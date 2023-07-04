@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Mahi Garg</title>
-    <link>https://mahigarg.github.io/</link>
-    <description>Recent content in Home on Mahi Garg</description>
+    <title>Swift on Mahi Garg</title>
+    <link>https://mahigarg.github.io/tags/swift/</link>
+    <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://mahigarg.github.io/test/</link>
-      <pubDate>Sat, 02 Jul 2022 17:02:58 +0300</pubDate>
-      
-      <guid>https://mahigarg.github.io/test/</guid>
-      <description>Test Simple Page</description>
-    </item>
-    
+    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>$0, $1 … $n in Swift</title>
       <link>https://mahigarg.github.io/blogs/0-1-n-in-swift/</link>
@@ -50,60 +41,6 @@
       
       <guid>https://mahigarg.github.io/blogs/labeled-statement-swift/</guid>
       <description>Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them. It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.</description>
-    </item>
-    
-    <item>
-      <title>Explore</title>
-      <link>https://mahigarg.github.io/portfolio/explore/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/explore/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gooir</title>
-      <link>https://mahigarg.github.io/portfolio/gooir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/gooir/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kana</title>
-      <link>https://mahigarg.github.io/portfolio/kana/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/kana/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mozar</title>
-      <link>https://mahigarg.github.io/portfolio/mozar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/mozar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stay Fit</title>
-      <link>https://mahigarg.github.io/portfolio/stay-fit/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/stay-fit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Zorro</title>
-      <link>https://mahigarg.github.io/portfolio/zorro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/portfolio/zorro/</guid>
-      <description></description>
     </item>
     
   </channel>
