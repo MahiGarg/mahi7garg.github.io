@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>Map Operator: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,218 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ May 30, 2022 / 3 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Map Operator: Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>The collection is something which is used by almost everyone. It makes our life easy. <code>Array</code>, <code>Set</code>, and <code>Dictionary</code> are the best examples of them.</p>
+<p>To iterate, filter, or modify the existing collection object, Swift provides us with a few in builds transform operators. Map operator is one of them.
+Let’s try to understand the Map operator in detail.</p>
+<h3 id="what-is-map-operator">What is Map operator?</h3>
+<p>Map operator is used to creating a new collection object by iterating over the existing collection object and applying some transformation to it.</p>
+<p>The transformation that needs to be applied, is passed as a higher-order function named <code>transform</code> to the map function.</p>
+<p>Since the map operator is present in Iterator, it can be used with all three collections ie <code>Array</code>, <code>Set</code>, and <code>Dictionary</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">/// Returns an array containing the results of mapping the given closure over the sequence&#39;s elements.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// - Parameter transform: A mapping closure. `transform` accepts an</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">///   element of this sequence as its parameter and returns a transformed value of the same or of a different type.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// - Returns: An array containing the transformed elements of this sequence.</span>
+</span></span><span style="display:flex;"><span>@inlinable <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">map</span>&lt;T&gt;(<span style="color:#66d9ef">_</span> transform: (Element) <span style="color:#66d9ef">throws</span> -&gt; T) <span style="color:#66d9ef">rethrows</span> -&gt; [T]
+</span></span></code></pre></div><p>Keep in mind, that this map function never holds the exceptions but it <code>throws</code> them to the caller. If there are any chances of any kind of exception at runtime, we need to wrap this inside a try-catch block.</p>
+<hr>
+<h3 id="map-with-array">Map with Array</h3>
+<p>map operator can be used over an Array to apply the transformation on its elements and return the new Array. It can be used with a named parameter or using $0.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> mappedArray = array.map { item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//this will convert all the elements to its square</span>
+</span></span><span style="display:flex;"><span>    item <span style="color:#f92672">*</span> item
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//or</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> mappedArray = array.map {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//this will convert all the elements to its square</span>
+</span></span><span style="display:flex;"><span>    $0 <span style="color:#f92672">*</span> $0
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(mappedArray)
+</span></span></code></pre></div><p>It can also be used with <a href="/blogs/enumerated-in-swift/">enumerated</a> for positional-based access.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> mappedArray = array.enumerated().map { index, item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//this will convert all the elements to its square</span>
+</span></span><span style="display:flex;"><span>    item <span style="color:#f92672">*</span> item
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//or</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> mappedArray = arrayenumerated.map {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//this will convert all the elements to its square</span>
+</span></span><span style="display:flex;"><span>    $1 <span style="color:#f92672">*</span> $1
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(mappedArray)
+</span></span></code></pre></div><hr>
+<h3 id="map-with-set">Map with Set</h3>
+<p>Similar to Array, the map operator can be used along with a <code>Set</code> to iterate over its elements, apply some transformation on its elements and return the new <code>Set</code>. It can be used with a named parameter or using $0.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> set : Set = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filteredSet = <span style="color:#66d9ef">set</span>.map { item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    item <span style="color:#f92672">*</span> item
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//or</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filteredSet = <span style="color:#66d9ef">set</span>.map {
+</span></span><span style="display:flex;"><span>    $0 <span style="color:#f92672">*</span> $0
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filteredSet)
+</span></span></code></pre></div><p>There is no point in using an <a href="/blogs/enumerated-in-swift/">enumerated</a> map with the <code>Set</code> as it never guarantees the sequence in a <code>Set</code>.</p>
+<hr>
+<h3 id="map-with-dictionary">Map with Dictionary</h3>
+<p>Similar to <code>Array</code> and <code>Set</code>, the map operator can be used over a <code>Dictionary</code> to iterate over the <code>Dictionary</code>, apply some transformation to its elements and return the new <code>Dictionary</code>. It can be used with a named parameter or using $0.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> map = [<span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#34;One&#34;</span>, <span style="color:#ae81ff">2</span>: <span style="color:#e6db74">&#34;Two&#34;</span>, <span style="color:#ae81ff">3</span>: <span style="color:#e6db74">&#34;Three&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filteredMap = map.map { item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    (item.key, item.value.uppercased())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//or</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filteredMap = map.map {
+</span></span><span style="display:flex;"><span>    ($0.key, $0.value.uppercased())
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filteredMap)
+</span></span></code></pre></div><p>There is no point in using an <a href="/blogs/enumerated-in-swift/">enumerated</a> map with the <code>Dictionary</code> as it never guarantees the sequence in a <code>Dictionary</code>.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="Map Operator: Swift" data-url="https://mahigarg.github.io/blogs/map-operator-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/map-operator-swift\/";   
+									this.page.identifier = "9ae2d0900e8cdcacfb433e62f9995bbe";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Setup Firebase RemoteConfig
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Round up to n Decimal Digit: Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>

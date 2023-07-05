@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>Round up to n Decimal Digit: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,213 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ August 16, 2022 / 3 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Round up to n Decimal Digit: Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>We sometimes in our calculation get results with more than 4 decimal digits or even more. But as a developer, we can’t use the same to display to users.</p>
+<p>Imagine we have a dashboard application that displays monthly tax on an employee&rsquo;s salary. And it is coming as 630.6152. This doesn’t look good at all to say the same. It will be better to show it like 630.62 or 630.61 i.e., rounding it to n Decimal Digit.</p>
+<p>Let us take a look at how this can be done.</p>
+<p>If we say round up to n Decimal Digits where n equals 2. Then we need to follow the below steps</p>
+<ul>
+<li>Multiply it by 100 (10^n)</li>
+<li>Use round, floor, or ceil to remove the extra digits</li>
+<li>Divide by 100 (10^n)</li>
+</ul>
+<hr>
+<h3 id="round-to-n-digits-using-the-round-function">Round to n digits using the round function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//after calculation</span>
+</span></span><span style="display:flex;"><span>tax = <span style="color:#ae81ff">630.6152</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//multiply with 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = tax <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>                 <span style="color:#75715e">//63061.52</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Using round to remove extra digit</span>
+</span></span><span style="display:flex;"><span>roundresult = round(result)            <span style="color:#75715e">//63062</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//divide by 100</span>
+</span></span><span style="display:flex;"><span>result = result<span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>             
+</span></span><span style="display:flex;"><span>print (result)                         <span style="color:#75715e">//630.62</span>
+</span></span><span style="display:flex;"><span>print(evenNumbers)
+</span></span></code></pre></div><p>Here tax 630.6152 is rounded to 630.62 as the third decimal digit is 5.</p>
+<p>Let us consider example 437.1932. Here 3 is the third decimal digit.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//after calculation</span>
+</span></span><span style="display:flex;"><span>tax = <span style="color:#ae81ff">437.1932</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//multiply with 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = tax <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>                 <span style="color:#75715e">//43719.32</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Using round to remove extra digit</span>
+</span></span><span style="display:flex;"><span>roundresult = round(result)            <span style="color:#75715e">//43719</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//divide by 100</span>
+</span></span><span style="display:flex;"><span>result = result<span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>print (result)                         <span style="color:#75715e">//437.19</span>
+</span></span></code></pre></div><p>On comparing the result of both the example, we can see the result depends on the decimal digits we have. If the third digit is between 1 to 4, then it will keep the existing previous results (437.1932 -&gt; 437.19) but in the case of digits between 5–9, it increases the last digit (630.6152 -&gt; 630.61).</p>
+<p>Now let us see how our output will be impacted if we use the floor or ceil function instead of round.</p>
+<hr>
+<h3 id="round-to-n-digits-using-the-floor-function">Round to n digits using the floor function</h3>
+<p>Considering the same example here. Tax after calculation equals 630.6152.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//after calculation</span>
+</span></span><span style="display:flex;"><span>tax = <span style="color:#ae81ff">630.6152</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//multiply with 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = tax <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>                 <span style="color:#75715e">//63061.52</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Using floor to remove extra digit</span>
+</span></span><span style="display:flex;"><span>floorResult = floor(result)            <span style="color:#75715e">//63061</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//divide by 100</span>
+</span></span><span style="display:flex;"><span>floorResult = floorResult <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>print (floorResult)                    <span style="color:#75715e">//630.61</span>
+</span></span></code></pre></div><p>Here, we saw floor will step down the result irrespective of the digit we have at the third position, be it 1 or 9 it will always take you to the nearest smallest number.</p>
+<hr>
+<h3 id="round-to-n-digits-using-the-ceil-function">Round to n digits using the ceil function</h3>
+<p>Here, let us alter our example to 630.6122 and see how our results vary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//after calculation</span>
+</span></span><span style="display:flex;"><span>tax = <span style="color:#ae81ff">630.6122</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//multiply with 100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> result = tax <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>                 <span style="color:#75715e">//63061.22</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//Using ceil to remove extra digit</span>
+</span></span><span style="display:flex;"><span>ceilResult = ceil(result)              <span style="color:#75715e">//63062</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//divide by 100</span>
+</span></span><span style="display:flex;"><span>ceilResult = ceilResult <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>print (ceilResult)                     <span style="color:#75715e">//630.62</span>
+</span></span></code></pre></div><p>Here, we saw ceil will step up the result irrespective of the digit we have at the third position, be it anything between 1 to 9 it will always take you to the nearest largest number.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="Round up to n Decimal Digit: Swift" data-url="https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/round-up-to-n-decimal-digit-swift\/";   
+									this.page.identifier = "c2130b4d245689e08ddecb30109d7956";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/map-operator-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Map Operator: Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							For loop with where clause: Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>

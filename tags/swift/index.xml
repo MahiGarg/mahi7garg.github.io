@@ -6,7 +6,43 @@
     <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Closures: Swift</title>
+      <link>https://mahigarg.github.io/blogs/closures-swift/</link>
+      <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/closures-swift/</guid>
+      <description>Closures are a powerful feature of the Swift programming language that allows you to write code that can be passed around and executed at a later time.</description>
+    </item>
+    
+    <item>
+      <title>For loop with where clause: Swift</title>
+      <link>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</link>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</guid>
+      <description>For loop is an inevitable part of any programming language. It iterates over every element of the collection type data including array, set, and dictionary, and does the operation as per the code.</description>
+    </item>
+    
+    <item>
+      <title>Round up to n Decimal Digit: Swift</title>
+      <link>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</link>
+      <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</guid>
+      <description>We sometimes in our calculation get results with more than 4 decimal digits or even more. But as a developer, we can’t use the same to display to users.</description>
+    </item>
+    
+    <item>
+      <title>Map Operator: Swift</title>
+      <link>https://mahigarg.github.io/blogs/map-operator-swift/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/map-operator-swift/</guid>
+      <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
+    </item>
+    
     <item>
       <title>$0, $1 … $n in Swift</title>
       <link>https://mahigarg.github.io/blogs/0-1-n-in-swift/</link>
@@ -14,6 +50,15 @@
       
       <guid>https://mahigarg.github.io/blogs/0-1-n-in-swift/</guid>
       <description>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</description>
+    </item>
+    
+    <item>
+      <title>Filter Operator: Swift</title>
+      <link>https://mahigarg.github.io/blogs/filter-operator-swift/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/filter-operator-swift/</guid>
+      <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
     </item>
     
     <item>

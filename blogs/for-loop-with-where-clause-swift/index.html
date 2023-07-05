@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>For loop with where clause: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,184 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ August 22, 2022 / 2 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				For loop with where clause: Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>For loop is an inevitable part of any programming language. It iterates over every element of the collection type data including array, set, and dictionary, and does the operation as per the code.</p>
+<p>Let us see an example of the same. Consider an array of integers and a for loop accessing its even integers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//array example</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">23</span>,<span style="color:#ae81ff">62</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">12</span>,<span style="color:#ae81ff">87</span>,<span style="color:#ae81ff">55</span>,<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">22</span>]
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//for loop</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers {
+</span></span><span style="display:flex;"><span>    print(number)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Above swift code will print all integers in the array. But sometimes we need only elements on certain conditions like even number, or positive number. This can be achieved by giving a where clause with the for loop body.</p>
+<p>Let us see the code for filtering even numbers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//for loop with where</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers <span style="color:#66d9ef">where</span> number <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>    print(number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// print 62 6 12 22</span>
+</span></span></code></pre></div><p>Here data is filtered according to <code>where</code> clause i.e., only even numbers will be printed. Similarly, we can filter data on more than one condition using (<code>||</code>) or and (<code>&amp;&amp;</code>) depending on the use case.</p>
+<p>Let us look at this with an example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//for loop with where </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers <span style="color:#66d9ef">where</span> number <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span> <span style="color:#f92672">||</span> number <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span> {
+</span></span><span style="display:flex;"><span>    print(number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 62 6 12 87 55 22</span>
+</span></span></code></pre></div><p>Here data is filtered according to <code>where</code> clause i.e., even numbers or numbers greater than 50 will be printed.</p>
+<p>Now let us consider case printing numbers that are even and greater than 50.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">//for loop with where</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers <span style="color:#66d9ef">where</span> number <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> number <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span> {
+</span></span><span style="display:flex;"><span>print(number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// prints even numbers and number greater than 50 </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 62 </span>
+</span></span></code></pre></div><p>Here data is filtered according to <code>where</code> clause i.e. even numbers and numbers greater than 50 will be printed.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="For loop with where clause: Swift" data-url="https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/for-loop-with-where-clause-swift\/";   
+									this.page.identifier = "f2682248c0062092042a3b6e8b80c8e7";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Round up to n Decimal Digit: Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/closures-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Closures: Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>

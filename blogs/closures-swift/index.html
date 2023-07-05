@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Test</title>
+  <title>Closures: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -256,41 +256,207 @@
       
 
 
+
 <section class="section section-inner started-heading">
 	<div class="container">
-  
-	  
-	  <div class="m-titles align-center">
-		<h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
-		  <span>Test</span>
-		</h1>
-	  </div>
-  
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ April 25, 2023 / 3 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Closures: Swift
+			</h1>
+		</div>
+
 	</div>
 </section>
-  
+
+
+
+
 
 <section class="section section-inner m-archive">
-	  <div class="container">
-  
-		  <div class="row">
-			  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
-  
-				  
-				  <div class="description">
-					  <div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Test Simple Page</p>
+	<div class="container">
 
-					  </div>
-				  </div>
-  
-			  </div>
-		  </div>
-  
-		  <div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
-  
-	  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>Closures are a powerful feature of the Swift programming language that allows you to write code that can be passed around and executed at a later time. They are self-contained blocks of functionality.</p>
+<p>Closures are commonly used in Swift to perform tasks like sorting and filtering collections and for handling asynchronous tasks.</p>
+<p>Syntax:</p>
+<p>A closure is defined using curly braces <code>{ }</code> and can take in one or more arguments, and returns a value. Here’s a basic syntax of a closure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>{ (params) -&gt; <span style="color:#66d9ef">return</span> type <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Statement</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>params — any value passed to the closure</li>
+<li>returnType — specifies the type of value returned by the closure</li>
+<li>in (optional) — used to separate parameters/returnType from the closure body</li>
+<li>Statement — code to be executed.</li>
+</ul>
+<p>Closures need not have the first 3 always. Find the below examples supporting the statement.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> sayHi = {
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;Hey!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// call the closure</span>
+</span></span><span style="display:flex;"><span>sayHi()                        <span style="color:#75715e">// output is Hey!</span>
+</span></span></code></pre></div><p>This example of closure prints a string. It doesn’t require any parameters. It doesn’t return anything. It just has a single line of code to execute.</p>
+<p>Now let us see other examples of closure where we have either a parameter or a return type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> sayHi = { (name: String) <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  print(<span style="color:#e6db74">&#34;Hey!, </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// closure call</span>
+</span></span><span style="display:flex;"><span>sayHi(<span style="color:#e6db74">&#34;Mahi&#34;</span>)                 <span style="color:#75715e">// output is Hey!, Mahi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> taskCompleted = { ()-&gt; String <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Bravo You Are Done!&#34;</span> 
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// closure call</span>
+</span></span><span style="display:flex;"><span>print(taskCompleted())         <span style="color:#75715e">// output is Bravo You Are Done!</span>
+</span></span></code></pre></div><p>Hope you have understood what is closure. How to write closure in Swift. Now let us move to the usage of closure in Swift.</p>
+<p>Now let us consider a block of code that needs to be executed after the method has completed its task. Let us have a look below for example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(first: Int, second: Int, completion: (Int) -&gt; String) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> sum = first <span style="color:#f92672">+</span> second
+</span></span><span style="display:flex;"><span>  print(completion(sum))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>add(first: <span style="color:#ae81ff">4</span>, second: <span style="color:#ae81ff">56</span>) { result <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;result is </span><span style="color:#e6db74">\(</span>result<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}                       <span style="color:#75715e">// output is result is 60</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>add(first: <span style="color:#ae81ff">4</span>, second: <span style="color:#ae81ff">56</span>) { result <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;sum is </span><span style="color:#e6db74">\(</span>result<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}                       <span style="color:#75715e">// output is sum is 60</span>
+</span></span></code></pre></div><p>Here method add takes 2 integers and 1 closure as arguments. It performs the sum of 2 numbers. After the addition is done it calls the closure to print the result according to the code written in the closure.</p>
+<p>Here, the first method call defines the closure to return the string “result is 60” while the second return the string “sum is 60”. So we can conclude that closure also gives the power to the method to execute a different set of code depending on where it is called.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						<div class="social-share" data-title="Closures: Swift" data-url="https://mahigarg.github.io/blogs/closures-swift/">
+							<span>Share:</span>
+							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a class="share-btn share-btn-twitter share-btn-2" title="Share on Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a class="share-btn share-btn-linkedin share-btn-3" title="Share on Linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_thread"></div>
+							<script>
+								var disqus_config = function () {
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/closures-swift\/";   
+									this.page.identifier = "262f5453f321c33fd6628941d0f96ccb";  
+								};
+								(function() {  
+									var d = document, s = d.createElement('script');
+									s.src = 'https://mahi7garg.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+								})();
+							</script>
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
 </section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							For loop with where clause: Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/remoteconfig-in-firebase/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							RemoteConfig in Firebase
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
     </div>
