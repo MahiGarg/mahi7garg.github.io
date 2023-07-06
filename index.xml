@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Mahi Garg</title>
+    <title>Mahi Garg</title>
     <link>https://mahigarg.github.io/</link>
-    <description>Recent content in Home on Mahi Garg</description>
+    <description>Recent content on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Setup Firebase RemoteConfig</title>
-      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
-      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
-    </item>
-    
-    <item>
-      <title>RemoteConfig in Firebase</title>
-      <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
-      <pubDate>Sun, 28 May 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</guid>
-      <description>In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Closures: Swift</title>
       <link>https://mahigarg.github.io/blogs/closures-swift/</link>
@@ -59,6 +41,15 @@
       
       <guid>https://mahigarg.github.io/test/</guid>
       <description>Test Simple Page</description>
+    </item>
+    
+    <item>
+      <title>Setup Firebase RemoteConfig</title>
+      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
+      <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
+      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
     </item>
     
     <item>
@@ -113,6 +104,15 @@
       
       <guid>https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/</guid>
       <description>Functions are something that every developer uses daily. A function can of with or without parameters. Swift has multiple ways of passing the parameters to a function.</description>
+    </item>
+    
+    <item>
+      <title>RemoteConfig in Firebase</title>
+      <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
+      <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</guid>
+      <description>In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates.</description>
     </item>
     
     <item>
