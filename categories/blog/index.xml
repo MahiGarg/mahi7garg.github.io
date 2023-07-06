@@ -6,7 +6,16 @@
     <description>Recent content in Blog on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Firebase RemoteConfig</title>
+      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
+      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
+    </item>
+    
     <item>
       <title>RemoteConfig in Firebase</title>
       <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
@@ -50,15 +59,6 @@
       
       <guid>https://mahigarg.github.io/blogs/map-operator-swift/</guid>
       <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
-    </item>
-    
-    <item>
-      <title>Setup Firebase RemoteConfig</title>
-      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
-      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
     </item>
     
     <item>

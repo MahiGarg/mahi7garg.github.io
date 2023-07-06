@@ -6,7 +6,16 @@
     <description>Recent content in Home on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Firebase RemoteConfig</title>
+      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
+      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
+    </item>
+    
     <item>
       <title>RemoteConfig in Firebase</title>
       <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
@@ -62,21 +71,21 @@
     </item>
     
     <item>
-      <title>Setup Firebase RemoteConfig</title>
-      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
-      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
-    </item>
-    
-    <item>
       <title>$0, $1 … $n in Swift</title>
       <link>https://mahigarg.github.io/blogs/0-1-n-in-swift/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/0-1-n-in-swift/</guid>
       <description>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</description>
+    </item>
+    
+    <item>
+      <title>Carousel View SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
+      <description>The below code will help you to implement Carouel view in iOS using SwiftUI.</description>
     </item>
     
     <item>
