@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gists on Mahi Garg</title>
-    <link>https://mahigarg.github.io/gists/</link>
-    <description>Recent content in Gists on Mahi Garg</description>
+    <title>Programming-Basics on Mahi Garg</title>
+    <link>https://mahigarg.github.io/tags/programming-basics/</link>
+    <description>Recent content in Programming-Basics on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/gists/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/programming-basics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bubble Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/bubble-sort-swift/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://mahigarg.github.io/gists/bubble-sort-swift/</guid>
       <description>Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted.</description>
-    </item>
-    
-    <item>
-      <title>Carousel View : SwiftUI</title>
-      <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
-      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
-      <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
     </item>
     
     <item>

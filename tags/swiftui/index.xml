@@ -6,14 +6,14 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Carousel View SwiftUI</title>
+      <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
-      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
-      <description>The below code will help you to implement Carouel view using ScrollView and HStack in iOS using SwiftUI.</description>
+      <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
     </item>
     
   </channel>

@@ -6,7 +6,88 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 25 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bubble Sort : Swift</title>
+      <link>https://mahigarg.github.io/gists/bubble-sort-swift/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/bubble-sort-swift/</guid>
+      <description>Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted.</description>
+    </item>
+    
+    <item>
+      <title>Dictionary: Swift</title>
+      <link>https://mahigarg.github.io/blogs/dictionary-swift/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/dictionary-swift/</guid>
+      <description>Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys.</description>
+    </item>
+    
+    <item>
+      <title>Carousel View : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
+      <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
+    </item>
+    
+    <item>
+      <title>Linked List : Swift</title>
+      <link>https://mahigarg.github.io/gists/linked-list-methods-swift/</link>
+      <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/linked-list-methods-swift/</guid>
+      <description>A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node.</description>
+    </item>
+    
+    <item>
+      <title>Remove duplicates from array: Swift</title>
+      <link>https://mahigarg.github.io/gists/remove-duplicate-array-swift/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/remove-duplicate-array-swift/</guid>
+      <description>To remove duplicates from an array in Swift using a dictionary, we can create an empty dictionary and iterate through the array.</description>
+    </item>
+    
+    <item>
+      <title>Binary Serach : Swift</title>
+      <link>https://mahigarg.github.io/gists/binary-serach-swift/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/binary-serach-swift/</guid>
+      <description>Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found.</description>
+    </item>
+    
+    <item>
+      <title>Insertion Sort : Swift</title>
+      <link>https://mahigarg.github.io/gists/insertion-sort-swift/</link>
+      <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/insertion-sort-swift/</guid>
+      <description>Insertion sort is a simple sorting algorithm in Swift that builds the final sorted array one element at a time. It iterates through the array, comparing each element with the sorted portion and placing it in the correct position.</description>
+    </item>
+    
+    <item>
+      <title>Selection Sort : Swift</title>
+      <link>https://mahigarg.github.io/gists/selection-sort-swift/</link>
+      <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/selection-sort-swift/</guid>
+      <description>Selection sort is a sorting algorithm in Swift that works by repeatedly finding the minimum element from the unsorted portion of an array and swapping it with the element in the correct position.</description>
+    </item>
+    
+    <item>
+      <title>Dutch National Flag : Sort Int Array of 0,1 and 2 : Swift</title>
+      <link>https://mahigarg.github.io/gists/dutch-national-flag-swift/</link>
+      <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/dutch-national-flag-swift/</guid>
+      <description>The Dutch National Flag algorithm is a sorting algorithm that partitions an array into three sections: elements less than a given pivot, elements equal to the pivot, and elements greater than the pivot.</description>
+    </item>
+    
     <item>
       <title>Closures: Swift</title>
       <link>https://mahigarg.github.io/blogs/closures-swift/</link>
@@ -68,15 +149,6 @@
       
       <guid>https://mahigarg.github.io/blogs/0-1-n-in-swift/</guid>
       <description>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</description>
-    </item>
-    
-    <item>
-      <title>Carousel View SwiftUI</title>
-      <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
-      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
-      <description>The below code will help you to implement Carouel view using ScrollView and HStack in iOS using SwiftUI.</description>
     </item>
     
     <item>
