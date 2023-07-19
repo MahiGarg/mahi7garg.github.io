@@ -16,5 +16,41 @@
       <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
     </item>
     
+    <item>
+      <title>Instagram Post : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/instagram-post-swiftui/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/instagram-post-swiftui/</guid>
+      <description>Coding an Instagram post in SwiftUI is an engaging project. You can use various components like images, text, and buttons to design a post layout.</description>
+    </item>
+    
+    <item>
+      <title>Instagarm Logo : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/instagram-logo-swiftui/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/instagram-logo-swiftui/</guid>
+      <description>Creating the Instagram logo in SwiftUI is an exciting task. Using basic shapes like circles, squares, and colors, you can piece together the iconic camera symbol and colorful gradient background.</description>
+    </item>
+    
+    <item>
+      <title>@State: SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
+      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
+      <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
+    </item>
+    
+    <item>
+      <title>List: SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/list-swiftui/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/list-swiftui/</guid>
+      <description>In SwiftUI, the List is a powerful tool for creating neat and organized scrolling lists in apps. Imagine it as a virtual scrollable sheet of paper where you can display various items, like names, messages, or to-do tasks.</description>
+    </item>
+    
   </channel>
 </rss>

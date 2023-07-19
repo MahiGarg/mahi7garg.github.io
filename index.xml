@@ -53,12 +53,57 @@
     </item>
     
     <item>
+      <title>Set: Swift</title>
+      <link>https://mahigarg.github.io/blogs/set-swift/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
+      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
+    </item>
+    
+    <item>
       <title>Binary Serach : Swift</title>
       <link>https://mahigarg.github.io/gists/binary-serach-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/gists/binary-serach-swift/</guid>
       <description>Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found.</description>
+    </item>
+    
+    <item>
+      <title>Merge 2 sorted Array: Swift</title>
+      <link>https://mahigarg.github.io/gists/merge-array-swift/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/merge-array-swift/</guid>
+      <description>Merging two sorted Int arrays in Swift means combining them into a single sorted array while preserving the order. With Swift, you can efficiently implement the merging algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Merge 2 sorted Linked List: Swift</title>
+      <link>https://mahigarg.github.io/gists/merge-linked-list-swift/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/merge-linked-list-swift/</guid>
+      <description>Merging two sorted linked lists in Swift is like combining two ordered lists into one, while still maintaining the sorted order.</description>
+    </item>
+    
+    <item>
+      <title>Instagram Post : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/instagram-post-swiftui/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/instagram-post-swiftui/</guid>
+      <description>Coding an Instagram post in SwiftUI is an engaging project. You can use various components like images, text, and buttons to design a post layout.</description>
+    </item>
+    
+    <item>
+      <title>Instagarm Logo : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/instagram-logo-swiftui/</link>
+      <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/instagram-logo-swiftui/</guid>
+      <description>Creating the Instagram logo in SwiftUI is an exciting task. Using basic shapes like circles, squares, and colors, you can piece together the iconic camera symbol and colorful gradient background.</description>
     </item>
     
     <item>
@@ -71,6 +116,15 @@
     </item>
     
     <item>
+      <title>@State: SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
+      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
+      <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
+    </item>
+    
+    <item>
       <title>Selection Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/selection-sort-swift/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
@@ -80,12 +134,21 @@
     </item>
     
     <item>
-      <title>Dutch National Flag : Sort Int Array of 0,1 and 2 : Swift</title>
+      <title>Dutch National Flag : Sort Int Array of 0, 1 and 2 : Swift</title>
       <link>https://mahigarg.github.io/gists/dutch-national-flag-swift/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/gists/dutch-national-flag-swift/</guid>
       <description>The Dutch National Flag algorithm is a sorting algorithm that partitions an array into three sections: elements less than a given pivot, elements equal to the pivot, and elements greater than the pivot.</description>
+    </item>
+    
+    <item>
+      <title>List: SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/list-swiftui/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/list-swiftui/</guid>
+      <description>In SwiftUI, the List is a powerful tool for creating neat and organized scrolling lists in apps. Imagine it as a virtual scrollable sheet of paper where you can display various items, like names, messages, or to-do tasks.</description>
     </item>
     
     <item>

@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Set: Swift</title>
+      <link>https://mahigarg.github.io/blogs/set-swift/</link>
+      <pubDate>Sun, 09 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
+      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
+    </item>
+    
+    <item>
       <title>Closures: Swift</title>
       <link>https://mahigarg.github.io/blogs/closures-swift/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Binary Serach : Swift</title>
+  <title>@State: SwiftUI</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,34 +13,34 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Binary Serach : Swift">
-    <meta name="description" content="Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively.">
-    <meta property="og:description" content="Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively.">
-    <meta property="twitter:description" content="Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively.">
-    <meta name="abstract" content="Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively.">
-    <meta name="summary" content="Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively."> 
+  <meta name="topic" content="@State: SwiftUI">
+    <meta name="description" content="@State in SwiftUI is a property wrapper used to manage mutable state within a view. It automatically tracks changes to the state variable and updates the UI accordingly, providing a straightforward way to create dynamic and reactive user interfaces without manual handling of state changes and view updates.">
+    <meta property="og:description" content="@State in SwiftUI is a property wrapper used to manage mutable state within a view. It automatically tracks changes to the state variable and updates the UI accordingly, providing a straightforward way to create dynamic and reactive user interfaces without manual handling of state changes and view updates.">
+    <meta property="twitter:description" content="@State in SwiftUI is a property wrapper used to manage mutable state within a view. It automatically tracks changes to the state variable and updates the UI accordingly, providing a straightforward way to create dynamic and reactive user interfaces without manual handling of state changes and view updates.">
+    <meta name="abstract" content="@State in SwiftUI is a property wrapper used to manage mutable state within a view. It automatically tracks changes to the state variable and updates the UI accordingly, providing a straightforward way to create dynamic and reactive user interfaces without manual handling of state changes and view updates.">
+    <meta name="summary" content="@State in SwiftUI is a property wrapper used to manage mutable state within a view. It automatically tracks changes to the state variable and updates the UI accordingly, providing a straightforward way to create dynamic and reactive user interfaces without manual handling of state changes and view updates."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-08 "> 
+    <meta property="article:published_time" content=" 2023-06-29 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/gists/binary-serach-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/gists/binary-serach-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/gists/binary-serach-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/state-swiftui/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/state-swiftui/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/state-swiftui/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="binary search,swift binary search,dsa,swift">
+    <meta name="keywords" content="swiftui,@State,@State example,swift,ios">
 
-    <link rel="canonical" href="https://mahigarg.github.io/gists/binary-serach-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/state-swiftui/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
     <meta name="coverage" content="Worldwide" />
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
-    <meta property="og:tags" content="Programming-Basics"> 
-    <title>Binary Serach : Swift &middot; Mahi Garg</title>
+    <meta property="og:tags" content="SwiftUI"> 
+    <title>@State: SwiftUI &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -262,13 +262,13 @@
 			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
 				
 				
-				<a href="https://mahigarg.github.io/categories/gist/">Gist</a>
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 8, 2023 / 1 min read / By Mahi Garg
+				/ June 29, 2023 / 2 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Binary Serach : Swift
+				@State: SwiftUI
 			</h1>
 		</div>
 
@@ -288,9 +288,42 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively. The time complexity of binary search is O(log n), where n is the number of elements in the array. This makes it highly efficient for large data sets as it eliminates half of the remaining search space at each step, significantly reducing the search time.</p>
-<script type="application/javascript" src="https://gist.github.com/mahigarg/85abad84ac62859330cf58303e8fa40d.js"></script>
-
+						<p>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences. One key tool SwiftUI provides for this purpose is the @State property wrapper.</p>
+<p>Now let us understand what is <code>@State</code>, how it works, what we can achieve through this, and much more.</p>
+<h3 id="what-isstate">What is @State?</h3>
+<p>The @State property wrapper is a fundamental component of SwiftUI that allows us to declare mutable state properties within a view. When the value of @State property changes, SwiftUI automatically re-renders the view, ensuring that the UI stays synchronized with the underlying state.</p>
+<p>Let us understand this with an example.</p>
+<p>Consider you want to change the background color of your view with a few button clicks. please have a look at the below code where we will understand its declaration and usage part as well.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">stateBootCamp</span>: View {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    @State <span style="color:#66d9ef">var</span> backgroundColor = Color.red
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>        ZStack {
+</span></span><span style="display:flex;"><span>            backgroundColor
+</span></span><span style="display:flex;"><span>            VStack(spacing: <span style="color:#ae81ff">20</span>) {
+</span></span><span style="display:flex;"><span>                Text(<span style="color:#e6db74">&#34;Studing @State&#34;</span>)
+</span></span><span style="display:flex;"><span>                    .font(.title)
+</span></span><span style="display:flex;"><span>                Button(<span style="color:#e6db74">&#34;BUTTON Green&#34;</span>) {
+</span></span><span style="display:flex;"><span>                        backgroundColor = .green
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                Button(<span style="color:#e6db74">&#34;BUTTON Pink&#34;</span>) {
+</span></span><span style="display:flex;"><span>                        backgroundColor = .pink
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            .foregroundColor(.white)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>To declare, prefix @State to property declaration. Above we made backgroundColor a state property.</p>
+<p>Now let us understand it&rsquo;s working.</p>
+<p><img src="/images/blog/blogs/state-swiftui/state-swiftui.webp" alt="@State: SwiftUI"></p>
+<p>The first view is your Initial View in zero state. When you tap on BUTTON Green, the background color changes to green as we are changing the state variable color to Green as the action of Button. Similarly, on Tap of BUTTON Pink, the background color changes to Pink. With this, we understood how @State is used.</p>
+<h3 id="usage-scenario-ofstate">Usage scenario of @State</h3>
+<p><code>@State</code> is best suited for managing a state within a single view or a small portion of the view hierarchy. It works well for a local, transient state that doesn&rsquo;t need to be shared across multiple views or persisted across sessions.</p>
+<h3 id="limitation-ofstate">Limitation of @State</h3>
+<p><code>@State</code> not suitable for managing states across multiple views or when sharing states between different parts of an application. In such cases, <code>@ObservedObject</code> or <code>@EnvironmentObject</code> maybe more appropriate choices.
+By leveraging @State, SwiftUI empowers developers to build modern, responsive applications that are efficient, maintainable, and delightful to use.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -310,12 +343,12 @@
 						<div class="tags-links">
 							<span>Tags:</span>
 							
-							<a href="https://mahigarg.github.io/tags/programming-basics/" rel="tag">Programming-Basics</a>
+							<a href="https://mahigarg.github.io/tags/swiftui/" rel="tag">SwiftUI</a>
 							
 						</div>
 						
 
-						<div class="social-share" data-title="Binary Serach : Swift" data-url="https://mahigarg.github.io/gists/binary-serach-swift/">
+						<div class="social-share" data-title="@State: SwiftUI" data-url="https://mahigarg.github.io/blogs/state-swiftui/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -344,8 +377,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/gists\/binary-serach-swift\/";   
-									this.page.identifier = "0297e9220863634dd8fc7fa18ca3d5bd";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/state-swiftui\/";   
+									this.page.identifier = "4c19994651489638dd41892aa9d8b94d";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -376,24 +409,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/gists/merge-array-swift/">
+					<a href="https://mahigarg.github.io/blogs/closures-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Merge 2 sorted Array: Swift
+							Closures: Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/gists/remove-duplicate-array-swift/">
+					<a href="https://mahigarg.github.io/blogs/set-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Remove duplicates from array: Swift
+							Set: Swift
 						</span>
 					</a>
 					

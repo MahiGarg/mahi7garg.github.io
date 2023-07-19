@@ -44,6 +44,24 @@
     </item>
     
     <item>
+      <title>Merge 2 sorted Array: Swift</title>
+      <link>https://mahigarg.github.io/gists/merge-array-swift/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/merge-array-swift/</guid>
+      <description>Merging two sorted Int arrays in Swift means combining them into a single sorted array while preserving the order. With Swift, you can efficiently implement the merging algorithm.</description>
+    </item>
+    
+    <item>
+      <title>Merge 2 sorted Linked List: Swift</title>
+      <link>https://mahigarg.github.io/gists/merge-linked-list-swift/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/merge-linked-list-swift/</guid>
+      <description>Merging two sorted linked lists in Swift is like combining two ordered lists into one, while still maintaining the sorted order.</description>
+    </item>
+    
+    <item>
       <title>Insertion Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/insertion-sort-swift/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
@@ -62,7 +80,7 @@
     </item>
     
     <item>
-      <title>Dutch National Flag : Sort Int Array of 0,1 and 2 : Swift</title>
+      <title>Dutch National Flag : Sort Int Array of 0, 1 and 2 : Swift</title>
       <link>https://mahigarg.github.io/gists/dutch-national-flag-swift/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       
