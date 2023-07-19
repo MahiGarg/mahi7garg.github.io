@@ -620,7 +620,7 @@ body.dark-skin {
 .dark-skin .post-content table td,
 .dark-skin .wp-block-table.is-style-stripes td {
 	border: 1px solid #666;
-	color: #fff;
+	color: #000;
 }
 
 .dark-skin .post-content ol,

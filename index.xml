@@ -116,15 +116,6 @@
     </item>
     
     <item>
-      <title>Test</title>
-      <link>https://mahigarg.github.io/test/</link>
-      <pubDate>Sat, 02 Jul 2022 17:02:58 +0300</pubDate>
-      
-      <guid>https://mahigarg.github.io/test/</guid>
-      <description>Test Simple Page</description>
-    </item>
-    
-    <item>
       <title>Setup Firebase RemoteConfig</title>
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
