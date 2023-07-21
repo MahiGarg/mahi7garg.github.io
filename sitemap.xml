@@ -3,21 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mahigarg.github.io/categories/blog/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/blogs/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/gists/bubble-sort-swift/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/categories/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/guard-let-in-swift/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/if-let-in-swift/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/swift/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/navigation-swiftui/</loc>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/swiftui/</loc>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/bubble-sort-swift/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -37,32 +72,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://mahigarg.github.io/tags/programming-basics/</loc>
     <lastmod>2023-07-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/tags/swift/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/tags/</loc>
-    <lastmod>2023-07-18T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://mahigarg.github.io/gists/carousel-view-swiftui/</loc>
-    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/tags/swiftui/</loc>
     <lastmod>2023-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

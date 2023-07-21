@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Dictionary: Swift</title>
+  <title>NavigationView in SwiftUI</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,34 +13,34 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Dictionary: Swift">
-    <meta name="description" content="Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. .">
-    <meta property="og:description" content="Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. .">
-    <meta property="twitter:description" content="Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. .">
-    <meta name="abstract" content="Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. .">
-    <meta name="summary" content="Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. ."> 
+  <meta name="topic" content="NavigationView in SwiftUI">
+    <meta name="description" content="Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.">
+    <meta property="og:description" content="Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.">
+    <meta property="twitter:description" content="Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.">
+    <meta name="abstract" content="Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.">
+    <meta name="summary" content="Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-18 "> 
+    <meta property="article:published_time" content=" 2023-07-20 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/dictionary-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/dictionary-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/dictionary-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/navigation-swiftui/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/navigation-swiftui/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/navigation-swiftui/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="dictionary,map,swift,ios,key value,pair">
+    <meta name="keywords" content="swiftui,navigationView swiftUI,navigation View swiftUI,navigationLink in swiftUI,navigationBar swiftUIswift,navigation Bar in swiftUI,navigationView in swiftUI,navigation Link in swiftUI,ios,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/dictionary-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/navigation-swiftui/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
     <meta name="coverage" content="Worldwide" />
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
-    <meta property="og:tags" content="Swift"> 
-    <title>Dictionary: Swift &middot; Mahi Garg</title>
+    <meta property="og:tags" content="SwiftUI"> 
+    <title>NavigationView in SwiftUI &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 18, 2023 / 3 mins read / By Mahi Garg
+				/ July 20, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Dictionary: Swift
+				NavigationView in SwiftUI
 			</h1>
 		</div>
 
@@ -288,60 +288,92 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. Dictionaries support operations like adding, removing, and iterating over elements. With constant time complexity for most operations, dictionaries are a powerful tool for organizing and managing data in Swift programming.</p>
-<p>Let us explore syntax, usage, and various operations that can be performed on dictionay.</p>
-<h3 id="creating-a-dictionary">Creating a Dictionary:</h3>
-<p>In Swift, dictionaries are represented by the <code>Dictionary&lt;Key, Value&gt;</code> type, or simply <code>[Key: Value]</code>. Time complexity for creating an empty dictionary is O(1). Here&rsquo;s how you can create an empty dictionary or initialize it with values:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// Empty Dictionary</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> emptyDictionary: [String: Int] = [:]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Initializing a Dictionary</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> fruits = [<span style="color:#e6db74">&#34;apple&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;banana&#34;</span>: <span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#34;orange&#34;</span>: <span style="color:#ae81ff">2</span>]
-</span></span></code></pre></div><h3 id="accessing-and-modifying-values">Accessing and Modifying Values:</h3>
-<p>You can access values in a dictionary using their corresponding keys. If the key exists, the value will be returned; otherwise, it will return <code>nil</code>. Time complexity for accessing and modifying values in an dictionary is O(1). Here&rsquo;s an example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numberOfApples = fruits[<span style="color:#e6db74">&#34;apple&#34;</span>] <span style="color:#75715e">// returns 3</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Modifying values</span>
-</span></span><span style="display:flex;"><span>fruits[<span style="color:#e6db74">&#34;banana&#34;</span>] = <span style="color:#ae81ff">10</span>
-</span></span></code></pre></div><h3 id="adding-and-removing-elements">Adding and Removing Elements:</h3>
-<p>To add elements to a dictionary, you can assign a value to a specific key. If the key already exists, the value will be updated; otherwise, a new key-value pair will be added. Removing elements can be done using the  <code>removeValue(forKey:)</code> method. Time complexity of adding and removing element in dictionary is O(1). However, in some cases, the complexity can be O(n) due to the need to resize the underlying hash table. Examples:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>fruits[<span style="color:#e6db74">&#34;kiwi&#34;</span>] = <span style="color:#ae81ff">4</span> <span style="color:#75715e">// Adding a new element</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>fruits.removeValue(forKey: <span style="color:#e6db74">&#34;orange&#34;</span>) <span style="color:#75715e">// Removing an element</span>
-</span></span></code></pre></div><h3 id="iterating-over-a-dictionary">Iterating over a Dictionary:</h3>
-<p>Swift provides several ways to iterate over the elements in a dictionary. You can use a for-in loop to access each key-value pair, or you can iterate over keys or values separately using the <code>keys and values</code> properties. Iterating over a dictionary has a time complexity of O(n), where n is the number of key-value pairs in the dictionary. This is because iterating requires visiting each element once. Here&rsquo;s an example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> (fruit, quantity) <span style="color:#66d9ef">in</span> fruits {
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>quantity<span style="color:#e6db74">)</span><span style="color:#e6db74"> </span><span style="color:#e6db74">\(</span>fruit<span style="color:#e6db74">)</span><span style="color:#e6db74">s&#34;</span>)
+						<p>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.</p>
+<h3 id="navigationview">NavigationView</h3>
+<p>NavigationView serves as the navigation container, hosting a hierarchy of views. At the top of the screen, it presents a navigation bar, which typically includes a back button for easy navigation to the previous view. You can also customize the appearance and behavior of the navigation bar to match your app&rsquo;s style.</p>
+<p>We will understand how to implement NavigationView and it various modifier. For same let us take an example of code and walk through it step by step.</p>
+<h3 id="implement-navigationview">Implement NavigationView</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">NavigationInSwiftUI</span>: View {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>        NavigationView {
+</span></span><span style="display:flex;"><span>            ScrollView(.vertical) {
+</span></span><span style="display:flex;"><span>               
+</span></span><span style="display:flex;"><span>                    NavigationLink(<span style="color:#e6db74">&#34;Navigaton Link&#34;</span>, destination: navigationPage)
+</span></span><span style="display:flex;"><span>                    Text(<span style="color:#e6db74">&#34;Home View&#34;</span>)           
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            .navigationTitle(<span style="color:#e6db74">&#34; Navigation Title&#34;</span>)
+</span></span><span style="display:flex;"><span>            .navigationBarTitleDisplayMode(.automatic)
+</span></span><span style="display:flex;"><span>            .navigationBarHidden(<span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>            .navigationBarItems(leading: EditButton(), trailing: Image(systemName: <span style="color:#e6db74">&#34;person.fill&#34;</span>))
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> fruit <span style="color:#66d9ef">in</span> fruits.keys {
-</span></span><span style="display:flex;"><span>    print(fruit)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> navigationPage: some View {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ZStack {
+</span></span><span style="display:flex;"><span>        Color.purple.edgesIgnoringSafeArea(.all)
+</span></span><span style="display:flex;"><span>        Text(<span style="color:#e6db74">&#34;Hello World&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    .navigationTitle(<span style="color:#e6db74">&#34; Navigated Page&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="set-up-navigation">Set Up Navigation</h3>
+<p>Wrap your starting view (usually HomeView) with a <code>NavigationView</code> to set up the navigation hierarchy</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">NavigationInSwiftUI</span>: View {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>        NavigationView {
+</span></span><span style="display:flex;"><span>            ScrollView(.vertical) {
+</span></span><span style="display:flex;"><span>                    Text(<span style="color:#e6db74">&#34;Home View&#34;</span>)                 
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="create-navigationlink">Create NavigationLink</h3>
+<p>Within the HomeView, create a NavigationLink to navigate to the DetailView. Here, in <code> NavigationLink(&quot;Navigaton Link&quot;, destination: navigationPage)</code> Navigation Link is title displayed and destination i.e. <code>navigationPage</code> is the view to which user will navigate on taping <code>Navigation Link</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">NavigationInSwiftUI</span>: View {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>        NavigationView {
+</span></span><span style="display:flex;"><span>            ScrollView(.vertical) {
+</span></span><span style="display:flex;"><span>                    NavigationLink(<span style="color:#e6db74">&#34;Navigaton Link&#34;</span>, destination: navigationPage)
+</span></span><span style="display:flex;"><span>                    Text(<span style="color:#e6db74">&#34;Home View&#34;</span>)                 
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }  
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> quantity <span style="color:#66d9ef">in</span> fruits.values {
-</span></span><span style="display:flex;"><span>    print(quantity)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> navigationPage: some View {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ZStack {
+</span></span><span style="display:flex;"><span>        Color.purple.edgesIgnoringSafeArea(.all)
+</span></span><span style="display:flex;"><span>        Text(<span style="color:#e6db74">&#34;Second Page&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="checking-for-the-existence-of-keys-and-values">Checking for the Existence of Keys and Values:</h3>
-<p>To check if a key or value exists in a dictionary, you can use the contains(where:) method or the keys.contains(<em>:) and values.contains(</em>:) properties. Checking for the existence of keys or values in a dictionary has an average time complexity of O(1). This is due to the efficient lookup mechanism provided by the hash table implementation. Here&rsquo;s an example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> fruits.contains(<span style="color:#66d9ef">where</span>: { $0.key == <span style="color:#e6db74">&#34;apple&#34;</span> }) {
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Apple exists&#34;</span>)
+</span></span></code></pre></div><h3 id="navigationbar">NavigationBar</h3>
+<p>Navigation View give navigation Bar as one of its characterstic, where title, left right navigation button can be configured.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">NavigationInSwiftUI</span>: View {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> body: some View {
+</span></span><span style="display:flex;"><span>        NavigationView {
+</span></span><span style="display:flex;"><span>            ScrollView(.vertical) {
+</span></span><span style="display:flex;"><span>                    NavigationLink(<span style="color:#e6db74">&#34;Navigaton Link&#34;</span>, destination: navigationPage)
+</span></span><span style="display:flex;"><span>                    Text(<span style="color:#e6db74">&#34;Home View&#34;</span>)                 
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>            .navigationTitle(<span style="color:#e6db74">&#34; Navigation Title&#34;</span>)
+</span></span><span style="display:flex;"><span>            .navigationBarTitleDisplayMode(.automatic)
+</span></span><span style="display:flex;"><span>            .navigationBarHidden(<span style="color:#66d9ef">false</span>)
+</span></span><span style="display:flex;"><span>            .navigationBarItems(leading: EditButton(), trailing: Image(systemName: <span style="color:#e6db74">&#34;person.fill&#34;</span>))  
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> fruits.values.contains(<span style="color:#ae81ff">5</span>) {
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;There is a fruit with quantity 5&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="dictionary-operations-and-properties">Dictionary Operations and Properties:</h3>
-<p>Swift dictionaries provide various operations and properties to work with. Some notable ones include:</p>
-<ul>
-<li><code>count</code>: Returns the number of key-value pairs in the dictionary.</li>
-<li><code>isEmpty</code>: Returns a Boolean value indicating whether the dictionary is empty.</li>
-<li><code>keys</code>: Returns a collection containing all the keys in the dictionary.</li>
-<li><code>values</code>: Returns a collection containing all the values in the dictionary.</li>
-<li><code>merge(_:uniquingKeysWith:)</code>: Merges the given dictionary with the current dictionary.</li>
-<li><code>filter(_:)</code>: Returns a new dictionary containing the key-value pairs that satisfy the given predicate.</li>
-</ul>
-<h3 id="conclusion">Conclusion:</h3>
-<p>Dictionaries are powerful data structures that allow you to store and retrieve values using a key-value pair mechanism. In Swift, dictionaries are easy to use and provide various operations for manipulating and accessing data efficiently. By understanding the concepts and techniques covered in this blog post, you are now equipped to work with dictionaries effectively in Swift. Happy coding!</p>
+</span></span></code></pre></div><h4 id="navigationtitle">navigationTitle</h4>
+<p><code>navigationTitle</code> will give title to view. 3 display modes for the navigation can be used via <code>navigationBarTitleDisplayMode</code>. These 3 modes are <code>.automatic</code>, <code>.inline</code> and <code>.large</code>.</p>
+<h4 id="navigationbar-1">navigationBar</h4>
+<p><code>navigationBarHidden</code> can be used with true as a parameter to hide the navigationBar. This is used when multiple navigation screen is used under same navigation View and navigation bar need to be hidden for some of them.</p>
+<p>Also, left and right buttons can be used and given as view like <code>Image(systemName: &quot;person.fill&quot;)</code> using <code>navigationBarItems</code>.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>NavigationView is a powerful tool that simplifies navigation and enhances the user experience. Now we  learned how to create a smooth and intuitive navigation flow. With SwiftUI&rsquo;s NavigationView, we can create engaging and user-friendly apps, guiding users through your content effortlessly. So, dive into your SwiftUI projects and start navigating with style using NavigationView!</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -361,12 +393,12 @@
 						<div class="tags-links">
 							<span>Tags:</span>
 							
-							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							<a href="https://mahigarg.github.io/tags/swiftui/" rel="tag">SwiftUI</a>
 							
 						</div>
 						
 
-						<div class="social-share" data-title="Dictionary: Swift" data-url="https://mahigarg.github.io/blogs/dictionary-swift/">
+						<div class="social-share" data-title="NavigationView in SwiftUI" data-url="https://mahigarg.github.io/blogs/navigation-swiftui/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -395,8 +427,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/dictionary-swift\/";   
-									this.page.identifier = "3ad25f4f9fccb28f08fa0aeaa1e1079f";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/navigation-swiftui\/";   
+									this.page.identifier = "e8afb6d83b0b26f116cf2705db7df5c0";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -427,24 +459,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/set-swift/">
+					<a href="https://mahigarg.github.io/blogs/dictionary-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Set: Swift
+							Dictionary: Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/navigation-swiftui/">
+					<a href="https://mahigarg.github.io/blogs/if-let-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							NavigationView in SwiftUI
+							if let in Swift
 						</span>
 					</a>
 					

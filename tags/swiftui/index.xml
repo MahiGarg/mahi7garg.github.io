@@ -6,7 +6,16 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NavigationView in SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/navigation-swiftui/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/navigation-swiftui/</guid>
+      <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
+    </item>
+    
     <item>
       <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
