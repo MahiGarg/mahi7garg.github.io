@@ -6,16 +6,7 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 20 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NavigationView in SwiftUI</title>
-      <link>https://mahigarg.github.io/blogs/navigation-swiftui/</link>
-      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/navigation-swiftui/</guid>
-      <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
-    </item>
-    
+    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
@@ -44,21 +35,30 @@
     </item>
     
     <item>
-      <title>@State: SwiftUI</title>
-      <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
-      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
-      <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
-    </item>
-    
-    <item>
       <title>List: SwiftUI</title>
       <link>https://mahigarg.github.io/gists/list-swiftui/</link>
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/gists/list-swiftui/</guid>
       <description>In SwiftUI, the List is a powerful tool for creating neat and organized scrolling lists in apps. Imagine it as a virtual scrollable sheet of paper where you can display various items, like names, messages, or to-do tasks.</description>
+    </item>
+    
+    <item>
+      <title>NavigationView in SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</guid>
+      <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
+    </item>
+    
+    <item>
+      <title>@State: SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
+      <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
     </item>
     
   </channel>
