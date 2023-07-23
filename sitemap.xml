@@ -72,48 +72,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/categories/blog/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/blogs/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/blogs/protocols-in-swift/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/tags/swift/</loc>
-    <lastmod>2023-07-06T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/blogs/classes-in-swift/</loc>
-    <lastmod>2023-07-05T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://mahigarg.github.io/gists/instagram-post-swiftui/</loc>
     <lastmod>2023-07-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/blogs/structs-in-swift/</loc>
-    <lastmod>2023-07-04T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/blogs/enums-in-swift/</loc>
-    <lastmod>2023-07-03T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://mahigarg.github.io/gists/instagram-logo-swiftui/</loc>
     <lastmod>2023-07-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/categories/blog/</loc>
+    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/</loc>
+    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -123,6 +98,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/gists/insertion-sort-swift/</loc>
+    <lastmod>2023-07-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/swift/</loc>
     <lastmod>2023-07-02T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -177,8 +157,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://mahigarg.github.io/blogs/enums-in-swift/</loc>
+    <lastmod>2023-04-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/structs-in-swift/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://mahigarg.github.io/blogs/tuple-in-swift/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/classes-in-swift/</loc>
+    <lastmod>2023-03-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -188,6 +183,11 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/blogs/dictionary-swift/</loc>
+    <lastmod>2023-03-14T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/protocols-in-swift/</loc>
     <lastmod>2023-03-05T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -197,13 +197,33 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/blogs/set-swift/</loc>
-    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+    <loc>https://mahigarg.github.io/blogs/generics-in-swift/</loc>
+    <lastmod>2023-02-22T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/blogs/generics-in-swift/</loc>
-    <lastmod>2023-02-04T00:00:00+00:00</lastmod>
+    <loc>https://mahigarg.github.io/blogs/variable-types-in-swift/</loc>
+    <lastmod>2023-02-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/</loc>
+    <lastmod>2023-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/optional-type-in-swift/</loc>
+    <lastmod>2023-02-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/</loc>
+    <lastmod>2023-01-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/while-loop-in-swift/</loc>
+    <lastmod>2023-01-26T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -264,6 +284,10 @@
   </url><url>
     <loc>https://mahigarg.github.io/blogs/labeled-statement-swift/</loc>
     <lastmod>2022-05-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/set-swift/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

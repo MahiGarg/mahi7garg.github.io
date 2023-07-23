@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Extensions in Swift</title>
+  <title>Optional Type in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Extensions in Swift">
-    <meta name="description" content="Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability.">
-    <meta property="og:description" content="Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability.">
-    <meta property="twitter:description" content="Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability.">
-    <meta name="abstract" content="Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability.">
-    <meta name="summary" content="Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability."> 
+  <meta name="topic" content="Optional Type in Swift">
+    <meta name="description" content="Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&#39;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values.">
+    <meta property="og:description" content="Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&#39;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values.">
+    <meta property="twitter:description" content="Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&#39;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values.">
+    <meta name="abstract" content="Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&#39;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values.">
+    <meta name="summary" content="Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&#39;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-02-26 "> 
+    <meta property="article:published_time" content=" 2023-02-13 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/extensions-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/extensions-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/extensions-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/optional-type-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/optional-type-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/optional-type-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="Extensions in Swift,extensions swift,swift,extensions,ios">
+    <meta name="keywords" content="optinaol type,optional swift,? swift,swift option">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/extensions-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/optional-type-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>Extensions in Swift &middot; Mahi Garg</title>
+    <title>Optional Type in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ February 26, 2023 / 3 mins read / By Mahi Garg
+				/ February 13, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Extensions in Swift
+				Optional Type in Swift
 			</h1>
 		</div>
 
@@ -288,76 +288,104 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability. By separating concerns through extensions, developers can achieve cleaner, more organized code, increasing code reusability and maintainability in Swift projects.</p>
-<h3 id="extending-classes-in-swift">Extending Classes in Swift</h3>
-<p>Swift enables developers to extend classes with new methods, computed properties, and initializers, providing a modular way to add functionality. Let&rsquo;s consider a simple example of extending a <code>Person</code> class:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+						<p>Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&rsquo;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values. In this blog, we will explore the concept of optional types in Swift, along with examples to demonstrate how they can be effectively utilized in your code.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="understanding-optionals">Understanding Optionals</h3>
+<p>In Swift, an optional is a type that can hold either a value or nil, indicating the absence of a value. Optionals are denoted by appending a question mark ? after the type of the value they can contain.</p>
+<h5 id="example">Example:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> phoneNumber: Int? = <span style="color:#ae81ff">1234567890</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> middleName: String? = <span style="color:#66d9ef">nil</span>
+</span></span></code></pre></div><p>In the example above, we declare two optional variables: phoneNumber of type Int? and middleName of type String?. phoneNumber holds a valid integer value, while middleName is explicitly set to nil to indicate the absence of a middle name.</p>
+<h3 id="handling-optionals-safely">Handling Optionals Safely</h3>
+<h4 id="optional-binding">Optional Binding</h4>
+<p>Optional binding is a safe way to unwrap optional values and use them if they are not nil. It is achieved through the if let or guard let constructs.</p>
+<h5 id="example-using-if-let">Example using if let:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">printMiddleName</span>(<span style="color:#66d9ef">_</span> middleName: String?) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> name = middleName {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Middle name: </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;No middle name.&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> fullName: String? = <span style="color:#e6db74">&#34;John Smith&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> nameComponents = fullName?.components(separatedBy: <span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> middleName = nameComponents?[<span style="color:#ae81ff">1</span>] {
+</span></span><span style="display:flex;"><span>    printMiddleName(middleName)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No middle name found.&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In the above example, we use optional binding with if let to safely unwrap the middle name and print it if it exists. If the middle name is nil, we print a message indicating its absence.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h4 id="nil-coalescing-operator">Nil Coalescing Operator</h4>
+<p>The nil coalescing operator (??) provides a concise way to handle optionals and provide a default value if the optional is nil.</p>
+<h5 id="example-1">Example:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> username: String? = <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> defaultUsername: String = <span style="color:#e6db74">&#34;Guest&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> greeting = <span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>username ?? defaultUsername<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>print(greeting)
+</span></span></code></pre></div><p>In the example above, we use the <code>nil</code> coalescing operator to provide a default username <code>Guest</code> in case the username is <code>nil</code>. This ensures that the greeting string is always well-formed.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="optional-chaining">Optional Chaining</h3>
+<p>Optional chaining is a powerful feature that allows you to call properties, methods, and subscripts on an optional that might be nil.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Address</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> street: String
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> city: String
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> zipCode: String
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Person</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(name: String) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.name = name
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> address: Address?
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHello</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Hello, my name is </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> john = Person(name: <span style="color:#e6db74">&#34;John Doe&#34;</span>, address: Address(street: <span style="color:#e6db74">&#34;123 Main St&#34;</span>, city: <span style="color:#e6db74">&#34;New York&#34;</span>, zipCode: <span style="color:#e6db74">&#34;10001&#34;</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> person = Person(name: <span style="color:#e6db74">&#34;Mahi&#34;</span>)
-</span></span><span style="display:flex;"><span>person.sayHello() <span style="color:#75715e">// Output: &#34;Hello, my name is Mahi!&#34;</span>
-</span></span></code></pre></div><p>By using extensions, we separate the core functionality of the Person class from additional features like sayHello(), enhancing code organization and maintainability.</p>
-<h3 id="extending-protocols-in-swift">Extending Protocols in Swift</h3>
-<p>Extending protocols in Swift allows us to provide default implementations for protocol methods. This feature is particularly useful when adding new methods to existing protocols without breaking the code for existing implementations. Let&rsquo;s illustrate this with a protocol extension for an Animal protocol:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">Animal</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String { <span style="color:#66d9ef">get</span> }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">makeSound</span>()
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">Animal</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">makeSound</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Unknown sound&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Conforming to the protocol</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Dog</span>: Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Cat</span>: Animal {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">makeSound</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Meow!&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> dog = Dog(name: <span style="color:#e6db74">&#34;Buddy&#34;</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> cat = Cat(name: <span style="color:#e6db74">&#34;Whiskers&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dog.makeSound() <span style="color:#75715e">// Output: &#34;Unknown sound&#34; (using default implementation)</span>
-</span></span><span style="display:flex;"><span>cat.makeSound() <span style="color:#75715e">// Output: &#34;Meow!&#34;</span>
-</span></span></code></pre></div><h3 id="code-modularity-and-reusability-with-extensions">Code Modularity and Reusability with Extensions</h3>
-<p>Extensions significantly enhance code modularity and reusability by enabling developers to add functionalities to classes and protocols across different files and modules. This segregation of responsibilities ensures a clearer and more organized codebase. Consider the following example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#75715e">// File: MathExtensions.swift</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">Int</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">squared</span>() -&gt; Int {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">self</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">self</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// File: StringExtensions.swift</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">String</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">capitalizeFirstLetter</span>() -&gt; String {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">prefix</span>(<span style="color:#ae81ff">1</span>).capitalized <span style="color:#f92672">+</span> dropFirst()
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In this example, we have two separate extensions, one for <code>Int</code> and the other for <code>String</code>, each residing in its respective file. These extensions can be added to a project without modifying the original implementations of <code>Int</code> and <code>String</code>, providing code reusability and maintainability.</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> johnsCity = john.address?.city ?? <span style="color:#e6db74">&#34;Unknown City&#34;</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;John lives in </span><span style="color:#e6db74">\(</span>johnsCity<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>)
+</span></span></code></pre></div><p>In the example above, we use optional chaining to access the city property of the optional address. If the address is <code>nil</code>, the result of the optional chaining expression is also <code>nil</code>, and the <code>nil</code> coalescing operator provides a default value &ldquo;Unknown City&rdquo;.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>Extensions in Swift are a powerful tool for extending classes and protocols without modifying their original code. By adding new methods, properties, and initializers to classes and providing default implementations for protocol methods, extensions promote code modularity and reusability. Leveraging extensions effectively can significantly improve the development process and maintainability of Swift projects, making it an essential feature for Swift developers to embrace.</p>
+<p>Understanding optional types in Swift is crucial for writing safe and robust code. By embracing optionals, you can effectively handle scenarios where values might be missing, avoiding runtime crashes and improving the overall stability of your applications.</p>
+<p>With optional binding, nil coalescing, and optional chaining, Swift provides a comprehensive set of tools to handle optionals safely and efficiently. Mastering these concepts will empower you to write code that gracefully handles the absence of values and ensures a smooth user experience in your Swift projects. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -382,7 +410,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="Extensions in Swift" data-url="https://mahigarg.github.io/blogs/extensions-in-swift/">
+						<div class="social-share" data-title="Optional Type in Swift" data-url="https://mahigarg.github.io/blogs/optional-type-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -411,8 +439,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/extensions-in-swift\/";   
-									this.page.identifier = "61ae5168f8188da0ff2dd86caa15d31f";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/optional-type-in-swift\/";   
+									this.page.identifier = "7b9512f348e40caf8eb08987a3b67f54";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -443,24 +471,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/generics-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Generics in Swift
+							Do While (Repeat While) Loop in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/protocols-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Protocols in Swift
+							let vs var: Mutability in Swift
 						</span>
 					</a>
 					
