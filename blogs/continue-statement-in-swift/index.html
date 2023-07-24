@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>guard let in Swift</title>
+  <title>Continue Statement in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="guard let in Swift">
-    <meta name="description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta property="og:description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta property="twitter:description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta name="abstract" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta name="summary" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement."> 
+  <meta name="topic" content="Continue Statement in Swift">
+    <meta name="description" content="Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop.">
+    <meta property="og:description" content="Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop.">
+    <meta property="twitter:description" content="Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop.">
+    <meta name="abstract" content="Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop.">
+    <meta name="summary" content="Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-06-30 "> 
+    <meta property="article:published_time" content=" 2023-05-24 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="swift guard let,guard let,guard,let,swift">
+    <meta name="keywords" content="continue statement,swift continue,continue,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>guard let in Swift &middot; Mahi Garg</title>
+    <title>Continue Statement in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ June 30, 2023 / 3 mins read / By Mahi Garg
+				/ May 24, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				guard let in Swift
+				Continue Statement in Swift
 			</h1>
 		</div>
 
@@ -288,9 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<h2 id="guard-let--art-of-early-returns-with-optionals">guard let : Art of Early Returns with Optionals</h2>
-<h3 id="introduction">Introduction:</h3>
-<p>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement. In this blog, we will delve into the world of guard let and explore how it enables developers to gracefully exit functions early when dealing with optional values. By the end of this blog, you will understand why guard let is a powerful tool in your Swift programming arsenal.</p>
+						<p>Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop. In this blog post, we&rsquo;ll explore the continue statement in Swift, along with practical examples to demonstrate its usefulness.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -304,48 +302,17 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="understanding-optionals-in-swift">Understanding Optionals in Swift:</h3>
-<p>Before we jump into the wonders of guard let, let&rsquo;s take a moment to understand optionals in Swift. An optional is a type that can either store a value or be nil. The presence of the question mark &lsquo;?&rsquo; after a type indicates that it is an optional type. For instance, String? denotes an optional String.</p>
-<h3 id="the-purpose-of-guard-let">The Purpose of guard let:</h3>
-<p>guard let is a control flow statement that ensures a value exists within an optional and, if so, binds it to a non-optional variable for use within the current scope. If the value is nil, the guard statement mandates an early exit from the current function, guard clause, or loop. It helps to keep the main body of code clean and readable by eliminating deeply nested if statements.</p>
-<h3 id="syntax-of-guard-let">Syntax of guard let:</h3>
-<p>The syntax of guard let is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">someFunction</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> nonOptionalVar = optionalVar <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code to be executed if optionalVar is nil</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return, throw, or continue with the rest of the function&#39;s code</span>
+<h3 id="skipping-odd-numbers">Skipping Odd Numbers</h3>
+<p>Let&rsquo;s consider a common scenario where we have an array of numbers, and we want to print only the even numbers while skipping the odd ones:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> number <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">1</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span> <span style="color:#75715e">// Skip odd numbers and proceed to the next iteration</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code to be executed if optionalVar is not nil</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// nonOptionalVar is safely unwrapped and ready for use within this scope</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Even number: </span><span style="color:#e6db74">\(</span>number<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="example-of-guard-let">Example of guard let:</h3>
-<p>Let&rsquo;s illustrate the power of guard let with an example. Suppose we have a function that accepts an optional Int and performs some operation on it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">performOperation</span>(value: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Ensure value is not nil using guard let</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> unwrappedValue = value <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Value is nil. Operation cannot be performed.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Continue with the operation using unwrappedValue</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> result = unwrappedValue <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The result is: </span><span style="color:#e6db74">\(</span>result<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In this example, the guard let statement ensures that the value is not nil. If it is nil, the function prints an error message and exits early using the return statement. Otherwise, it continues with the operation, multiplying the unwrappedValue by 2.</p>
+</span></span></code></pre></div><p>In this example, the continue statement is used inside the loop to skip odd numbers (number % 2 == 1). When the condition is met, the loop immediately proceeds to the next iteration, effectively skipping the code below the continue statement.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -359,15 +326,70 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="advantages-of-using-guard-let">Advantages of using guard let:</h3>
-<ul>
-<li><strong>Readability</strong>: guard let enhances code readability by making the code more concise and reducing nested if statements.</li>
-<li><strong>Early Exits</strong>: It encourages the practice of early exits from a function or block if necessary conditions are not met, leading to more structured and organized code.</li>
-<li><strong>Safer Code</strong>: By forcing developers to handle the nil case upfront, guard let reduces the likelihood of runtime crashes due to unwrapping nil optionals.</li>
-<li><strong>Improved Maintainability</strong>: The use of guard let allows you to handle edge cases efficiently, leading to more maintainable and future-proof code.</li>
-</ul>
-<h3 id="conclusion">Conclusion:</h3>
-<p>In conclusion, guard let is a powerful tool that empowers Swift developers to handle optionals gracefully. By ensuring that optionals contain valid values and providing an elegant early exit strategy, guard let promotes code safety, readability, and maintainability. When dealing with optional values in Swift, remember to embrace the art of guard let to write clean, robust, and efficient code. Happy coding! 🚀</p>
+<h3 id="filtering-string-elements">Filtering String Elements</h3>
+<p>The continue statement is not limited to arrays of numbers; it can be used with any type of collection, including arrays of strings. Here&rsquo;s an example where we want to filter out strings with a length greater than a certain value:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> fruits = [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;orange&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>, <span style="color:#e6db74">&#34;pear&#34;</span>, <span style="color:#e6db74">&#34;mango&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> maxLength = <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> fruit <span style="color:#66d9ef">in</span> fruits {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> fruit.count <span style="color:#f92672">&gt;</span> maxLength {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span> <span style="color:#75715e">// Skip the string with a length greater than &#39;maxLength&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Fruit: </span><span style="color:#e6db74">\(</span>fruit<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this case, the continue statement is employed to skip the strings with a length greater than maxLength. The loop continues with the next iteration when the condition is met, resulting in only shorter strings being printed.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="handling-optionals">Handling Optionals</h3>
+<p>The continue statement can be particularly useful when working with optionals. Consider an example where we have an array of optional integers, and we want to print only the non-nil values:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> optionalNumbers: [Int?] = [<span style="color:#ae81ff">10</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#ae81ff">35</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#ae81ff">54</span>, <span style="color:#ae81ff">78</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#ae81ff">22</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> num <span style="color:#66d9ef">in</span> optionalNumbers {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = num <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span> <span style="color:#75715e">// Skip nil values and proceed to the next iteration</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Number: </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, the guard statement is used to unwrap the optional num. If num is nil, the continue statement is executed, and the loop proceeds to the next iteration. If num contains a non-nil value, the unwrapped value is printed.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="skipping-specific-values">Skipping Specific Values</h3>
+<p>The continue statement can also be applied to skip specific values, not just based on conditions. Let&rsquo;s say we have an array of colors, and we want to exclude the color &ldquo;yellow&rdquo; from our list:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> colors = [<span style="color:#e6db74">&#34;red&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>, <span style="color:#e6db74">&#34;yellow&#34;</span>, <span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;purple&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> color <span style="color:#66d9ef">in</span> colors {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> color == <span style="color:#e6db74">&#34;yellow&#34;</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">continue</span> <span style="color:#75715e">// Skip &#34;yellow&#34; and proceed to the next iteration</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Color: </span><span style="color:#e6db74">\(</span>color<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, the continue statement is used to skip the iteration when the color is equal to &ldquo;yellow,&rdquo; effectively excluding it from the output.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The continue statement is a powerful tool that enables developers to control the flow of their loops, skipping unnecessary iterations and improving the efficiency of their code. By using the continue statement judiciously, you can write more concise and optimized loops, enhancing the performance of your Swift applications.</p>
+<p>Remember, with great power comes great responsibility, so make sure to use the continue statement wisely and keep your code readable and maintainable. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -392,7 +414,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="guard let in Swift" data-url="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+						<div class="social-share" data-title="Continue Statement in Swift" data-url="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -421,8 +443,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/guard-let-in-swift\/";   
-									this.page.identifier = "dccf09751815c3ba23284d97e21d96c4";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/continue-statement-in-swift\/";   
+									this.page.identifier = "0f6edf8b20030e1dd962826f18b9d6a8";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -453,24 +475,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/default-statement-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/swift-functions-single-and-multiple-value-returns/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Default Statement in Swift
+							Swift Functions: Single and Multiple Value Returns
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/computed-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/if-let-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Computed Property in Swift
+							if let in Swift
 						</span>
 					</a>
 					

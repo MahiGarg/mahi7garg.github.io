@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>guard let in Swift</title>
+  <title>Default Statement in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="guard let in Swift">
-    <meta name="description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta property="og:description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta property="twitter:description" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta name="abstract" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.">
-    <meta name="summary" content="In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement."> 
+  <meta name="topic" content="Default Statement in Swift">
+    <meta name="description" content="When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios.">
+    <meta property="og:description" content="When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios.">
+    <meta property="twitter:description" content="When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios.">
+    <meta name="abstract" content="When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios.">
+    <meta name="summary" content="When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-06-30 "> 
+    <meta property="article:published_time" content=" 2023-06-24 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/default-statement-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/default-statement-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/default-statement-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="swift guard let,guard let,guard,let,swift">
+    <meta name="keywords" content="default statement,swift default,default,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/default-statement-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>guard let in Swift &middot; Mahi Garg</title>
+    <title>Default Statement in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ June 30, 2023 / 3 mins read / By Mahi Garg
+				/ June 24, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				guard let in Swift
+				Default Statement in Swift
 			</h1>
 		</div>
 
@@ -288,9 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<h2 id="guard-let--art-of-early-returns-with-optionals">guard let : Art of Early Returns with Optionals</h2>
-<h3 id="introduction">Introduction:</h3>
-<p>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement. In this blog, we will delve into the world of guard let and explore how it enables developers to gracefully exit functions early when dealing with optional values. By the end of this blog, you will understand why guard let is a powerful tool in your Swift programming arsenal.</p>
+						<p>When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios. In this blog post, we&rsquo;ll explore the default statement in Swift and learn how to effectively handle unknown cases with elegance.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -304,48 +302,33 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="understanding-optionals-in-swift">Understanding Optionals in Swift:</h3>
-<p>Before we jump into the wonders of guard let, let&rsquo;s take a moment to understand optionals in Swift. An optional is a type that can either store a value or be nil. The presence of the question mark &lsquo;?&rsquo; after a type indicates that it is an optional type. For instance, String? denotes an optional String.</p>
-<h3 id="the-purpose-of-guard-let">The Purpose of guard let:</h3>
-<p>guard let is a control flow statement that ensures a value exists within an optional and, if so, binds it to a non-optional variable for use within the current scope. If the value is nil, the guard statement mandates an early exit from the current function, guard clause, or loop. It helps to keep the main body of code clean and readable by eliminating deeply nested if statements.</p>
-<h3 id="syntax-of-guard-let">Syntax of guard let:</h3>
-<p>The syntax of guard let is as follows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">someFunction</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> nonOptionalVar = optionalVar <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code to be executed if optionalVar is nil</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Return, throw, or continue with the rest of the function&#39;s code</span>
+<h3 id="basic-usage-of-default">Basic Usage of default</h3>
+<p>Let&rsquo;s start with a simple example of a switch statement to determine the day of the week based on a given number:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getDayOfWeek</span>(<span style="color:#66d9ef">_</span> dayNumber: Int) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> dayNumber {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Monday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Tuesday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Thursday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Friday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">7</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Saturday&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Unknown Day&#34;</span> <span style="color:#75715e">// Handling unknown cases with &#39;default&#39;</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code to be executed if optionalVar is not nil</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// nonOptionalVar is safely unwrapped and ready for use within this scope</span>
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="example-of-guard-let">Example of guard let:</h3>
-<p>Let&rsquo;s illustrate the power of guard let with an example. Suppose we have a function that accepts an optional Int and performs some operation on it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">performOperation</span>(value: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Ensure value is not nil using guard let</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> unwrappedValue = value <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Value is nil. Operation cannot be performed.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Continue with the operation using unwrappedValue</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> result = unwrappedValue <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The result is: </span><span style="color:#e6db74">\(</span>result<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In this example, the guard let statement ensures that the value is not nil. If it is nil, the function prints an error message and exits early using the return statement. Otherwise, it continues with the operation, multiplying the unwrappedValue by 2.</p>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> dayNumber = <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> dayOfWeek = getDayOfWeek(dayNumber)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;The day of the week is: </span><span style="color:#e6db74">\(</span>dayOfWeek<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>In this example, we use the <code>default</code> statement to handle the case when the dayNumber does not match any of the specified cases. If dayNumber is not in the range of 1 to 7, the default case is executed, returning <code>Unknown Day.</code></p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -359,15 +342,61 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="advantages-of-using-guard-let">Advantages of using guard let:</h3>
-<ul>
-<li><strong>Readability</strong>: guard let enhances code readability by making the code more concise and reducing nested if statements.</li>
-<li><strong>Early Exits</strong>: It encourages the practice of early exits from a function or block if necessary conditions are not met, leading to more structured and organized code.</li>
-<li><strong>Safer Code</strong>: By forcing developers to handle the nil case upfront, guard let reduces the likelihood of runtime crashes due to unwrapping nil optionals.</li>
-<li><strong>Improved Maintainability</strong>: The use of guard let allows you to handle edge cases efficiently, leading to more maintainable and future-proof code.</li>
-</ul>
-<h3 id="conclusion">Conclusion:</h3>
-<p>In conclusion, guard let is a powerful tool that empowers Swift developers to handle optionals gracefully. By ensuring that optionals contain valid values and providing an elegant early exit strategy, guard let promotes code safety, readability, and maintainability. When dealing with optional values in Swift, remember to embrace the art of guard let to write clean, robust, and efficient code. Happy coding! 🚀</p>
+<h2 id="handling-enumerations-with-default">Handling Enumerations with default</h2>
+<p>Enums are a powerful feature in Swift, but they can sometimes evolve with new cases added in subsequent versions of your app. To handle future cases gracefully, you can use the default statement in a switch that deals with enum values:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">Weather</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> sunny
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> cloudy
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> rainy
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// case snowy // Uncomment this line to see how &#39;default&#39; handles the new case.</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getWeatherDescription</span>(<span style="color:#66d9ef">_</span> weather: Weather) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> weather {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> .sunny:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;It&#39;s a sunny day.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> .cloudy:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Expect some clouds today.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> .rainy:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Don&#39;t forget your umbrella.&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Weather forecast not available.&#34;</span> <span style="color:#75715e">// Handling future cases with &#39;default&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> currentWeather = Weather.snowy
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> weatherDescription = getWeatherDescription(currentWeather)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Weather forecast: </span><span style="color:#e6db74">\(</span>weatherDescription<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><p>In this example, we have an enum Weather representing different weather conditions. If you uncomment the snowy case, the default statement will handle it gracefully as the new case wasn&rsquo;t explicitly listed in the switch.</p>
+<div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="default-for-optional-binding">default for Optional Binding</h3>
+<p>Using the default statement with optional binding is another useful technique. Let&rsquo;s consider an example where we retrieve an element from an array using an index, but the index might be out of bounds:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getElement</span>(at index: Int, <span style="color:#66d9ef">in</span> array: [Int]) -&gt; String {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> index <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> index <span style="color:#f92672">&lt;</span> array.count <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Index out of bounds.&#34;</span> <span style="color:#75715e">// Handling invalid index with &#39;default&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Element at index </span><span style="color:#e6db74">\(</span>index<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>array[index]<span style="color:#e6db74">)</span><span style="color:#e6db74">.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">23</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">8</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> indexToRetrieve = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> element = getElement(at: indexToRetrieve, <span style="color:#66d9ef">in</span>: numbers)
+</span></span><span style="display:flex;"><span>print(element)
+</span></span></code></pre></div><p>In this example, the default statement handles the case where the index provided is out of bounds. Instead of causing a crash or unexpected behavior, we provide a helpful message.</p>
+<p>The default statement is a powerful tool in Swift, ensuring that your code gracefully handles unknown or unexpected scenarios. It&rsquo;s particularly useful in switch statements when dealing with enumerations or handling user inputs. By using the default statement effectively, you can enhance the robustness and reliability of your Swift applications.</p>
+<p>Remember to use the default statement thoughtfully, considering potential future changes in your code, and provide helpful responses to users to create a seamless and delightful user experience. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -392,7 +421,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="guard let in Swift" data-url="https://mahigarg.github.io/blogs/guard-let-in-swift/">
+						<div class="social-share" data-title="Default Statement in Swift" data-url="https://mahigarg.github.io/blogs/default-statement-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -421,8 +450,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/guard-let-in-swift\/";   
-									this.page.identifier = "dccf09751815c3ba23284d97e21d96c4";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/default-statement-in-swift\/";   
+									this.page.identifier = "0e93029b79bba72eca2214b5a40c3eb8";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -453,24 +482,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/default-statement-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/if-let-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Default Statement in Swift
+							if let in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/computed-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/guard-let-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Computed Property in Swift
+							guard let in Swift
 						</span>
 					</a>
 					

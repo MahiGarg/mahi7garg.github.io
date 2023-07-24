@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>If let vs Guard let in Swift</title>
+      <link>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</guid>
+      <description>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent.</description>
+    </item>
+    
+    <item>
       <title>Binary Serach : Swift</title>
       <link>https://mahigarg.github.io/gists/binary-serach-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
@@ -77,6 +86,15 @@
       
       <guid>https://mahigarg.github.io/gists/instagram-post-swiftui/</guid>
       <description>Coding an Instagram post in SwiftUI is an engaging project. You can use various components like images, text, and buttons to design a post layout.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Property in Swift</title>
+      <link>https://mahigarg.github.io/blogs/lazy-property-in-swift/</link>
+      <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/lazy-property-in-swift/</guid>
+      <description>Swift&amp;rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed.</description>
     </item>
     
     <item>
@@ -125,6 +143,15 @@
     </item>
     
     <item>
+      <title>Default Statement in Swift</title>
+      <link>https://mahigarg.github.io/blogs/default-statement-in-swift/</link>
+      <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/default-statement-in-swift/</guid>
+      <description>When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully.</description>
+    </item>
+    
+    <item>
       <title>Dutch National Flag : Sort Int Array of 0, 1 and 2 : Swift</title>
       <link>https://mahigarg.github.io/gists/dutch-national-flag-swift/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
@@ -152,12 +179,12 @@
     </item>
     
     <item>
-      <title>Lazy Property in Swift</title>
-      <link>https://mahigarg.github.io/blogs/lazy-property-in-swift/</link>
-      <pubDate>Sat, 03 Jun 2023 00:00:00 +0000</pubDate>
+      <title>Continue Statement in Swift</title>
+      <link>https://mahigarg.github.io/blogs/continue-statement-in-swift/</link>
+      <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://mahigarg.github.io/blogs/lazy-property-in-swift/</guid>
-      <description>Swift&amp;rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed.</description>
+      <guid>https://mahigarg.github.io/blogs/continue-statement-in-swift/</guid>
+      <description>Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action.</description>
     </item>
     
     <item>
@@ -188,6 +215,15 @@
     </item>
     
     <item>
+      <title>Break Statement in Swift</title>
+      <link>https://mahigarg.github.io/blogs/break-statement-in-swift/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/break-statement-in-swift/</guid>
+      <description>Control flow is an essential aspect of any programming language, and Swift is no exception. Swift provides a powerful and flexible control flow mechanism that allows developers to direct the flow of their code execution based on certain conditions.</description>
+    </item>
+    
+    <item>
       <title>Ternary Conditional Operator in Swift</title>
       <link>https://mahigarg.github.io/blogs/ternary-conditional-operator-in-swift/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
@@ -203,6 +239,15 @@
       
       <guid>https://mahigarg.github.io/blogs/enums-in-swift/</guid>
       <description>When it comes to writing clean, maintainable, and bug-free code, Swift provides a powerful feature called enums or enumerations. Enums are a fundamental data type that allows developers to define a set of related values in a type-safe manner.</description>
+    </item>
+    
+    <item>
+      <title>Inout in Swift</title>
+      <link>https://mahigarg.github.io/blogs/inout-in-swift/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/inout-in-swift/</guid>
+      <description>Swift, being a modern and versatile programming language, offers various features to enhance code functionality and readability. One such powerful feature is the inout parameter, which allows two-way communication between a function and its caller.</description>
     </item>
     
     <item>
