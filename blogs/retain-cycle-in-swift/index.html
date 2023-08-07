@@ -265,7 +265,7 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ August 6, 2023 / 4 mins read / By Mahi Garg
+				/ August 6, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
 				Retain Cycle in Swift
@@ -337,62 +337,6 @@
 </span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span>
 </span></span><span style="display:flex;"><span>apartment = <span style="color:#66d9ef">nil</span>
 </span></span></code></pre></div><div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="what-are-classes">What are Classes?</h3>
-<p>In Swift, a class is a reference type that defines a blueprint for creating objects. Unlike structs, which are value types, classes are passed around by reference, meaning multiple variables can point to the same underlying instance. Classes support inheritance, enabling you to create hierarchies of related objects, and they play a pivotal role in achieving abstraction and polymorphism, two essential principles of OOP.</p>
-<h3 id="declaring-classes">Declaring Classes</h3>
-<p>Let&rsquo;s start by creating a simple class to represent a Person:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(name: String, age: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.name = name
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.age = age
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHello</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Hello, my name is </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74"> and I am </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74"> years old.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>In this example, we&rsquo;ve defined a class called <code>Person</code> with two properties: <code>name</code> and <code>age</code>, along with an initializer to set their initial values. The class also contains a method <code>sayHello()</code> to introduce the person.</p>
-<div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="creating-instances-of-a-class">Creating Instances of a Class</h3>
-<p>Now that we have our Person class, let&rsquo;s create instances of it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> john = Person(name: <span style="color:#e6db74">&#34;John&#34;</span>, age: <span style="color:#ae81ff">30</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> jane = Person(name: <span style="color:#e6db74">&#34;Jane&#34;</span>, age: <span style="color:#ae81ff">25</span>)
-</span></span></code></pre></div><h3 id="accessing-properties-and-calling-methods">Accessing Properties and Calling Methods</h3>
-<p>We can access the properties and call methods of the instances using dot notation:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>print(john.name) <span style="color:#75715e">// Output: John</span>
-</span></span><span style="display:flex;"><span>print(jane.age)  <span style="color:#75715e">// Output: 25</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>john.sayHello() <span style="color:#75715e">// Output: Hello, my name is John and I am 30 years old.</span>
-</span></span><span style="display:flex;"><span>jane.sayHello() <span style="color:#75715e">// Output: Hello, my name is Jane and I am 25 years old.</span>
-</span></span></code></pre></div><p>In this example, even when you set <code>person</code> and <code>apartment</code> to nil, the deinitializers won&rsquo;t be called because the retain cycle prevents them from being deallocated.</p>
-<div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
      style="display:block"
@@ -528,7 +472,7 @@
 							<script>
 								var disqus_config = function () {
 									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/retain-cycle-in-swift\/";   
-									this.page.identifier = "777b8bdd199332cf0711b772ba439d46";  
+									
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
