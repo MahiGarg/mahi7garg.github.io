@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>If let vs Guard let in Swift</title>
+  <title>CoreData in SwiftUI</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,34 +13,34 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="If let vs Guard let in Swift">
-    <meta name="description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="og:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="twitter:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="abstract" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="summary" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values."> 
+  <meta name="topic" content="CoreData in SwiftUI">
+    <meta name="description" content="Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.">
+    <meta property="og:description" content="Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.">
+    <meta property="twitter:description" content="Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.">
+    <meta name="abstract" content="Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.">
+    <meta name="summary" content="Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-10 "> 
+    <meta property="article:published_time" content=" 2023-08-06 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/coredata-swiftui/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/coredata-swiftui/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/coredata-swiftui/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="if let vs guard let,if let,guard let,swift">
+    <meta name="keywords" content="coredata,coredata in swift,coredata in swiftui">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/coredata-swiftui/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
     <meta name="coverage" content="Worldwide" />
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
-    <meta property="og:tags" content="Swift"> 
-    <title>If let vs Guard let in Swift &middot; Mahi Garg</title>
+    <meta property="og:tags" content="SwiftUI"> 
+    <title>CoreData in SwiftUI &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 10, 2023 / 3 mins read / By Mahi Garg
+				/ August 6, 2023 / 2 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				If let vs Guard let in Swift
+				CoreData in SwiftUI
 			</h1>
 		</div>
 
@@ -288,7 +288,8 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
+						<p>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience. Simplify synchronization between data and UI layers for efficient, scalable app development.</p>
+<p>Let us understand the setup of Core Data in SwiftUI</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -302,53 +303,34 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="if-let-unwrapping">if let Unwrapping</h3>
-<p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> value = number {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
-<div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
-<p>guard let is used to perform early exits from a function or scope if an optional value is nil. It ensures that the unwrapped value is available for the rest of the function or scope, avoiding nested conditionals. Let&rsquo;s see how guard let works:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = number <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> uses <code>guard let</code> to unwrap the number. If number is <code>nil</code>, the function immediately exits, avoiding unnecessary computation. Otherwise, the value is available for the rest of the function to calculate the square root.</p>
-<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
-<p>The primary difference between <code>if let</code> and <code>guard let</code> lies in their behavior and use cases:</p>
+<h3 id="create-core-data-model">Create Core Data Model</h3>
 <ul>
-<li><strong>if let</strong>: Use if let when you want to conditionally perform an action based on the presence of a value. It&rsquo;s suitable for short-lived local unwrapping and can be used inside loops and nested conditionals.</li>
-<li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
+<li>Create new file of type Data Model under Core Data.</li>
+<li>Add entity by tapping on <code>+</code> button. Then add attributes.
+Your file will look like below after adding EmployeeModel with EmployeeEntity and name and id as attributes</li>
 </ul>
+<p><img src="/images/blog/blogs/coredata-in-swiftui/coredata-in-swiftui.webp" alt="CoreData in SwiftUI"></p>
+<h3 id="create-core-view-model">Create Core View Model</h3>
+<p>This swift file will contain initialization and methods required to work core data.</p>
+<p>Let us give a look on the code.</p>
+<h3 id="initialization-of-core-data">Initialization of Core Data</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">CoreData</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EmployeeViewModel</span>: ObservableObject {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> context: NSPersistentContainer
+</span></span><span style="display:flex;"><span>    @Published <span style="color:#66d9ef">var</span> employeeEntity: [EmployeeEntity] = []
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(){
+</span></span><span style="display:flex;"><span>        context = NSPersistentContainer(name: <span style="color:#e6db74">&#34;EmployeeModel&#34;</span>)
+</span></span><span style="display:flex;"><span>        context.loadPersistentStores { description, error <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> error = error {
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;error loading: </span><span style="color:#e6db74">\(</span>error<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Here, EmployeeModel is initialized using NSPersistentContainer.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -362,30 +344,62 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
-<p>Both if let and guard let can be used for unwrapping multiple optional values, making them versatile tools in Swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processNumbers</span>(<span style="color:#66d9ef">_</span> firstNumber: Int?, <span style="color:#66d9ef">_</span> secondNumber: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> number1 = firstNumber,
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> number2 = secondNumber {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> sum = number1 <span style="color:#f92672">+</span> number2
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The sum of </span><span style="color:#e6db74">\(</span>number1<span style="color:#e6db74">)</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">\(</span>number2<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>sum<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid numbers or nil values.&#34;</span>)
+<h3 id="fetching-core-data">Fetching Core Data</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchData</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> request = NSFetchRequest&lt;EmployeeEntity&gt;(entityName: <span style="color:#e6db74">&#34;EmployeeEntity&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>            employeeEntity = <span style="color:#66d9ef">try</span> context.viewContext.fetch(request)
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#66d9ef">let</span> error) {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;error fetching: </span><span style="color:#e6db74">\(</span>error<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> a: Int? = <span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> b: Int? = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>processNumbers(a, b)
-</span></span></code></pre></div><p>In this example, the function <code>processNumbers(_:_:)</code> uses if let to unwrap both <code>firstNumber</code> and <code>secondNumber</code>. If both numbers are non-nil, the sum is calculated and printed. Otherwise, the else block handles the case when either or both numbers are nil.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>In conclusion, both if let and guard let are indispensable tools for safely unwrapping optional values in Swift. Understanding when and how to use them can significantly enhance your code&rsquo;s readability, maintainability, and safety. Remember the following key points:</p>
-<ul>
-<li>Use <code>if let</code> for conditional unwrapping within a limited scope.</li>
-<li>Use <code>guard let</code> for early exits and to ensure unwrapped values are available throughout the function or scope.</li>
-<li>Both constructs can handle multiple optional unwrapping efficiently.</li>
-</ul>
-<p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
+</span></span></code></pre></div><h3 id="adding-data-to-core-data-entity">Adding data to Core Data Entity</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addData</span>(name: String,
+</span></span><span style="display:flex;"><span>                 id: Int16) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> newEmployee = EmployeeEntity(context: context.viewContext)
+</span></span><span style="display:flex;"><span>        newEmployee.id = id
+</span></span><span style="display:flex;"><span>        newEmployee.name = name
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.saveData()
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="saving-core-data">Saving Core Data</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">saveData</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span> context.viewContext.save()
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (<span style="color:#66d9ef">let</span> error) {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;error saving: </span><span style="color:#e6db74">\(</span>error<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="deleting-data-from-core-data">Deleting data from Core Data</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">deleteData</span>(indexSet: IndexSet) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> index = indexSet.first <span style="color:#66d9ef">else</span> { <span style="color:#66d9ef">return</span> }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> entity = employeeEntity[index]
+</span></span><span style="display:flex;"><span>        context.viewContext.delete(entity)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.saveData()
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="using-core-data-in-swiftui-view">Using Core Data in swiftUI View</h3>
+<p>Create a @StateObject variable Viewmodel.
+Use the publised property of Core Data Entity to updae the UI.
+Publised property of Core Data Entity will work similarly as an data array.
+Data an be displayed by Using ForEach in stack (HStack or VStack) or List view can also be used to do so.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">EmployeeView</span>: View {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    @StateObject <span style="color:#66d9ef">var</span> viewModel = EmployeeViewModel()
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// code</span>
+</span></span></code></pre></div><p>Feel free to refer my demo project on Core Data in SwiftUI <a href="https://github.com/MahiGarg/coredata-swiftui">coredata-swiftui</a></p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -405,12 +419,12 @@
 						<div class="tags-links">
 							<span>Tags:</span>
 							
-							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							<a href="https://mahigarg.github.io/tags/swiftui/" rel="tag">SwiftUI</a>
 							
 						</div>
 						
 
-						<div class="social-share" data-title="If let vs Guard let in Swift" data-url="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+						<div class="social-share" data-title="CoreData in SwiftUI" data-url="https://mahigarg.github.io/blogs/coredata-swiftui/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -439,8 +453,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/if-let-vs-guard-let-in-swift\/";   
-									this.page.identifier = "e2e2fa4410478a919a50ba12235d5374";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/coredata-swiftui\/";   
+									this.page.identifier = "d3cf0d8a81628608d89b421523d7150c";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -471,26 +485,17 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Lazy Property in Swift
+							Retain Cycle in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
-					
-					<a href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
-						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
-							Next Post
-						</span>
-						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Type Checking (is Operator) in Swift
-						</span>
-					</a>
 					
 				</div>
 			</div>

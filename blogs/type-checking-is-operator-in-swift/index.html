@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>If let vs Guard let in Swift</title>
+  <title>Type Checking (is Operator) in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="If let vs Guard let in Swift">
-    <meta name="description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="og:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="twitter:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="abstract" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="summary" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values."> 
+  <meta name="topic" content="Type Checking (is Operator) in Swift">
+    <meta name="description" content="Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.">
+    <meta property="og:description" content="Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.">
+    <meta property="twitter:description" content="Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.">
+    <meta name="abstract" content="Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.">
+    <meta name="summary" content="Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-10 "> 
+    <meta property="article:published_time" content=" 2023-07-12 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="if let vs guard let,if let,guard let,swift">
+    <meta name="keywords" content="type check swift,swift type check,is,is operator">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>If let vs Guard let in Swift &middot; Mahi Garg</title>
+    <title>Type Checking (is Operator) in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 10, 2023 / 3 mins read / By Mahi Garg
+				/ July 12, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				If let vs Guard let in Swift
+				Type Checking (is Operator) in Swift
 			</h1>
 		</div>
 
@@ -288,7 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
+						<p>Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code. In this blog post, we&rsquo;ll delve into the world of type checking in Swift, exploring its syntax, use cases, and providing real-world examples to help you grasp this essential concept.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -302,21 +302,32 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="if-let-unwrapping">if let Unwrapping</h3>
-<p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> value = number {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
+<h3 id="type-checking-with-is-and-as">Type Checking with is and as:</h3>
+<p>In Swift, the <code>is</code> keyword is used for type checking, allowing you to check whether an instance is of a certain class or conforms to a specific protocol. The <code>as</code> keyword, on the other hand, is used for type casting, enabling you to downcast instances to a subclass or a more specific type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> { }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span>: Animal { }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Cat</span>: Animal { }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> myDog = Dog()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> myCat = Cat()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> myDog <span style="color:#66d9ef">is</span> Animal {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;myDog is an Animal&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
-<div class="col-xs-12 googleads">
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> myCat <span style="color:#66d9ef">is</span> Dog {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;myCat is a Dog&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;myCat is not a Dog&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> someAnimal: Animal = myDog
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> someDog = someAnimal <span style="color:#66d9ef">as</span>? Dog {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;someAnimal is a Dog&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;someAnimal is not a Dog&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
      style="display:block"
@@ -329,27 +340,32 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
-<p>guard let is used to perform early exits from a function or scope if an optional value is nil. It ensures that the unwrapped value is available for the rest of the function or scope, avoiding nested conditionals. Let&rsquo;s see how guard let works:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = number <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+<h3 id="using-type-casting-to-access-subclass-members">Using Type Casting to Access Subclass Members:</h3>
+<p>Type casting is particularly useful when you have a hierarchy of classes and want to access members specific to a subclass.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Shape</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">area</span>() -&gt; Double {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0.0</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> uses <code>guard let</code> to unwrap the number. If number is <code>nil</code>, the function immediately exits, avoiding unnecessary computation. Otherwise, the value is available for the rest of the function to calculate the square root.</p>
-<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
-<p>The primary difference between <code>if let</code> and <code>guard let</code> lies in their behavior and use cases:</p>
-<ul>
-<li><strong>if let</strong>: Use if let when you want to conditionally perform an action based on the presence of a value. It&rsquo;s suitable for short-lived local unwrapping and can be used inside loops and nested conditionals.</li>
-<li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
-</ul>
-<div class="col-xs-12 googleads">
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Circle</span>: Shape {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> radius: Double
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(radius: Double) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.radius = radius
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">area</span>() -&gt; Double {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Double.pi <span style="color:#f92672">*</span> radius <span style="color:#f92672">*</span> radius
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> myShape: Shape = Circle(radius: <span style="color:#ae81ff">5.0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> myCircle = myShape <span style="color:#66d9ef">as</span>? Circle {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Area of the circle: </span><span style="color:#e6db74">\(</span>myCircle.area<span style="color:#e6db74">())</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Not a circle&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
      style="display:block"
@@ -362,30 +378,47 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
-<p>Both if let and guard let can be used for unwrapping multiple optional values, making them versatile tools in Swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processNumbers</span>(<span style="color:#66d9ef">_</span> firstNumber: Int?, <span style="color:#66d9ef">_</span> secondNumber: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> number1 = firstNumber,
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> number2 = secondNumber {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> sum = number1 <span style="color:#f92672">+</span> number2
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The sum of </span><span style="color:#e6db74">\(</span>number1<span style="color:#e6db74">)</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">\(</span>number2<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>sum<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid numbers or nil values.&#34;</span>)
+<h3 id="type-checking-with-protocols">Type Checking with Protocols:</h3>
+<p>Type checking is also useful when working with protocols. You can determine whether an instance conforms to a protocol and then conditionally use protocol-specific behavior.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">protocol</span> <span style="color:#a6e22e">Printable</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">printDetails</span>()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span>: Printable {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> title: String
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(title: String) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.title = title
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">printDetails</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Book Title: </span><span style="color:#e6db74">\(</span>title<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> a: Int? = <span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> b: Int? = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>processNumbers(a, b)
-</span></span></code></pre></div><p>In this example, the function <code>processNumbers(_:_:)</code> uses if let to unwrap both <code>firstNumber</code> and <code>secondNumber</code>. If both numbers are non-nil, the sum is calculated and printed. Otherwise, the else block handles the case when either or both numbers are nil.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>In conclusion, both if let and guard let are indispensable tools for safely unwrapping optional values in Swift. Understanding when and how to use them can significantly enhance your code&rsquo;s readability, maintainability, and safety. Remember the following key points:</p>
-<ul>
-<li>Use <code>if let</code> for conditional unwrapping within a limited scope.</li>
-<li>Use <code>guard let</code> for early exits and to ensure unwrapped values are available throughout the function or scope.</li>
-<li>Both constructs can handle multiple optional unwrapping efficiently.</li>
-</ul>
-<p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Magazine</span>: Printable {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> issueNumber: Int
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(issueNumber: Int) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.issueNumber = issueNumber
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">printDetails</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Magazine Issue: </span><span style="color:#e6db74">\(</span>issueNumber<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> items: [Printable] = [Book(title: <span style="color:#e6db74">&#34;Swift Programming&#34;</span>), Magazine(issueNumber: <span style="color:#ae81ff">42</span>)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> item <span style="color:#66d9ef">in</span> items {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> printableItem = item <span style="color:#66d9ef">as</span>? Book {
+</span></span><span style="display:flex;"><span>        printableItem.printDetails()
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> printableItem = item <span style="color:#66d9ef">as</span>? Magazine {
+</span></span><span style="display:flex;"><span>        printableItem.printDetails()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="conclusion">Conclusion:</h3>
+<p>Type checking in Swift empowers you to create more dynamic and adaptable code by determining the type of instances at runtime. Whether it&rsquo;s checking class hierarchies or protocol conformance, type checking plays a crucial role in enhancing the flexibility and functionality of your Swift applications. By mastering the is and as keywords and understanding their applications, you can create versatile and robust code that gracefully handles different types and situations. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -410,7 +443,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="If let vs Guard let in Swift" data-url="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+						<div class="social-share" data-title="Type Checking (is Operator) in Swift" data-url="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -439,8 +472,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/if-let-vs-guard-let-in-swift\/";   
-									this.page.identifier = "e2e2fa4410478a919a50ba12235d5374";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/type-checking-is-operator-in-swift\/";   
+									this.page.identifier = "1f402ba896dd231d5ae76a37318a2f9b";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -471,24 +504,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Lazy Property in Swift
+							If let vs Guard let in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Type Checking (is Operator) in Swift
+							Type Casting (as Operator) in Swift
 						</span>
 					</a>
 					

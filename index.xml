@@ -6,7 +6,61 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CoreData in SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
+      <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
+    </item>
+    
+    <item>
+      <title>Retain Cycle in Swift</title>
+      <link>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</guid>
+      <description>Swift&amp;rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&amp;rsquo;s a phenomenon called retain cycle that can sneakily lead to memory leaks.</description>
+    </item>
+    
+    <item>
+      <title>@objc in swift</title>
+      <link>https://mahigarg.github.io/blogs/objc-in-swift/</link>
+      <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/objc-in-swift/</guid>
+      <description>The @objc attribute in Swift facilitates seamless interaction between Swift and Objective-C codebases by exposing Swift declarations to the Objective-C runtime.</description>
+    </item>
+    
+    <item>
+      <title>class vs struct: Swift</title>
+      <link>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</link>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</guid>
+      <description>In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&amp;rsquo;s design, efficiency, and behavior.</description>
+    </item>
+    
+    <item>
+      <title>Error Handling with do-catch in Swift</title>
+      <link>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</link>
+      <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</guid>
+      <description>Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.</description>
+    </item>
+    
+    <item>
+      <title>As Operator (as vs as? vs as!) in Swift</title>
+      <link>https://mahigarg.github.io/blogs/as-operator-in-swift/</link>
+      <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/as-operator-in-swift/</guid>
+      <description>Type casting is a fundamental concept in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
+    </item>
+    
     <item>
       <title>Bubble Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/bubble-sort-swift/</link>
@@ -14,6 +68,24 @@
       
       <guid>https://mahigarg.github.io/gists/bubble-sort-swift/</guid>
       <description>Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted.</description>
+    </item>
+    
+    <item>
+      <title>Is Operator (is vs is? vs is!) in Swift</title>
+      <link>https://mahigarg.github.io/blogs/is-operator-in-swift/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/is-operator-in-swift/</guid>
+      <description>Type checking is a crucial concept in Swift that allows you to determine the type of an instance or value at runtime.</description>
+    </item>
+    
+    <item>
+      <title>Try Statement (Try vs Try? vs Try!) in SWift</title>
+      <link>https://mahigarg.github.io/blogs/try-statement-in-swift/</link>
+      <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/try-statement-in-swift/</guid>
+      <description>Error handling is an integral part of any programming language, and Swift provides a versatile set of tools to handle errors effectively.</description>
     </item>
     
     <item>
@@ -26,12 +98,30 @@
     </item>
     
     <item>
+      <title>Type Casting (as Operator) in Swift</title>
+      <link>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</link>
+      <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</guid>
+      <description>Type casting is a powerful feature in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
+    </item>
+    
+    <item>
       <title>Linked List : Swift</title>
       <link>https://mahigarg.github.io/gists/linked-list-methods-swift/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/gists/linked-list-methods-swift/</guid>
       <description>A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node.</description>
+    </item>
+    
+    <item>
+      <title>Type Checking (is Operator) in Swift</title>
+      <link>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</link>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</guid>
+      <description>Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.</description>
     </item>
     
     <item>

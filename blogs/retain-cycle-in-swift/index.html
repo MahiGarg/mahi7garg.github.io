@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>If let vs Guard let in Swift</title>
+  <title>Retain Cycle in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="If let vs Guard let in Swift">
-    <meta name="description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="og:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="twitter:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="abstract" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="summary" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values."> 
+  <meta name="topic" content="Retain Cycle in Swift">
+    <meta name="description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
+    <meta property="og:description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
+    <meta property="twitter:description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
+    <meta name="abstract" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
+    <meta name="summary" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-10 "> 
+    <meta property="article:published_time" content=" 2023-08-06 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="if let vs guard let,if let,guard let,swift">
+    <meta name="keywords" content="retain cycle swift,retain cycle,memory management,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>If let vs Guard let in Swift &middot; Mahi Garg</title>
+    <title>Retain Cycle in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 10, 2023 / 3 mins read / By Mahi Garg
+				/ August 6, 2023 / 4 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				If let vs Guard let in Swift
+				Retain Cycle in Swift
 			</h1>
 		</div>
 
@@ -288,7 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
+						<p>Swift&rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&rsquo;s a phenomenon called <code>retain cycle</code> that can sneakily lead to memory leaks. In this blog post, we&rsquo;ll delve into the world of retain cycles, understand how they occur, and learn effective strategies to prevent them.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -302,20 +302,71 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="if-let-unwrapping">if let Unwrapping</h3>
-<p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> value = number {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
+<h3 id="understanding-retain-cycles">Understanding Retain Cycles</h3>
+<p>A retain cycle, also known as a <code>circular reference,</code> occurs when two or more objects reference each other strongly, preventing them from being deallocated. As a result, memory leaks can occur, leading to your app consuming more memory than necessary.</p>
+<p>Imagine two classes, <code>Person</code> and <code>Apartment</code>, where each <code>Person</code> owns an <code>Apartment</code>, and each <code>Apartment</code> has a reference to its <code>Tenant</code>. If the references between these objects are strong, a retain cycle can form.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> apartment: Apartment?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person initialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person deinitialized&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Apartment</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> tenant: Person?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment initialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment deinitialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> person: Person?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> apartment: Apartment?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person = Person()
+</span></span><span style="display:flex;"><span>apartment = Apartment()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person?.apartment = apartment
+</span></span><span style="display:flex;"><span>apartment?.tenant = person
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>apartment = <span style="color:#66d9ef">nil</span>
+</span></span></code></pre></div><div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h3 id="what-are-classes">What are Classes?</h3>
+<p>In Swift, a class is a reference type that defines a blueprint for creating objects. Unlike structs, which are value types, classes are passed around by reference, meaning multiple variables can point to the same underlying instance. Classes support inheritance, enabling you to create hierarchies of related objects, and they play a pivotal role in achieving abstraction and polymorphism, two essential principles of OOP.</p>
+<h3 id="declaring-classes">Declaring Classes</h3>
+<p>Let&rsquo;s start by creating a simple class to represent a Person:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> name: String
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(name: String, age: Int) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.name = name
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.age = age
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">sayHello</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Hello, my name is </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74"> and I am </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74"> years old.&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example, we&rsquo;ve defined a class called <code>Person</code> with two properties: <code>name</code> and <code>age</code>, along with an initializer to set their initial values. The class also contains a method <code>sayHello()</code> to introduce the person.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -329,26 +380,18 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
-<p>guard let is used to perform early exits from a function or scope if an optional value is nil. It ensures that the unwrapped value is available for the rest of the function or scope, avoiding nested conditionals. Let&rsquo;s see how guard let works:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = number <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>}
+<h3 id="creating-instances-of-a-class">Creating Instances of a Class</h3>
+<p>Now that we have our Person class, let&rsquo;s create instances of it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> john = Person(name: <span style="color:#e6db74">&#34;John&#34;</span>, age: <span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> jane = Person(name: <span style="color:#e6db74">&#34;Jane&#34;</span>, age: <span style="color:#ae81ff">25</span>)
+</span></span></code></pre></div><h3 id="accessing-properties-and-calling-methods">Accessing Properties and Calling Methods</h3>
+<p>We can access the properties and call methods of the instances using dot notation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>print(john.name) <span style="color:#75715e">// Output: John</span>
+</span></span><span style="display:flex;"><span>print(jane.age)  <span style="color:#75715e">// Output: 25</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> uses <code>guard let</code> to unwrap the number. If number is <code>nil</code>, the function immediately exits, avoiding unnecessary computation. Otherwise, the value is available for the rest of the function to calculate the square root.</p>
-<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
-<p>The primary difference between <code>if let</code> and <code>guard let</code> lies in their behavior and use cases:</p>
-<ul>
-<li><strong>if let</strong>: Use if let when you want to conditionally perform an action based on the presence of a value. It&rsquo;s suitable for short-lived local unwrapping and can be used inside loops and nested conditionals.</li>
-<li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
-</ul>
+</span></span><span style="display:flex;"><span>john.sayHello() <span style="color:#75715e">// Output: Hello, my name is John and I am 30 years old.</span>
+</span></span><span style="display:flex;"><span>jane.sayHello() <span style="color:#75715e">// Output: Hello, my name is Jane and I am 25 years old.</span>
+</span></span></code></pre></div><p>In this example, even when you set <code>person</code> and <code>apartment</code> to nil, the deinitializers won&rsquo;t be called because the retain cycle prevents them from being deallocated.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -362,30 +405,75 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
-<p>Both if let and guard let can be used for unwrapping multiple optional values, making them versatile tools in Swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processNumbers</span>(<span style="color:#66d9ef">_</span> firstNumber: Int?, <span style="color:#66d9ef">_</span> secondNumber: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> number1 = firstNumber,
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> number2 = secondNumber {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> sum = number1 <span style="color:#f92672">+</span> number2
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The sum of </span><span style="color:#e6db74">\(</span>number1<span style="color:#e6db74">)</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">\(</span>number2<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>sum<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid numbers or nil values.&#34;</span>)
+<h3 id="preventing-retain-cycles">Preventing Retain Cycles</h3>
+<p>To avoid retain cycles and the memory leaks they cause, Swift provides several strategies:</p>
+<h4 id="weak-references">Weak References</h4>
+<p>Use the <code>weak</code> keyword to create a weak reference. A weak reference doesn&rsquo;t keep a strong hold on the referenced object, and it automatically becomes <code>nil</code> when the object it references is deallocated.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> apartment: Apartment?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person initialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person deinitialized&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> a: Int? = <span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> b: Int? = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>processNumbers(a, b)
-</span></span></code></pre></div><p>In this example, the function <code>processNumbers(_:_:)</code> uses if let to unwrap both <code>firstNumber</code> and <code>secondNumber</code>. If both numbers are non-nil, the sum is calculated and printed. Otherwise, the else block handles the case when either or both numbers are nil.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>In conclusion, both if let and guard let are indispensable tools for safely unwrapping optional values in Swift. Understanding when and how to use them can significantly enhance your code&rsquo;s readability, maintainability, and safety. Remember the following key points:</p>
-<ul>
-<li>Use <code>if let</code> for conditional unwrapping within a limited scope.</li>
-<li>Use <code>guard let</code> for early exits and to ensure unwrapped values are available throughout the function or scope.</li>
-<li>Both constructs can handle multiple optional unwrapping efficiently.</li>
-</ul>
-<p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Apartment</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> tenant: Person?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment initialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment deinitialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> person: Person?
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> apartment: Apartment?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person = Person()
+</span></span><span style="display:flex;"><span>apartment = Apartment()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person?.apartment = apartment
+</span></span><span style="display:flex;"><span>apartment?.tenant = person
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>apartment = <span style="color:#66d9ef">nil</span>
+</span></span></code></pre></div><div class="col-xs-12 googleads">
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+<h4 id="unowned-references">Unowned References</h4>
+<p>An unowned reference is similar to a weak reference, but it&rsquo;s assumed that the reference will never be nil. Be cautious when using unowned references, as they can lead to crashes if accessed after the referenced object has been deallocated.</p>
+<h4 id="capture-lists">Capture Lists</h4>
+<p>When using closures, especially in scenarios like delegates, use capture lists to prevent retain cycles. A capture list defines the relationship between the closure and the objects it references. Declare these references as weak or unowned within the capture list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViewController</span>: UIViewController {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> dataManager: DataManager!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viewDidLoad</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.viewDidLoad()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        dataManager.loadData { [<span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">self</span>] result <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">self</span>?.handleData(result)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleData</span>(<span style="color:#66d9ef">_</span> result: Result&lt;Data, Error&gt;) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle the data</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
+<p>Retain cycles can be subtle and tricky, causing memory leaks in your app. However, by understanding how retain cycles occur and employing strategies like using weak and unowned references and capture lists, you can effectively prevent these memory leaks. As a responsible Swift developer, mastering retain cycle prevention is a crucial step towards building efficient and reliable applications.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -410,7 +498,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="If let vs Guard let in Swift" data-url="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+						<div class="social-share" data-title="Retain Cycle in Swift" data-url="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -439,8 +527,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/if-let-vs-guard-let-in-swift\/";   
-									this.page.identifier = "e2e2fa4410478a919a50ba12235d5374";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/retain-cycle-in-swift\/";   
+									this.page.identifier = "777b8bdd199332cf0711b772ba439d46";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -471,24 +559,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/objc-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Lazy Property in Swift
+							@objc in swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/coredata-swiftui/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Type Checking (is Operator) in Swift
+							CoreData in SwiftUI
 						</span>
 					</a>
 					

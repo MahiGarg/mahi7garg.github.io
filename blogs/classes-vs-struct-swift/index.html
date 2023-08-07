@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>If let vs Guard let in Swift</title>
+  <title>class vs struct: Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="If let vs Guard let in Swift">
-    <meta name="description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="og:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="twitter:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="abstract" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="summary" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values."> 
+  <meta name="topic" content="class vs struct: Swift">
+    <meta name="description" content="In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.">
+    <meta property="og:description" content="In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.">
+    <meta property="twitter:description" content="In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.">
+    <meta name="abstract" content="In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.">
+    <meta name="summary" content="In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-10 "> 
+    <meta property="article:published_time" content=" 2023-08-02 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="if let vs guard let,if let,guard let,swift">
+    <meta name="keywords" content="classes swift,swift classes,class,inheritance,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>If let vs Guard let in Swift &middot; Mahi Garg</title>
+    <title>class vs struct: Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 10, 2023 / 3 mins read / By Mahi Garg
+				/ August 2, 2023 / 2 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				If let vs Guard let in Swift
+				class vs struct: Swift
 			</h1>
 		</div>
 
@@ -288,7 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
+						<p>In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&rsquo;s design, efficiency, and behavior. In this blog, we&rsquo;ll embark on a journey through class and struct differences, focusing on scenarios where classes outshine structs. By exploring practical examples, we&rsquo;ll illuminate the unique capabilities that classes bring to the table.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -302,53 +302,51 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="if-let-unwrapping">if let Unwrapping</h3>
-<p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> value = number {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
-<div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
-<p>guard let is used to perform early exits from a function or scope if an optional value is nil. It ensures that the unwrapped value is available for the rest of the function or scope, avoiding nested conditionals. Let&rsquo;s see how guard let works:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = number <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> uses <code>guard let</code> to unwrap the number. If number is <code>nil</code>, the function immediately exits, avoiding unnecessary computation. Otherwise, the value is available for the rest of the function to calculate the square root.</p>
-<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
-<p>The primary difference between <code>if let</code> and <code>guard let</code> lies in their behavior and use cases:</p>
+<h4 id="understanding-the-basics">Understanding the Basics</h4>
+<p>Before diving into the specifics, let&rsquo;s recap the fundamental contrasts between classes and structs:</p>
+<h3 id="classes">Classes:</h3>
 <ul>
-<li><strong>if let</strong>: Use if let when you want to conditionally perform an action based on the presence of a value. It&rsquo;s suitable for short-lived local unwrapping and can be used inside loops and nested conditionals.</li>
-<li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
+<li>Reference types</li>
+<li>Support inheritance</li>
+<li>Have a deinit method for custom deallocation</li>
+<li>Allow for shared instances with reference semantics</li>
 </ul>
+<h3 id="structs">Structs:</h3>
+<ul>
+<li>Value types</li>
+<li>No inheritance but support protocol conformance</li>
+<li>No deinit since they&rsquo;re automatically deallocated</li>
+<li>Create distinct copies for each instance</li>
+</ul>
+<h3 id="harnessing-class-power">Harnessing Class Power</h3>
+<h4 id="example-hierarchical-relationships">Example: Hierarchical Relationships</h4>
+<p>When your application demands a hierarchy of related entities with shared properties and behaviors, classes excel. Consider modeling a vehicle fleet:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vehicle</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> brand: String
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(brand: String) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.brand = brand
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">startEngine</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Engine started for </span><span style="color:#e6db74">\(</span>brand<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>: Vehicle {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> passengers: Int
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(brand: String, passengers: Int) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.passengers = passengers
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#66d9ef">init</span>(brand: brand)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">startEngine</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.startEngine()
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Car is ready to roll!&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Here, using classes enables you to establish a hierarchy by subclassing <code>Vehicle</code> with a specialized class <code>Car</code>.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -362,30 +360,38 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
-<p>Both if let and guard let can be used for unwrapping multiple optional values, making them versatile tools in Swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processNumbers</span>(<span style="color:#66d9ef">_</span> firstNumber: Int?, <span style="color:#66d9ef">_</span> secondNumber: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> number1 = firstNumber,
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> number2 = secondNumber {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> sum = number1 <span style="color:#f92672">+</span> number2
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The sum of </span><span style="color:#e6db74">\(</span>number1<span style="color:#e6db74">)</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">\(</span>number2<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>sum<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid numbers or nil values.&#34;</span>)
+<h4 id="example-shared-instances">Example: Shared Instances</h4>
+<p>When dealing with complex data models or entities that require shared state, classes shine. Let&rsquo;s consider managing a shopping cart:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ShoppingCart</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">let</span> shared = ShoppingCart()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> items: [String] = []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">init</span>() {}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> cart1 = ShoppingCart.shared
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> cart2 = ShoppingCart.shared
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cart1.items.append(<span style="color:#e6db74">&#34;Item A&#34;</span>)
+</span></span><span style="display:flex;"><span>print(cart2.items)  <span style="color:#75715e">// Output: [&#34;Item A&#34;]</span>
+</span></span></code></pre></div><p>In this case, the shared instance of <code>ShoppingCart</code> serves as a centralized storage for shopping items, thanks to classes&rsquo; reference semantics.</p>
+<h4 id="example-custom-deinitialization">Example: Custom Deinitialization</h4>
+<p>If you need to perform cleanup operations before an instance is deallocated, classes offer the <code>deinit</code> method. Consider a database connection:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseConnection</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Database connection established&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Database connection closed&#34;</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> a: Int? = <span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> b: Int? = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>processNumbers(a, b)
-</span></span></code></pre></div><p>In this example, the function <code>processNumbers(_:_:)</code> uses if let to unwrap both <code>firstNumber</code> and <code>secondNumber</code>. If both numbers are non-nil, the sum is calculated and printed. Otherwise, the else block handles the case when either or both numbers are nil.</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> connection: DatabaseConnection? = DatabaseConnection()
+</span></span><span style="display:flex;"><span>connection = <span style="color:#66d9ef">nil</span>  <span style="color:#75715e">// Output: Database connection closed</span>
+</span></span></code></pre></div><p>Here, the <code>deinit</code> method ensures proper resource release, showcasing classes&rsquo; capacity for custom cleanup.</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>In conclusion, both if let and guard let are indispensable tools for safely unwrapping optional values in Swift. Understanding when and how to use them can significantly enhance your code&rsquo;s readability, maintainability, and safety. Remember the following key points:</p>
-<ul>
-<li>Use <code>if let</code> for conditional unwrapping within a limited scope.</li>
-<li>Use <code>guard let</code> for early exits and to ensure unwrapped values are available throughout the function or scope.</li>
-<li>Both constructs can handle multiple optional unwrapping efficiently.</li>
-</ul>
-<p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
+<p>While structs have their merits in scenarios like immutability and simple data structures, classes provide indispensable features like inheritance, reference semantics, and custom deinitialization. Through real-world examples, we&rsquo;ve uncovered how classes outperform structs in handling hierarchical relationships, shared instances, and cleanup tasks. By recognizing these distinctions, you&rsquo;ll adeptly wield both classes and structs to create efficient, organized, and powerful Swift codebases.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -410,7 +416,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="If let vs Guard let in Swift" data-url="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+						<div class="social-share" data-title="class vs struct: Swift" data-url="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -439,8 +445,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/if-let-vs-guard-let-in-swift\/";   
-									this.page.identifier = "e2e2fa4410478a919a50ba12235d5374";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/classes-vs-struct-swift\/";   
+									this.page.identifier = "fa544c56cc680aa51a783006582a4400";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -471,24 +477,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Lazy Property in Swift
+							Error Handling with do-catch in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/objc-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Type Checking (is Operator) in Swift
+							@objc in swift
 						</span>
 					</a>
 					

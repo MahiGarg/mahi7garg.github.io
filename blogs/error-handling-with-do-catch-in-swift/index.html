@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>If let vs Guard let in Swift</title>
+  <title>Error Handling with do-catch in Swift</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="If let vs Guard let in Swift">
-    <meta name="description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="og:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta property="twitter:description" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="abstract" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values.">
-    <meta name="summary" content="Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values."> 
+  <meta name="topic" content="Error Handling with do-catch in Swift">
+    <meta name="description" content="Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.">
+    <meta property="og:description" content="Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.">
+    <meta property="twitter:description" content="Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.">
+    <meta name="abstract" content="Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.">
+    <meta name="summary" content="Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-10 "> 
+    <meta property="article:published_time" content=" 2023-07-22 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="if let vs guard let,if let,guard let,swift">
+    <meta name="keywords" content="error handling,do catch,try catch,swift">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -40,7 +40,7 @@
     <meta name="distribution" content="Global">
     <meta name="rating" content="safe for kids" /> 
     <meta property="og:tags" content="Swift"> 
-    <title>If let vs Guard let in Swift &middot; Mahi Garg</title>
+    <title>Error Handling with do-catch in Swift &middot; Mahi Garg</title>
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
@@ -265,10 +265,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ July 10, 2023 / 3 mins read / By Mahi Garg
+				/ July 22, 2023 / 3 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				If let vs Guard let in Swift
+				Error Handling with do-catch in Swift
 			</h1>
 		</div>
 
@@ -288,7 +288,7 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
+						<p>Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the <code>do-catch</code> construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations. In this blog post, we&rsquo;ll delve into the world of <code>do-catch</code> in Swift, exploring its syntax, best practices, and real-world examples to help you master this essential feature.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -302,21 +302,35 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="if-let-unwrapping">if let Unwrapping</h3>
-<p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> value = number {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
+<h3 id="understanding-do-catch">Understanding do-catch:</h3>
+<p>The <code>do-catch</code> statement is used to enclose code that might throw an error, allowing you to handle the error in a controlled manner. The basic syntax is as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Code that might throw an error</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Handle the error</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="handling-errors-with-catch">Handling Errors with catch:</h3>
+<p>You can use the <code>catch</code> clause to specify how to handle specific errors or error patterns. Swift allows you to use pattern matching to catch specific error cases.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">enum</span> <span style="color:#a6e22e">NetworkError</span>: Error {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> noConnection
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> serverError(statusCode: Int)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
-<div class="col-xs-12 googleads">
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">fetchData</span>() <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Simulate a network error</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> NetworkError.noConnection
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> fetchData()
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> NetworkError.noConnection {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;No internet connection.&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> NetworkError.serverError(<span style="color:#66d9ef">let</span> statusCode) {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Server error with status code: </span><span style="color:#e6db74">\(</span>statusCode<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;An unknown error occurred.&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
      style="display:block"
@@ -329,27 +343,35 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
-<p>guard let is used to perform early exits from a function or scope if an optional value is nil. It ensures that the unwrapped value is available for the rest of the function or scope, avoiding nested conditionals. Let&rsquo;s see how guard let works:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateSquareRoot</span>(<span style="color:#66d9ef">_</span> number: Double?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> value = number <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid number or nil value.&#34;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>
+<h3 id="using-try-and-try">Using try? and try!:</h3>
+<p>You can use <code>try?</code> to convert errors into optional values, and <code>try!</code> to indicate that you believe an error won&rsquo;t be thrown. However, be cautious when using <code>try!</code> as it can lead to runtime crashes if an error does occur.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">convertToNumber</span>(<span style="color:#66d9ef">_</span> string: String) <span style="color:#66d9ef">throws</span> -&gt; Int {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> number = Int(string) <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> NSError(domain: <span style="color:#e6db74">&#34;ConversionError&#34;</span>, code: <span style="color:#ae81ff">1</span>, userInfo: <span style="color:#66d9ef">nil</span>)
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> squareRoot = sqrt(value)
-</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;The square root of </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>squareRoot<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> number
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> inputNumber: Double? = <span style="color:#ae81ff">25</span>
-</span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
-</span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> uses <code>guard let</code> to unwrap the number. If number is <code>nil</code>, the function immediately exits, avoiding unnecessary computation. Otherwise, the value is available for the rest of the function to calculate the square root.</p>
-<h3 id="differences-and-use-cases">Differences and Use Cases</h3>
-<p>The primary difference between <code>if let</code> and <code>guard let</code> lies in their behavior and use cases:</p>
-<ul>
-<li><strong>if let</strong>: Use if let when you want to conditionally perform an action based on the presence of a value. It&rsquo;s suitable for short-lived local unwrapping and can be used inside loops and nested conditionals.</li>
-<li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
-</ul>
-<div class="col-xs-12 googleads">
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> result1 = <span style="color:#66d9ef">try</span>? convertToNumber(<span style="color:#e6db74">&#34;42&#34;</span>) <span style="color:#75715e">// Returns an optional Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> result2 = <span style="color:#66d9ef">try</span>? convertToNumber(<span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e">// Returns nil</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> result3 = <span style="color:#66d9ef">try</span>! convertToNumber(<span style="color:#e6db74">&#34;123&#34;</span>) <span style="color:#75715e">// Forced unwrapping, assumes no error</span>
+</span></span></code></pre></div><h3 id="defer-statements">defer Statements:</h3>
+<p>The <code>defer</code> statement is used to execute code just before a function returns, regardless of whether an error was thrown or not. It&rsquo;s often used for cleanup tasks.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processFile</span>(filename: String) <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> file = openFile(filename)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">defer</span> {
+</span></span><span style="display:flex;"><span>        closeFile(file)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Process the file</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> processFile(filename: <span style="color:#e6db74">&#34;data.txt&#34;</span>)
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Error processing file: </span><span style="color:#e6db74">\(</span>error<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
      style="display:block"
@@ -362,30 +384,20 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
-<p>Both if let and guard let can be used for unwrapping multiple optional values, making them versatile tools in Swift:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">processNumbers</span>(<span style="color:#66d9ef">_</span> firstNumber: Int?, <span style="color:#66d9ef">_</span> secondNumber: Int?) {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> number1 = firstNumber,
-</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">let</span> number2 = secondNumber {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">let</span> sum = number1 <span style="color:#f92672">+</span> number2
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;The sum of </span><span style="color:#e6db74">\(</span>number1<span style="color:#e6db74">)</span><span style="color:#e6db74"> and </span><span style="color:#e6db74">\(</span>number2<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>sum<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
-</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Invalid numbers or nil values.&#34;</span>)
+<h3 id="chaining-do-catch-blocks">Chaining do-catch Blocks:</h3>
+<p>You can chain multiple <code>do-catch</code> blocks to handle errors at different levels of your code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">performComplexTask</span>() <span style="color:#66d9ef">throws</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> task1()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> task2()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> task3()
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;An error occurred while performing complex task: </span><span style="color:#e6db74">\(</span>error<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> error
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> a: Int? = <span style="color:#ae81ff">10</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> b: Int? = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>processNumbers(a, b)
-</span></span></code></pre></div><p>In this example, the function <code>processNumbers(_:_:)</code> uses if let to unwrap both <code>firstNumber</code> and <code>secondNumber</code>. If both numbers are non-nil, the sum is calculated and printed. Otherwise, the else block handles the case when either or both numbers are nil.</p>
-<h3 id="conclusion">Conclusion</h3>
-<p>In conclusion, both if let and guard let are indispensable tools for safely unwrapping optional values in Swift. Understanding when and how to use them can significantly enhance your code&rsquo;s readability, maintainability, and safety. Remember the following key points:</p>
-<ul>
-<li>Use <code>if let</code> for conditional unwrapping within a limited scope.</li>
-<li>Use <code>guard let</code> for early exits and to ensure unwrapped values are available throughout the function or scope.</li>
-<li>Both constructs can handle multiple optional unwrapping efficiently.</li>
-</ul>
-<p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
+</span></span></code></pre></div><h3 id="conclusion">Conclusion:</h3>
+<p>The <code>do-catch</code> construct is a powerful tool in Swift for handling errors and ensuring the stability and reliability of your applications. By understanding the syntax, leveraging pattern matching, and employing techniques like <code>try?</code>, <code>try!</code>, and <code>defer</code>, you can gracefully handle errors and take appropriate actions to keep your code robust and maintainable. Incorporate these error handling practices into your Swift projects to create software that can gracefully handle unexpected situations and deliver a better user experience. Happy error-free coding! 🚀</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -410,7 +422,7 @@
 						</div>
 						
 
-						<div class="social-share" data-title="If let vs Guard let in Swift" data-url="https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/">
+						<div class="social-share" data-title="Error Handling with do-catch in Swift" data-url="https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/">
 							<span>Share:</span>
 							<a class="share-btn share-btn-facebook share-btn-1" title="Share on Facebook">
 								<i class="fab fa-facebook"></i>
@@ -439,8 +451,8 @@
 							<div id="disqus_thread"></div>
 							<script>
 								var disqus_config = function () {
-									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/if-let-vs-guard-let-in-swift\/";   
-									this.page.identifier = "e2e2fa4410478a919a50ba12235d5374";  
+									this.page.url = "https:\/\/mahigarg.github.io\/blogs\/error-handling-with-do-catch-in-swift\/";   
+									this.page.identifier = "8c60fa8d11677571e95c096afff9f51e";  
 								};
 								(function() {  
 									var d = document, s = d.createElement('script');
@@ -471,24 +483,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/as-operator-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Lazy Property in Swift
+							As Operator (as vs as? vs as!) in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Type Checking (is Operator) in Swift
+							class vs struct: Swift
 						</span>
 					</a>
 					

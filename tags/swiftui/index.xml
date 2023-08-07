@@ -6,7 +6,16 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CoreData in SwiftUI</title>
+      <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
+      <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
+    </item>
+    
     <item>
       <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
