@@ -481,6 +481,13 @@ body.dark-skin {
 	background: #222831;
 }
 
+@media screen and (max-width: 767px) {
+	.dark-skin .works-items.works-list-items .works-item {
+		background: #1d222a;
+		border-radius: 20px;
+	}
+}
+
 .dark-skin .works-items.works-list-items .works-item .desc .name {
 	color: #fff;
 }
