@@ -6,14 +6,23 @@
     <description>Recent content in Blogs on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CoreData in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
-      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
       <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
+    </item>
+    
+    <item>
+      <title>Conditional Expressions in Swift</title>
+      <link>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</link>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</guid>
+      <description>Conditional expressions lie at the heart of programming, allowing developers to make decisions and control the flow of their code. In Swift, these expressions provide the foundation for branching logic and executing different paths based on conditions.</description>
     </item>
     
     <item>
@@ -41,6 +50,42 @@
       
       <guid>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</guid>
       <description>In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&amp;rsquo;s design, efficiency, and behavior.</description>
+    </item>
+    
+    <item>
+      <title>Nested Methods in swift</title>
+      <link>https://mahigarg.github.io/blogs/nested-methods-in-swift/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/nested-methods-in-swift/</guid>
+      <description>Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function.</description>
+    </item>
+    
+    <item>
+      <title>Super in Swift</title>
+      <link>https://mahigarg.github.io/blogs/super-in-swift/</link>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/super-in-swift/</guid>
+      <description>In the dynamic world of Swift programming, the super keyword serves as a bridge connecting the past and present—enabling seamless inheritance and collaboration between parent and child classes.</description>
+    </item>
+    
+    <item>
+      <title>Swift Enum in detail</title>
+      <link>https://mahigarg.github.io/blogs/swift-enum-in-detail/</link>
+      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/swift-enum-in-detail/</guid>
+      <description>Enumerations, commonly known as enums, are a versatile feature in Swift that allow you to define a group of related values in a structured manner.</description>
+    </item>
+    
+    <item>
+      <title>Self in Swift</title>
+      <link>https://mahigarg.github.io/blogs/self-in-swift/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/self-in-swift/</guid>
+      <description>In the realm of Swift programming, mastering the self keyword is essential for crafting clean and efficient code. This small but mighty keyword plays a significant role in object-oriented design, allowing developers to access and manipulate instance-specific properties and methods.</description>
     </item>
     
     <item>

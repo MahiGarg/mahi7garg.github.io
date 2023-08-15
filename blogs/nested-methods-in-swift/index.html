@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Retain Cycle in Swift &middot; Mahi Garg</title>
+  <title>Nested Methods in swift &middot; Mahi Garg</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,26 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Retain Cycle in Swift">
-    <meta name="description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
-    <meta property="og:description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
-    <meta property="twitter:description" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
-    <meta name="abstract" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks.">
-    <meta name="summary" content="Swift&#39;s automatic reference counting (ARC) system does a great job of managing memory, there&#39;s a phenomenon called retain cycle that can sneakily lead to memory leaks."> 
+  <meta name="topic" content="Nested Methods in swift">
+    <meta name="description" content="Nested methods provide an efficient way to encapsulate functionality within a larger function&#39;s scope. Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&#39;s a powerful mechanism for modularizing code and keeping related functionality together.">
+    <meta property="og:description" content="Nested methods provide an efficient way to encapsulate functionality within a larger function&#39;s scope. Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&#39;s a powerful mechanism for modularizing code and keeping related functionality together.">
+    <meta property="twitter:description" content="Nested methods provide an efficient way to encapsulate functionality within a larger function&#39;s scope. Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&#39;s a powerful mechanism for modularizing code and keeping related functionality together.">
+    <meta name="abstract" content="Nested methods provide an efficient way to encapsulate functionality within a larger function&#39;s scope. Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&#39;s a powerful mechanism for modularizing code and keeping related functionality together.">
+    <meta name="summary" content="Nested methods provide an efficient way to encapsulate functionality within a larger function&#39;s scope. Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&#39;s a powerful mechanism for modularizing code and keeping related functionality together."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-08-06 "> 
+    <meta property="article:published_time" content=" 2023-07-30 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/nested-methods-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/nested-methods-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/nested-methods-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
 
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="retain cycle swift,retain cycle,memory management,swift">
+    <meta name="keywords" content="methods in swift,nested methods in swift,nested methods,swift,ios">
 
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/retain-cycle-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/nested-methods-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -244,10 +244,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ August 6, 2023 / 3 mins read / By Mahi Garg
+				/ July 30, 2023 / 2 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Retain Cycle in Swift
+				Nested Methods in swift
 			</h1>
 		</div>
 
@@ -267,7 +267,20 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>Swift&rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&rsquo;s a phenomenon called <code>retain cycle</code> that can sneakily lead to memory leaks. In this blog post, we&rsquo;ll delve into the world of retain cycles, understand how they occur, and learn effective strategies to prevent them.</p>
+						<p>Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&rsquo;s a powerful mechanism for modularizing code and keeping related functionality together.</p>
+<h3 id="basic-nested-method">Basic Nested Method</h3>
+<p>Let&rsquo;s consider a simple example where we calculate the area of a rectangle using nested methods:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calculateRectangleArea</span>(length: Double, width: Double) -&gt; Double {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">multiply</span>() -&gt; Double {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> length <span style="color:#f92672">*</span> width
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> multiply()
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> area = calculateRectangleArea(length: <span style="color:#ae81ff">5.0</span>, width: <span style="color:#ae81ff">3.0</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Rectangle Area: </span><span style="color:#e6db74">\(</span>area<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// Output: Rectangle Area: 15.0</span>
+</span></span></code></pre></div><p>In this example, the multiply function is nested within calculateRectangleArea, keeping the area calculation logic contained.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -281,122 +294,47 @@
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </div>
-<h3 id="understanding-retain-cycles">Understanding Retain Cycles</h3>
-<p>A retain cycle, also known as a <code>circular reference,</code> occurs when two or more objects reference each other strongly, preventing them from being deallocated. As a result, memory leaks can occur, leading to your app consuming more memory than necessary.</p>
-<p>Imagine two classes, <code>Person</code> and <code>Apartment</code>, where each <code>Person</code> owns an <code>Apartment</code>, and each <code>Apartment</code> has a reference to its <code>Tenant</code>. If the references between these objects are strong, a retain cycle can form.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> apartment: Apartment?
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person initialized&#34;</span>)
+<h3 id="benefits-of-nested-methods">Benefits of Nested Methods:</h3>
+<ul>
+<li><strong>Encapsulation</strong>: Nested methods help keep related code together, enhancing code organization and readability.</li>
+<li><strong>Scope Isolation</strong>: Nested methods are only accessible within their parent function, reducing the risk of naming conflicts.</li>
+<li><strong>Code Reusability</strong>: You can create specialized functions for a particular task within a broader context without cluttering the global scope.</li>
+</ul>
+<h3 id="nested-method-with-parameters">Nested Method with Parameters</h3>
+<p>Here&rsquo;s an example demonstrating a nested method with parameters:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">greet</span>(name: String) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">getGreeting</span>() -&gt; String {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello, </span><span style="color:#e6db74">\(</span>name<span style="color:#e6db74">)</span><span style="color:#e6db74">!&#34;</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person deinitialized&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> greeting = getGreeting()
+</span></span><span style="display:flex;"><span>    print(greeting)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Apartment</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> tenant: Person?
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment initialized&#34;</span>)
+</span></span><span style="display:flex;"><span>greet(name: <span style="color:#e6db74">&#34;Alice&#34;</span>) <span style="color:#75715e">// Output: Hello, Alice!</span>
+</span></span></code></pre></div><h3 id="practical-use-case">Practical Use Case</h3>
+<p>Nested methods are particularly handy for scenarios like data validation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">validateInput</span>(email: String, password: String) -&gt; Bool {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isValidEmail</span>() -&gt; Bool {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Check email format</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment deinitialized&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">isValidPassword</span>() -&gt; Bool {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Check password complexity</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
 </span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> isValidEmail() <span style="color:#f92672">&amp;&amp;</span> isValidPassword()
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> person: Person?
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> apartment: Apartment?
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = Person()
-</span></span><span style="display:flex;"><span>apartment = Apartment()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person?.apartment = apartment
-</span></span><span style="display:flex;"><span>apartment?.tenant = person
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>apartment = <span style="color:#66d9ef">nil</span>
-</span></span></code></pre></div><div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h3 id="preventing-retain-cycles">Preventing Retain Cycles</h3>
-<p>To avoid retain cycles and the memory leaks they cause, Swift provides several strategies:</p>
-<h4 id="weak-references">Weak References</h4>
-<p>Use the <code>weak</code> keyword to create a weak reference. A weak reference doesn&rsquo;t keep a strong hold on the referenced object, and it automatically becomes <code>nil</code> when the object it references is deallocated.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> apartment: Apartment?
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person initialized&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Person deinitialized&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Apartment</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">var</span> tenant: Person?
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment initialized&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">deinit</span> {
-</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;Apartment deinitialized&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> person: Person?
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> apartment: Apartment?
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = Person()
-</span></span><span style="display:flex;"><span>apartment = Apartment()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person?.apartment = apartment
-</span></span><span style="display:flex;"><span>apartment?.tenant = person
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>apartment = <span style="color:#66d9ef">nil</span>
-</span></span></code></pre></div><div class="col-xs-12 googleads">
-    
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-</div>
-<h4 id="unowned-references">Unowned References</h4>
-<p>An unowned reference is similar to a weak reference, but it&rsquo;s assumed that the reference will never be nil. Be cautious when using unowned references, as they can lead to crashes if accessed after the referenced object has been deallocated.</p>
-<h4 id="capture-lists">Capture Lists</h4>
-<p>When using closures, especially in scenarios like delegates, use capture lists to prevent retain cycles. A capture list defines the relationship between the closure and the objects it references. Declare these references as weak or unowned within the capture list.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViewController</span>: UIViewController {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> dataManager: DataManager!
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">viewDidLoad</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.viewDidLoad()
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        dataManager.loadData { [<span style="color:#66d9ef">weak</span> <span style="color:#66d9ef">self</span>] result <span style="color:#66d9ef">in</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">self</span>?.handleData(result)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleData</span>(<span style="color:#66d9ef">_</span> result: Result&lt;Data, Error&gt;) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle the data</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
-<p>Retain cycles can be subtle and tricky, causing memory leaks in your app. However, by understanding how retain cycles occur and employing strategies like using weak and unowned references and capture lists, you can effectively prevent these memory leaks. As a responsible Swift developer, mastering retain cycle prevention is a crucial step towards building efficient and reliable applications.</p>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> isValid = validateInput(email: <span style="color:#e6db74">&#34;example@email.com&#34;</span>, password: <span style="color:#e6db74">&#34;SecureP@ssw0rd&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Input Valid: </span><span style="color:#e6db74">\(</span>isValid<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>) <span style="color:#75715e">// Output: Input Valid: true</span>
+</span></span></code></pre></div><h3 id="considerations">Considerations:</h3>
+<p>Nested methods should be used judiciously, primarily for code organization purposes.
+Overuse of nested methods can lead to overly complex code. For intricate functionalities, consider extracting separate functions.</p>
+<h3 id="conclusion">Conclusion:</h3>
+<p>Swift&rsquo;s nested methods are a valuable tool for encapsulating related functionality within a function&rsquo;s scope, promoting clean code organization and enhanced readability. By understanding their benefits and leveraging examples, developers can use nested methods effectively to streamline their Swift programming projects.</p>
 <div class="col-xs-12 googleads">
     
     <ins class="adsbygoogle"
@@ -445,24 +383,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/objc-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/super-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							@objc in swift
+							Super in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/conditional-expressions-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/classes-vs-struct-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Conditional Expressions in Swift
+							class vs struct: Swift
 						</span>
 					</a>
 					
