@@ -6,7 +6,52 @@
     <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initializer in Swift</title>
+      <link>https://mahigarg.github.io/blogs/initializer-in-swift/</link>
+      <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/initializer-in-swift/</guid>
+      <description>In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state.</description>
+    </item>
+    
+    <item>
+      <title>Thread Safety in Swift</title>
+      <link>https://mahigarg.github.io/blogs/thread-safety-in-swift/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/thread-safety-in-swift/</guid>
+      <description>Thread safety refers to a programming concept where data or resources are accessed and modified in a way that ensures correct behavior and prevents conflicts when multiple threads (concurrent execution units) are working with the same data simultaneously.</description>
+    </item>
+    
+    <item>
+      <title>Unowned vs Optional Unowned References in Swift</title>
+      <link>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</link>
+      <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</guid>
+      <description>Memory management is a critical consideration in Swift development, and managing references is a key aspect of this. Two reference types that come into play are unowned and optional unowned references.</description>
+    </item>
+    
+    <item>
+      <title>Weak vs Unowned References in Swift</title>
+      <link>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</link>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</guid>
+      <description>Memory management is a vital consideration when developing applications, and Swift provides developers with different reference types to manage memory effectively.</description>
+    </item>
+    
+    <item>
+      <title>Strong vs Weak vs Unowned References in Swift</title>
+      <link>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</guid>
+      <description>In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps.</description>
+    </item>
+    
     <item>
       <title>Conditional Expressions in Swift</title>
       <link>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</link>

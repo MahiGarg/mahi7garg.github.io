@@ -28,10 +28,10 @@
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
-
+    
     <meta name="robots" content="index,follow">
     <meta name="keywords" content="continue statement,swift continue,continue,swift">
-
+    
     <link rel="canonical" href="https://mahigarg.github.io/blogs/continue-statement-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
@@ -134,7 +134,7 @@
 			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
 
 				
-				<a href="#" class="switcher-btn">
+				<a href="#" class="switcher-btn" aria-label="switcher-button">
 					<span class="sw-before">
 						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
 							<path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -148,7 +148,7 @@
 				</a>
 
 				
-				<a href="#" class="menu-btn">
+				<a href="#" class="menu-btn" aria-label="menu-button">
 					<span></span>
 					<span></span>
 				</a>
@@ -268,18 +268,8 @@
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
 						<p>Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop. In this blog post, we&rsquo;ll explore the continue statement in Swift, along with practical examples to demonstrate its usefulness.</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="skipping-odd-numbers">Skipping Odd Numbers</h3>
 <p>Let&rsquo;s consider a common scenario where we have an array of numbers, and we want to print only the even numbers while skipping the odd ones:</p>
@@ -292,18 +282,8 @@
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Even number: </span><span style="color:#e6db74">\(</span>number<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In this example, the continue statement is used inside the loop to skip odd numbers (number % 2 == 1). When the condition is met, the loop immediately proceeds to the next iteration, effectively skipping the code below the continue statement.</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="filtering-string-elements">Filtering String Elements</h3>
 <p>The continue statement is not limited to arrays of numbers; it can be used with any type of collection, including arrays of strings. Here&rsquo;s an example where we want to filter out strings with a length greater than a certain value:</p>
@@ -318,18 +298,8 @@
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Fruit: </span><span style="color:#e6db74">\(</span>fruit<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In this case, the continue statement is employed to skip the strings with a length greater than maxLength. The loop continues with the next iteration when the condition is met, resulting in only shorter strings being printed.</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="handling-optionals">Handling Optionals</h3>
 <p>The continue statement can be particularly useful when working with optionals. Consider an example where we have an array of optional integers, and we want to print only the non-nil values:</p>
@@ -342,18 +312,8 @@
 </span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Number: </span><span style="color:#e6db74">\(</span>value<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In this example, the guard statement is used to unwrap the optional num. If num is nil, the continue statement is executed, and the loop proceeds to the next iteration. If num contains a non-nil value, the unwrapped value is printed.</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="skipping-specific-values">Skipping Specific Values</h3>
 <p>The continue statement can also be applied to skip specific values, not just based on conditions. Let&rsquo;s say we have an array of colors, and we want to exclude the color &ldquo;yellow&rdquo; from our list:</p>
@@ -369,18 +329,8 @@
 <h3 id="conclusion">Conclusion</h3>
 <p>The continue statement is a powerful tool that enables developers to control the flow of their loops, skipping unnecessary iterations and improving the efficiency of their code. By using the continue statement judiciously, you can write more concise and optimized loops, enhancing the performance of your Swift applications.</p>
 <p>Remember, with great power comes great responsibility, so make sure to use the continue statement wisely and keep your code readable and maintainable. Happy coding! 🚀</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 

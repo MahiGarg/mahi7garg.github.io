@@ -28,10 +28,10 @@
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
-
+    
     <meta name="robots" content="index,follow">
     <meta name="keywords" content="lazy property,swift lazy property,lazy swift">
-
+    
     <link rel="canonical" href="https://mahigarg.github.io/blogs/lazy-property-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
@@ -134,7 +134,7 @@
 			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
 
 				
-				<a href="#" class="switcher-btn">
+				<a href="#" class="switcher-btn" aria-label="switcher-button">
 					<span class="sw-before">
 						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
 							<path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
@@ -148,7 +148,7 @@
 				</a>
 
 				
-				<a href="#" class="menu-btn">
+				<a href="#" class="menu-btn" aria-label="menu-button">
 					<span></span>
 					<span></span>
 				</a>
@@ -268,18 +268,8 @@
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
 						<p>Swift&rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed. This delayed initialization can greatly improve performance, especially when dealing with resource-intensive or time-consuming operations. In this blog, we&rsquo;ll explore lazy properties in Swift, understand how they work, and dive into practical examples where they can significantly enhance the efficiency of your code.</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="basic-usage-of-lazy-properties">Basic Usage of Lazy Properties</h3>
 <p>Lazy properties are declared using the lazy keyword. They are particularly useful when dealing with properties that are expensive to compute or require external resource allocation. Let&rsquo;s consider a simple example of a DatabaseManager class that loads a database connection lazily.</p>
@@ -297,18 +287,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// At this point, the database connection is not yet initialized</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// It will be initialized and set up only when the `databaseConnection` property is accessed for the first time</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> connection = manager.databaseConnection
-</span></span></code></pre></div><div class="col-xs-12 googleads">
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="lazy-property-with-complex-initialization">Lazy Property with Complex Initialization</h3>
 <p>Lazy properties can also be used when initializing complex objects. Consider a UserProfile class that fetches user data from a remote server. Using a lazy property, we can ensure that the data is fetched only when needed.</p>
@@ -333,18 +313,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// The user data is not fetched yet</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// The data will be fetched and processed only when the `userData` property is accessed</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> data = profile.userData
-</span></span></code></pre></div><div class="col-xs-12 googleads">
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="lazy-property-for-dependency-injection">Lazy Property for Dependency Injection</h3>
 <p>Lazy properties can be beneficial for dependency injection scenarios. Suppose we have a WeatherService class that requires a LocationManager instance to function. By using a lazy property, we can ensure that the LocationManager is only created when needed.</p>
@@ -366,18 +336,8 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> weatherService = WeatherService()
 </span></span><span style="display:flex;"><span>weatherService.fetchWeatherData()
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// The `locationManager` is not initialized until `getCurrentLocation()` is called</span>
-</span></span></code></pre></div><div class="col-xs-12 googleads">
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 <h3 id="lazy-properties-in-structs">Lazy Properties in Structs</h3>
 <p>Lazy properties are not limited to classes; they can also be used in structs. Let&rsquo;s look at an example of a Configuration struct with a lazy property for loading a configuration file.</p>
@@ -404,18 +364,8 @@
 </span></span></code></pre></div><h3 id="conclusion">Conclusion</h3>
 <p>Lazy properties in Swift offer a powerful way to delay the initialization of properties until they are first accessed. By leveraging lazy properties, you can improve the efficiency of your code, especially when dealing with resource-heavy or time-consuming operations. Whether you&rsquo;re fetching data from servers, initializing complex objects, or managing dependencies, lazy properties provide an elegant solution to optimize your Swift code.</p>
 <p>Integrate lazy properties into your projects to achieve better performance and responsiveness, ensuring that you allocate resources only when they are genuinely needed. Embrace the efficiency that lazy properties bring to your Swift development endeavors, and elevate the overall quality and responsiveness of your applications. Happy coding! 🚀</p>
-<div class="col-xs-12 googleads">
+<div class="col-xs-12 googleads" aria-hidden="true">
     
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1093303282603666"
-     data-ad-slot="5254968909"
-     data-ad-format="horizontal"
-     data-full-width-responsive="true"></ins>
-     
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
 </div>
 
 
