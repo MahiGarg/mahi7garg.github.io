@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -272,6 +272,18 @@
 <p>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement. In this blog, we will delve into the world of guard let and explore how it enables developers to gracefully exit functions early when dealing with optional values. By the end of this blog, you will understand why guard let is a powerful tool in your Swift programming arsenal.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="understanding-optionals-in-swift">Understanding Optionals in Swift:</h3>
 <p>Before we jump into the wonders of guard let, let&rsquo;s take a moment to understand optionals in Swift. An optional is a type that can either store a value or be nil. The presence of the question mark &lsquo;?&rsquo; after a type indicates that it is an optional type. For instance, String? denotes an optional String.</p>
@@ -290,6 +302,18 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="example-of-guard-let">Example of guard let:</h3>
 <p>Let&rsquo;s illustrate the power of guard let with an example. Suppose we have a function that accepts an optional Int and performs some operation on it:</p>
@@ -307,6 +331,18 @@
 </span></span></code></pre></div><p>In this example, the guard let statement ensures that the value is not nil. If it is nil, the function prints an error message and exits early using the return statement. Otherwise, it continues with the operation, multiplying the unwrappedValue by 2.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="advantages-of-using-guard-let">Advantages of using guard let:</h3>
 <ul>
@@ -318,6 +354,18 @@
 <h3 id="conclusion">Conclusion:</h3>
 <p>In conclusion, guard let is a powerful tool that empowers Swift developers to handle optionals gracefully. By ensuring that optionals contain valid values and providing an elegant early exit strategy, guard let promotes code safety, readability, and maintainability. When dealing with optional values in Swift, remember to embrace the art of guard let to write clean, robust, and efficient code. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 
@@ -337,7 +385,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

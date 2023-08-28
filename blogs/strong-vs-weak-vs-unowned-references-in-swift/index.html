@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -270,6 +270,18 @@
 						<p>In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps. One of the core concepts in memory management is the use of references to objects, which determine how objects are retained and released in memory. In Swift, there are three types of references that play a crucial role: strong, weak, and unowned references. In this blog, we will explore these three types of references with clear examples to help you understand their significance.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="strong-references">Strong References</h3>
 <p>A strong reference is the default type of reference in Swift. When you create a new instance of a class and assign it to a property, a strong reference is established. Strong references increase the retain count of an object, ensuring that it remains in memory as long as there are strong references pointing to it. Let&rsquo;s consider an example involving two classes that reference each other:</p>
@@ -314,6 +326,18 @@
 </span></span><span style="display:flex;"><span>book = <span style="color:#66d9ef">nil</span>
 </span></span></code></pre></div><p>The primary difference with strong references is that they keep the referenced object in memory as long as there is at least one strong reference to it. In the example above, even though both author and book are set to nil, neither instance is deallocated because the strong references maintain a reference cycle between them.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="weak-references">Weak References</h3>
@@ -361,6 +385,18 @@
 </span></span></code></pre></div><p>The key distinction of weak references is that they do not prevent the object they reference from being deallocated. In the example above, when the customer instance is deallocated, the weak reference in the card instance becomes automatically nil, preventing a retain cycle.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="unowned-references">Unowned References</h3>
 <p>Unowned references are similar to weak references in that they also avoid retain cycles. However, unlike weak references, unowned references assume that the referenced object will always exist as long as the unowned reference exists. If the referenced object is deallocated, accessing the unowned reference will result in a runtime error. Here&rsquo;s an example to illustrate this:</p>
@@ -405,6 +441,18 @@
 </span></span></code></pre></div><p>Unowned references provide a balance between strong and weak references. They don&rsquo;t increase the retain count like strong references, yet they require the referenced object to be valid during the entire lifetime of the unowned reference. In the example above, if the school instance is deallocated, accessing teacher.school will lead to a runtime error.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="differences-between-strong-weak-and-unowned-references">Differences Between Strong, Weak, and Unowned References</h3>
 <h5 id="strong-references-1">Strong References:</h5>
@@ -428,6 +476,18 @@
 <p>Understanding the differences between strong, weak, and unowned references is crucial for effective memory management in Swift. Strong references keep objects in memory as long as they are referenced, weak references prevent retain cycles and become nil when the referenced object is deallocated, and unowned references assume the referenced object&rsquo;s existence and lead to runtime errors if accessed after deallocation. By choosing the appropriate reference type based on the requirements of your code, developers can create stable and memory-efficient Swift applications. Happy coding!</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 
 
@@ -446,7 +506,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

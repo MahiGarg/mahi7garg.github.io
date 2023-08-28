@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -270,6 +270,18 @@
 						<p>Control flow is an essential aspect of any programming language, and Swift is no exception. Swift provides a powerful and flexible control flow mechanism that allows developers to direct the flow of their code execution based on certain conditions. One such tool in the Swift developer&rsquo;s toolbox is the break statement.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <p>The break statement is used within loops and switch statements to terminate their execution prematurely. It offers a way to exit a loop or switch block before its normal completion, providing developers with greater control over their code. In this blog post, we will explore the break statement in Swift, along with some practical examples to illustrate its usefulness.</p>
 <h3 id="breaking-out-of-a-loop">Breaking Out of a Loop</h3>
@@ -293,6 +305,18 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>In this example, we have a function findValue(_:in:) that searches for a specific value in the array using a for-in loop. When the desired value is found, the break statement is not required, as the function immediately returns true, breaking out of the loop and exiting the function.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="early-exit-in-a-switch-statement">Early Exit in a Switch Statement</h3>
@@ -320,6 +344,18 @@
 </span></span></code></pre></div><p>In this case, the switch statement evaluates the <code>userDirection</code> and finds it to be <code>.south</code>. As soon as it matches the <code>.south</code> case, it returns the corresponding description without evaluating the other cases. Here, <code>break</code> is not needed since each case has a return statement, causing an early exit from the getDescription function.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="exiting-nested-loops">Exiting Nested Loops</h3>
 <p>Sometimes, you may have nested loops where you want to break out of both loops simultaneously when a specific condition is met. Swift allows you to label your loops and use the break statement with a label to exit both loops. Here&rsquo;s an example:</p>
@@ -336,6 +372,18 @@
 <p>The break statement is a powerful tool that allows developers to take charge of the flow of their code execution. Whether you need to exit a loop early, break out of a switch block, or exit multiple nested loops at once, the break statement has got you covered.</p>
 <p>As you continue your journey with Swift, remember to use the break statement judiciously, keeping your code clean and maintainable. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 
@@ -355,7 +403,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

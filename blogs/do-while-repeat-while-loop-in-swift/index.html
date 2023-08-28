@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -270,6 +270,18 @@
 						<p>Swift is a powerful and expressive programming language that offers a variety of loop structures to handle repetitive tasks efficiently. Among these, the do-while loop stands out as a loop that ensures the code inside the loop executes at least once, regardless of the loop&rsquo;s condition. In this blog, we will explore the do-while loop in Swift, its syntax, and examples to showcase its usefulness in different scenarios.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="introducing-the-do-while-loop">Introducing the do-while Loop</h3>
 <p>The do-while loop, also known as the repeat-while loop, is a control flow statement that iterates over a block of code while a specified condition remains true. The unique feature of the do-while loop is that it guarantees the code inside the loop is executed at least once, even if the condition evaluates to false from the beginning.</p>
@@ -280,6 +292,18 @@
 </span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> condition
 </span></span></code></pre></div><p>The condition is a Boolean expression that determines whether the loop should continue iterating or terminate. The block of code inside the do section is executed first, and then the condition is checked. If the condition evaluates to true, the loop repeats; otherwise, the loop terminates.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="examples-of-do-while-loop">Examples of do-while Loop</h3>
@@ -306,6 +330,18 @@
 </span></span></code></pre></div><p>In this example, the <code>do-while</code> loop prompts the user to enter a positive number repeatedly until a valid positive number is provided. The loop checks whether the input can be converted to a valid positive number (not nil and greater than 0) before proceeding with the computation and printing the square root.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="loop-control-and-infinite-do-while-loops">Loop Control and Infinite do-while Loops</h3>
 <p>As with any loop structure, you must exercise caution to avoid creating infinite loops that never terminate. An infinite do-while loop can be created by using a condition that always evaluates to true. For example:</p>
@@ -318,6 +354,18 @@
 <p>The do-while loop in Swift is a powerful and flexible tool that allows you to handle repetitive tasks, ensuring that the loop body executes at least once, regardless of the loop&rsquo;s condition. With the examples provided in this blog, you can now apply the do-while loop effectively in various scenarios, such as input validation, randomization, and more.</p>
 <p>Always use loop control statements like break and continue judiciously to manage the flow of your loops, and avoid creating infinite loops that may cause your program to hang or crash. Embrace the power of the do-while loop in Swift and elevate your programming skills to new heights. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 
@@ -337,7 +385,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

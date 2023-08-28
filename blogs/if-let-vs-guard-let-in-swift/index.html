@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -270,6 +270,18 @@
 						<p>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="if-let-unwrapping">if let Unwrapping</h3>
 <p>if let is used to conditionally unwrap an optional value and execute a block of code only when the value is not nil. Here&rsquo;s a simple example of if let in action:</p>
@@ -286,6 +298,18 @@
 </span></span><span style="display:flex;"><span>calculateSquareRoot(inputNumber)
 </span></span></code></pre></div><p>In this example, the function <code>calculateSquareRoot(_:)</code> takes an optional number as input. Inside the <code>if let</code> block, we unwrap number and bind its unwrapped value to value. If number contains a valid value, the square root is calculated and printed. Otherwise, the else block handles the case when number is nil.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="guard-let-unwrapping">guard let Unwrapping</h3>
@@ -309,6 +333,18 @@
 <li><strong>guard let</strong>: Use guard let when you want to ensure the presence of a value throughout the function or scope. It&rsquo;s ideal for early exits to avoid nested code blocks and make the code more readable and maintainable.</li>
 </ul>
 <div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="multiple-optional-unwrapping">Multiple Optional Unwrapping</h3>
@@ -337,6 +373,18 @@
 <p>As you continue to work with optionals in Swift, keep if let and guard let in your toolkit to handle optional values gracefully, making your code more robust and efficient. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 
 
@@ -355,7 +403,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

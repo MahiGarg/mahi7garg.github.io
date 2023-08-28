@@ -126,7 +126,7 @@
 				<div class="logo">
 					<a href="https://mahigarg.github.io/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" style="width: 100%; height: auto;"/>
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -270,6 +270,18 @@
 						<p>Swift&rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed. This delayed initialization can greatly improve performance, especially when dealing with resource-intensive or time-consuming operations. In this blog, we&rsquo;ll explore lazy properties in Swift, understand how they work, and dive into practical examples where they can significantly enhance the efficiency of your code.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="basic-usage-of-lazy-properties">Basic Usage of Lazy Properties</h3>
 <p>Lazy properties are declared using the lazy keyword. They are particularly useful when dealing with properties that are expensive to compute or require external resource allocation. Let&rsquo;s consider a simple example of a DatabaseManager class that loads a database connection lazily.</p>
@@ -288,6 +300,18 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// It will be initialized and set up only when the `databaseConnection` property is accessed for the first time</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> connection = manager.databaseConnection
 </span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="lazy-property-with-complex-initialization">Lazy Property with Complex Initialization</h3>
@@ -315,6 +339,18 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> data = profile.userData
 </span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 <h3 id="lazy-property-for-dependency-injection">Lazy Property for Dependency Injection</h3>
 <p>Lazy properties can be beneficial for dependency injection scenarios. Suppose we have a WeatherService class that requires a LocationManager instance to function. By using a lazy property, we can ensure that the LocationManager is only created when needed.</p>
@@ -337,6 +373,18 @@
 </span></span><span style="display:flex;"><span>weatherService.fetchWeatherData()
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// The `locationManager` is not initialized until `getCurrentLocation()` is called</span>
 </span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     
 </div>
 <h3 id="lazy-properties-in-structs">Lazy Properties in Structs</h3>
@@ -366,6 +414,18 @@
 <p>Integrate lazy properties into your projects to achieve better performance and responsiveness, ensuring that you allocate resources only when they are genuinely needed. Embrace the efficiency that lazy properties bring to your Swift development endeavors, and elevate the overall quality and responsiveness of your applications. Happy coding! 🚀</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
+    
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1093303282603666"
+     data-ad-slot="5254968909"
+     data-ad-format="horizontal"
+     data-full-width-responsive="true"></ins>
+     
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 </div>
 
 
@@ -384,7 +444,66 @@
 
 				
 				
-				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>
