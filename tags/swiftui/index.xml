@@ -6,7 +6,79 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fidget Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/fidget-loader-swiftui/</link>
+      <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/fidget-loader-swiftui/</guid>
+      <description>The Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/lazy-loader-swiftui/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/lazy-loader-swiftui/</guid>
+      <description>The Lazy Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Arc Progress Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</guid>
+      <description>The Arc Progress Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Four Sided Fidget Loader: SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</guid>
+      <description>The Four Sided Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Ripple Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/ripple-loader-swiftui/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/ripple-loader-swiftui/</guid>
+      <description>The Ripple Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Ring and Circle Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</guid>
+      <description>The Ring and Circle Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Rotating Circular Sticks Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</guid>
+      <description>The Rotating Circular Sticks Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Rotating Square Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</guid>
+      <description>The Rotating Square Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
     <item>
       <title>CoreData in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>

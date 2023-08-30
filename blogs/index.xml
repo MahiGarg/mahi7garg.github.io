@@ -220,7 +220,7 @@
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/guard-let-in-swift/</guid>
-      <description>guard let : Art of Early Returns with Optionals Introduction: In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability.</description>
+      <description>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.</description>
     </item>
     
     <item>
@@ -238,7 +238,7 @@
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/if-let-in-swift/</guid>
-      <description>if let - A Concise Way to Handle Optionals Introduction: Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
+      <description>Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
     </item>
     
     <item>
@@ -458,6 +458,15 @@
     </item>
     
     <item>
+      <title>Set: Swift</title>
+      <link>https://mahigarg.github.io/blogs/set-swift/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
+      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
+    </item>
+    
+    <item>
       <title>Setup Firebase RemoteConfig</title>
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
@@ -527,15 +536,6 @@
       
       <guid>https://mahigarg.github.io/blogs/labeled-statement-swift/</guid>
       <description>Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them. It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.</description>
-    </item>
-    
-    <item>
-      <title>Set: Swift</title>
-      <link>https://mahigarg.github.io/blogs/set-swift/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
-      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
     </item>
     
   </channel>

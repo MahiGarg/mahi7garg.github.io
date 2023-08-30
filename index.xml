@@ -6,7 +6,88 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fidget Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/fidget-loader-swiftui/</link>
+      <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/fidget-loader-swiftui/</guid>
+      <description>The Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Lazy Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/lazy-loader-swiftui/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/lazy-loader-swiftui/</guid>
+      <description>The Lazy Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Arc Progress Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</guid>
+      <description>The Arc Progress Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Open Source Contribution</title>
+      <link>https://mahigarg.github.io/opensourcecontribution/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/opensourcecontribution/</guid>
+      <description>SwiftUI Components (8 Components) Below animations/loaders were published as SwiftUI components which can directly be plugged into any iOS app and use.</description>
+    </item>
+    
+    <item>
+      <title>Four Sided Fidget Loader: SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</guid>
+      <description>The Four Sided Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Ripple Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/ripple-loader-swiftui/</link>
+      <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/ripple-loader-swiftui/</guid>
+      <description>The Ripple Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Ring and Circle Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</guid>
+      <description>The Ring and Circle Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Rotating Circular Sticks Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</guid>
+      <description>The Rotating Circular Sticks Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
+    <item>
+      <title>Rotating Square Loader : SwiftUI</title>
+      <link>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</guid>
+      <description>The Rotating Square Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
+    </item>
+    
     <item>
       <title>Initializer in Swift</title>
       <link>https://mahigarg.github.io/blogs/initializer-in-swift/</link>
@@ -310,7 +391,7 @@
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/guard-let-in-swift/</guid>
-      <description>guard let : Art of Early Returns with Optionals Introduction: In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability.</description>
+      <description>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.</description>
     </item>
     
     <item>
@@ -355,7 +436,7 @@
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://mahigarg.github.io/blogs/if-let-in-swift/</guid>
-      <description>if let - A Concise Way to Handle Optionals Introduction: Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
+      <description>Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
     </item>
     
     <item>
@@ -575,6 +656,15 @@
     </item>
     
     <item>
+      <title>Set: Swift</title>
+      <link>https://mahigarg.github.io/blogs/set-swift/</link>
+      <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
+      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
+    </item>
+    
+    <item>
       <title>Setup Firebase RemoteConfig</title>
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
@@ -644,15 +734,6 @@
       
       <guid>https://mahigarg.github.io/blogs/labeled-statement-swift/</guid>
       <description>Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them. It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.</description>
-    </item>
-    
-    <item>
-      <title>Set: Swift</title>
-      <link>https://mahigarg.github.io/blogs/set-swift/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
-      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
     </item>
     
   </channel>
