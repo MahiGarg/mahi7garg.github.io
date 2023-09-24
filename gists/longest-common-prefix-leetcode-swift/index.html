@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Linked List : Swift &middot; Mahi Garg</title>
+  <title>Longest Common Prefix - LeetCode : Swift &middot; Mahi Garg</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,26 +13,29 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Linked List : Swift">
-    <meta name="description" content="A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation.">
-    <meta property="og:description" content="A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation.">
-    <meta property="twitter:description" content="A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation.">
-    <meta name="abstract" content="A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation.">
-    <meta name="summary" content="A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation."> 
+  <meta name="topic" content="Longest Common Prefix - LeetCode : Swift">
+    <meta name="description" content="Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string.">
+    <meta property="og:description" content="Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string.">
+    <meta property="twitter:description" content="Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string.">
+    <meta name="abstract" content="Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string.">
+    <meta name="summary" content="Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-07-13 "> 
+    <meta property="article:published_time" content=" 2023-09-02 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/gists/linked-list-methods-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/gists/linked-list-methods-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/gists/linked-list-methods-swift/">
+    <meta name="url" content="https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
+
+    <meta name="robots" content="max-image-preview:large">
     
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="linkedinlist,linked list,swift,dsa">
+    <meta name="keywords" content="longest common prefix,leetcode,dsa">
     
-    <link rel="canonical" href="https://mahigarg.github.io/gists/linked-list-methods-swift/">
+    
+    <link rel="canonical" href="https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -252,10 +255,10 @@
 				<a href="https://mahigarg.github.io/categories/gist/">Gist</a>
 				
 				
-				/ July 13, 2023 / 1 min read / By Mahi Garg
+				/ September 2, 2023 / 1 min read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Linked List : Swift
+				Longest Common Prefix - LeetCode : Swift
 			</h1>
 		</div>
 
@@ -275,8 +278,24 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation. Insertions and deletions can be performed efficiently in a linked list by updating the pointers, but accessing elements requires traversing the list linearly. Linked lists are useful when frequent insertions or deletions are expected, and their time complexity for most operations is O(1) or O(n) depending on the operation.</p>
-<script type="application/javascript" src="https://gist.github.com/mahigarg/30678f5301ee4a6f4f7eabcfbff86fcb.js"></script>
+						<p><a href="https://leetcode.com/problems/longest-common-prefix/description/">Longest Common Prefix - LeetCode</a></p>
+<p>Write a function to find the longest common prefix string amongst an array of strings.</p>
+<p>If there is no common prefix, return an empty string <code>&quot;&quot;</code>.</p>
+<p>Example 1:</p>
+<p>Input: strs = [&ldquo;flower&rdquo;,&ldquo;flow&rdquo;,&ldquo;flight&rdquo;]
+Output: &ldquo;fl&rdquo;</p>
+<p>Example 2:</p>
+<p>Input: strs = [&ldquo;dog&rdquo;,&ldquo;racecar&rdquo;,&ldquo;car&rdquo;]
+Output: &quot;&quot;
+Explanation: There is no common prefix among the input strings.</p>
+<p>Constraints:</p>
+<ul>
+<li>1 &lt;= strs.length &lt;= 200</li>
+<li>0 &lt;= strs[i].length &lt;= 200</li>
+<li>strs[i] consists of only lowercase English letters.</li>
+</ul>
+<h3 id="solution">Solution</h3>
+<script type="application/javascript" src="https://gist.github.com/mahigarg/0c6731d9600f51c06bf7a7b0149d15b9.js"></script>
 
 <div class="col-xs-12 googleads" aria-hidden="true">
     
@@ -319,24 +338,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/gists/remove-duplicate-array-swift/">
+					<a href="https://mahigarg.github.io/gists/two-sum-leetcode-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Remove duplicates from array: Swift
+							Two Sum - LeetCode : Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/gists/carousel-view-swiftui/">
+					<a href="https://mahigarg.github.io/gists/next-greater-element-i-leetcode-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Carousel View : SwiftUI
+							Next Greater Element I - LeetCode : Swift
 						</span>
 					</a>
 					
