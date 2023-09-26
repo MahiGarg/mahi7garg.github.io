@@ -305,9 +305,31 @@ nums2.length == n
 1 &lt;= m + n &lt;= 200
 -109 &lt;= nums1[i], nums2[j] &lt;= 109</p>
 <h3 id="solution">Solution</h3>
-<script type="application/javascript" src="https://gist.github.com/mahigarg/bfd612482faac09c1c484b86109d0cce.js"></script>
-
-<div class="col-xs-12 googleads" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">merge</span>(<span style="color:#66d9ef">_</span> nums1: <span style="color:#66d9ef">inout</span> [Int], <span style="color:#66d9ef">_</span> m: Int, <span style="color:#66d9ef">_</span> nums2: [Int], <span style="color:#66d9ef">_</span> n: Int) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> result: [Int] = []
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> c1 = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> c2 = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>..(m <span style="color:#f92672">+</span> n ) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> c1 == m {
+</span></span><span style="display:flex;"><span>                result.append(contentsOf: nums2[c2..&lt;n])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> c2 == n {
+</span></span><span style="display:flex;"><span>                result.append(contentsOf: nums1[c1..&lt;m])
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> nums1[c1] <span style="color:#f92672">&lt;=</span> nums2[c2] {
+</span></span><span style="display:flex;"><span>                result.append(nums1[c1])
+</span></span><span style="display:flex;"><span>                c1 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> nums2[c2] <span style="color:#f92672">&lt;</span> nums1[c1] {
+</span></span><span style="display:flex;"><span>                result.append(nums2[c2])
+</span></span><span style="display:flex;"><span>                c2 <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        nums1 = result
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
     
     

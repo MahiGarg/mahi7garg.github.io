@@ -6,7 +6,78 @@
     <description>Recent content in Programming-Basics on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/programming-basics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/programming-basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search a 2D Matrix - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</link>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</guid>
+      <description>Search a 2D Matrix - LeetCode
+You are given an m x n integer matrix matrix with the following two properties:</description>
+    </item>
+    
+    <item>
+      <title>Length of Last Word - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/length-of-last-word-leetcode-swift/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/length-of-last-word-leetcode-swift/</guid>
+      <description>Length of Last Word - LeetCode
+Given a string s consisting of words and spaces, return the length of the last word in the string.</description>
+    </item>
+    
+    <item>
+      <title>Roman to Integer - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/roman-to-integer-leetcode-swift/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/roman-to-integer-leetcode-swift/</guid>
+      <description>Roman to Integer - LeetCode
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</description>
+    </item>
+    
+    <item>
+      <title>Remove Duplicates from Sorted Array II - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode-swift/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode-swift/</guid>
+      <description>Remove Duplicates from Sorted Array || - LeetCode
+Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice.</description>
+    </item>
+    
+    <item>
+      <title>Best Time to Buy and Sell Stock - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode-swift/</link>
+      <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode-swift/</guid>
+      <description>Best Time to Buy and Sell Stock - LeetCode
+You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
+    </item>
+    
+    <item>
+      <title>Rotate Array - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</link>
+      <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</guid>
+      <description>Rotate Array - LeetCode
+Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.</description>
+    </item>
+    
+    <item>
+      <title>Majority Element - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</link>
+      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</guid>
+      <description>Majority Element - LeetCode
+Given an array nums of size n, return the majority element.
+The majority element is the element that appears more than [n / 2] times.</description>
+    </item>
+    
     <item>
       <title>Remove Duplicates from Sorted Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode-swift/</link>

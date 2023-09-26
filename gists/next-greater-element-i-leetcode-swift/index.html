@@ -306,9 +306,35 @@ Explanation: The next greater element for each value of nums1 is as follows:</p>
 All integers in nums1 and nums2 are unique.
 All the integers of nums1 also appear in nums2.</p>
 <h3 id="solution">Solution</h3>
-<script type="application/javascript" src="https://gist.github.com/mahigarg/7a0d1d00357ff7ce7d2236b771a90f5e.js"></script>
-
-<div class="col-xs-12 googleads" aria-hidden="true">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">nextGreaterElement</span>(<span style="color:#66d9ef">_</span> num1: [Int], <span style="color:#66d9ef">_</span> num2: [Int]) -&gt; [Int] {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> result: [Int] = []
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>.&lt;num1.count {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> x = num1[i]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> resultAppended = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> numFound = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> j <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">0.</span>.&lt;num2.count {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (numFound <span style="color:#f92672">&amp;&amp;</span> num2[j] <span style="color:#f92672">&gt;</span> x){
+</span></span><span style="display:flex;"><span>                    resultAppended = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                    result.append(num2[j])
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> num2[j] == x {
+</span></span><span style="display:flex;"><span>                    numFound = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>resultAppended {
+</span></span><span style="display:flex;"><span>                result.append(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
     
     
     

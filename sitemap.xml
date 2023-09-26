@@ -3,36 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mahigarg.github.io/categories/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/categories/gist/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/gists/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/tags/programming-basics/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode-swift/</loc>
-    <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+    <loc>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</loc>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/tags/</loc>
+    <lastmod>2023-09-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/length-of-last-word-leetcode-swift/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/roman-to-integer-leetcode-swift/</loc>
+    <lastmod>2023-09-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode-swift/</loc>
+    <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode-swift/</loc>
+    <lastmod>2023-09-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</loc>
+    <lastmod>2023-09-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</loc>
+    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode-swift/</loc>
     <lastmod>2023-09-06T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
