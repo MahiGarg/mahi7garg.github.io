@@ -6,7 +6,28 @@
     <description>Recent content in Gists on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/gists/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/gists/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Search Insert Position - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/search-insert-position-leetcode-swift/</link>
+      <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/search-insert-position-leetcode-swift/</guid>
+      <description>Search Insert Position - LeetCode
+Given a sorted array of distinct integers and a target value, return the index if the target is found.</description>
+    </item>
+    
+    <item>
+      <title>Find Peak Element - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/find-peak-element-leetcode-swift/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://mahigarg.github.io/gists/find-peak-element-leetcode-swift/</guid>
+      <description>Find Peak Element - LeetCode
+A peak element is an element that is strictly greater than its neighbors.
+Given a 0-indexed integer array nums, find a peak element, and return its index.</description>
+    </item>
+    
     <item>
       <title>Search a 2D Matrix - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</link>
