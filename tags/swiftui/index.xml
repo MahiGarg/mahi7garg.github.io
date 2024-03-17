@@ -6,141 +6,112 @@
     <description>Recent content in SwiftUI on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mahigarg.github.io/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fidget Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/fidget-loader-swiftui/</link>
       <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/fidget-loader-swiftui/</guid>
       <description>The Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Lazy Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/lazy-loader-swiftui/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/lazy-loader-swiftui/</guid>
       <description>The Lazy Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Arc Progress Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</guid>
       <description>The Arc Progress Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Four Sided Fidget Loader: SwiftUI</title>
       <link>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</link>
       <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</guid>
       <description>The Four Sided Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Ripple Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/ripple-loader-swiftui/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/ripple-loader-swiftui/</guid>
       <description>The Ripple Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Ring and Circle Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</link>
       <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</guid>
       <description>The Ring and Circle Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Rotating Circular Sticks Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</link>
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</guid>
       <description>The Rotating Circular Sticks Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Rotating Square Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</guid>
       <description>The Rotating Square Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>CoreData in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
       <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
     </item>
-    
     <item>
       <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
       <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
     </item>
-    
     <item>
       <title>Instagram Post : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/instagram-post-swiftui/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/instagram-post-swiftui/</guid>
       <description>Coding an Instagram post in SwiftUI is an engaging project. You can use various components like images, text, and buttons to design a post layout.</description>
     </item>
-    
     <item>
       <title>Instagarm Logo : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/instagram-logo-swiftui/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/instagram-logo-swiftui/</guid>
       <description>Creating the Instagram logo in SwiftUI is an exciting task. Using basic shapes like circles, squares, and colors, you can piece together the iconic camera symbol and colorful gradient background.</description>
     </item>
-    
     <item>
       <title>List: SwiftUI</title>
       <link>https://mahigarg.github.io/gists/list-swiftui/</link>
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/list-swiftui/</guid>
       <description>In SwiftUI, the List is a powerful tool for creating neat and organized scrolling lists in apps. Imagine it as a virtual scrollable sheet of paper where you can display various items, like names, messages, or to-do tasks.</description>
     </item>
-    
     <item>
       <title>NavigationView in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</guid>
       <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
     </item>
-    
     <item>
       <title>@State: SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
       <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
     </item>
-    
   </channel>
 </rss>

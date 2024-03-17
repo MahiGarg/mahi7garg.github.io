@@ -3,22 +3,77 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mahigarg.github.io/categories/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/dsa/</loc>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/find-k-closest-elements-leetcode/</loc>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/categories/gist/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/gists/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/leetcode/</loc>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/tags/</loc>
+    <lastmod>2024-02-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/intersection-of-two-arrays-leetcode/</loc>
+    <lastmod>2024-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/contains-duplicate-ii-leetcode/</loc>
+    <lastmod>2024-02-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/minimum-size-subarray-sum-leetcode/</loc>
+    <lastmod>2024-02-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/repeated-dna-sequences-leetcode/</loc>
+    <lastmod>2024-02-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/longest-substring-without-repeating-characters-leetcode/</loc>
+    <lastmod>2024-02-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/majority-element-leetcode/</loc>
+    <lastmod>2024-01-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/gists/longest-substring-with-at-least-k-repeating-characters-leetcode/</loc>
+    <lastmod>2024-01-25T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -28,11 +83,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/gists/search-insert-position-leetcode-swift/</loc>
-    <lastmod>2023-09-15T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/tags/</loc>
     <lastmod>2023-09-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -69,11 +119,6 @@
   </url><url>
     <loc>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</loc>
     <lastmod>2023-09-08T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</loc>
-    <lastmod>2023-09-07T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

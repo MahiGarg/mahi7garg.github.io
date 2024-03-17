@@ -6,887 +6,728 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find K Closest Elements - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/find-k-closest-elements-leetcode/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/find-k-closest-elements-leetcode/</guid>
+      <description>Find K Closest Elements - LeetCode&#xA;Given a sorted integer array arr, two integers k and x, return the k closest integers to x in the array.</description>
+    </item>
+    <item>
+      <title>Intersection of Two Arrays - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/intersection-of-two-arrays-leetcode/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/intersection-of-two-arrays-leetcode/</guid>
+      <description>Intersection of Two Arrays - LeetCode&#xA;Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.</description>
+    </item>
+    <item>
+      <title>Contains Duplicate II - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/contains-duplicate-ii-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/contains-duplicate-ii-leetcode/</guid>
+      <description>Contains Duplicate II - LeetCode&#xA;Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) &amp;lt;= k.</description>
+    </item>
+    <item>
+      <title>Minimum Size Subarray Sum - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/minimum-size-subarray-sum-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/minimum-size-subarray-sum-leetcode/</guid>
+      <description>Minimum Size Subarray Sum - LeetCode&#xA;Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target.</description>
+    </item>
+    <item>
+      <title>Repeated DNA Sequences - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/repeated-dna-sequences-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/repeated-dna-sequences-leetcode/</guid>
+      <description>Repeated DNA Sequences - LeetCode&#xA;The DNA sequence is composed of a series of nucleotides abbreviated as &#39;A&#39;, &#39;C&#39;, &#39;G&#39;, and &#39;T&#39;.</description>
+    </item>
+    <item>
+      <title>Longest Substring Without Repeating Characters - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/longest-substring-without-repeating-characters-leetcode/</link>
+      <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/longest-substring-without-repeating-characters-leetcode/</guid>
+      <description>Longest Substring Without Repeating Characters - LeetCode&#xA;Given a string s, find the length of the longest substring without repeating characters.</description>
+    </item>
+    <item>
+      <title>Majority Element - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/majority-element-leetcode/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/majority-element-leetcode/</guid>
+      <description>Majority Element - LeetCode&#xA;Given an array nums of size n, return the majority element.&#xA;The majority element is the element that appears more than [n / 2] times.</description>
+    </item>
+    <item>
+      <title>Longest Substring with At Least K Repeating Characters - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/longest-substring-with-at-least-k-repeating-characters-leetcode/</link>
+      <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/longest-substring-with-at-least-k-repeating-characters-leetcode/</guid>
+      <description>Longest Substring with At Least K Repeating Characters - LeetCode&#xA;Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in this substring is greater than or equal to k.</description>
+    </item>
     <item>
       <title>Search Insert Position - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/search-insert-position-leetcode-swift/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/search-insert-position-leetcode-swift/</guid>
-      <description>Search Insert Position - LeetCode
-Given a sorted array of distinct integers and a target value, return the index if the target is found.</description>
+      <description>Search Insert Position - LeetCode&#xA;Given a sorted array of distinct integers and a target value, return the index if the target is found.</description>
     </item>
-    
     <item>
       <title>Find Peak Element - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/find-peak-element-leetcode-swift/</link>
       <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/find-peak-element-leetcode-swift/</guid>
-      <description>Find Peak Element - LeetCode
-A peak element is an element that is strictly greater than its neighbors.
-Given a 0-indexed integer array nums, find a peak element, and return its index.</description>
+      <description>Find Peak Element - LeetCode&#xA;A peak element is an element that is strictly greater than its neighbors.&#xA;Given a 0-indexed integer array nums, find a peak element, and return its index.</description>
     </item>
-    
     <item>
       <title>Search a 2D Matrix - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode-swift/</guid>
-      <description>Search a 2D Matrix - LeetCode
-You are given an m x n integer matrix matrix with the following two properties:</description>
+      <description>Search a 2D Matrix - LeetCode&#xA;You are given an m x n integer matrix matrix with the following two properties:</description>
     </item>
-    
     <item>
       <title>Length of Last Word - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/length-of-last-word-leetcode-swift/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/length-of-last-word-leetcode-swift/</guid>
-      <description>Length of Last Word - LeetCode
-Given a string s consisting of words and spaces, return the length of the last word in the string.</description>
+      <description>Length of Last Word - LeetCode&#xA;Given a string s consisting of words and spaces, return the length of the last word in the string.</description>
     </item>
-    
     <item>
       <title>Roman to Integer - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/roman-to-integer-leetcode-swift/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/roman-to-integer-leetcode-swift/</guid>
-      <description>Roman to Integer - LeetCode
-Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</description>
+      <description>Roman to Integer - LeetCode&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</description>
     </item>
-    
     <item>
       <title>Remove Duplicates from Sorted Array II - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode-swift/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode-swift/</guid>
-      <description>Remove Duplicates from Sorted Array || - LeetCode
-Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice.</description>
+      <description>Remove Duplicates from Sorted Array || - LeetCode&#xA;Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice.</description>
     </item>
-    
     <item>
       <title>Best Time to Buy and Sell Stock - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode-swift/</link>
       <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode-swift/</guid>
-      <description>Best Time to Buy and Sell Stock - LeetCode
-You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
+      <description>Best Time to Buy and Sell Stock - LeetCode&#xA;You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
     </item>
-    
     <item>
       <title>Rotate Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</guid>
-      <description>Rotate Array - LeetCode
-Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.</description>
+      <description>Rotate Array - LeetCode&#xA;Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.</description>
     </item>
-    
-    <item>
-      <title>Majority Element - LeetCode : Swift</title>
-      <link>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</link>
-      <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://mahigarg.github.io/gists/majority-element-leetcode-swift/</guid>
-      <description>Majority Element - LeetCode
-Given an array nums of size n, return the majority element.
-The majority element is the element that appears more than [n / 2] times.</description>
-    </item>
-    
     <item>
       <title>Remove Duplicates from Sorted Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode-swift/</link>
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode-swift/</guid>
-      <description>Remove Duplicates from Sorted Array - LeetCode
-Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.</description>
+      <description>Remove Duplicates from Sorted Array - LeetCode&#xA;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.</description>
     </item>
-    
     <item>
       <title>Remove Element - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-element-leetcode-swift/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/remove-element-leetcode-swift/</guid>
-      <description>Remove Element - LeetCode
-Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.</description>
+      <description>Remove Element - LeetCode&#xA;Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.</description>
     </item>
-    
     <item>
       <title>Merge Sorted Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/merge-sorted-array-leetcode-swift/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/merge-sorted-array-leetcode-swift/</guid>
-      <description>Merge Sorted Array - LeetCode
-You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.</description>
+      <description>Merge Sorted Array - LeetCode&#xA;You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.</description>
     </item>
-    
     <item>
       <title>Next Greater Element I - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/next-greater-element-i-leetcode-swift/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/next-greater-element-i-leetcode-swift/</guid>
-      <description>Next Greater Element I - LeetCode
-The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.</description>
+      <description>Next Greater Element I - LeetCode&#xA;The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.</description>
     </item>
-    
     <item>
       <title>Longest Common Prefix - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/</link>
       <pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/longest-common-prefix-leetcode-swift/</guid>
-      <description>Longest Common Prefix - LeetCode
-Write a function to find the longest common prefix string amongst an array of strings.</description>
+      <description>Longest Common Prefix - LeetCode&#xA;Write a function to find the longest common prefix string amongst an array of strings.</description>
     </item>
-    
     <item>
       <title>Two Sum - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/two-sum-leetcode-swift/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/two-sum-leetcode-swift/</guid>
-      <description>Two Sum - LeetCode
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</description>
+      <description>Two Sum - LeetCode&#xA;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</description>
     </item>
-    
     <item>
       <title>Fidget Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/fidget-loader-swiftui/</link>
       <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/fidget-loader-swiftui/</guid>
       <description>The Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Lazy Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/lazy-loader-swiftui/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/lazy-loader-swiftui/</guid>
       <description>The Lazy Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Arc Progress Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/arc-progress-loader-swiftui/</guid>
       <description>The Arc Progress Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Open Source Contribution</title>
       <link>https://mahigarg.github.io/opensourcecontribution/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/opensourcecontribution/</guid>
       <description>SwiftUI Components (8 Components) Below animations/loaders were published as SwiftUI components which can directly be plugged into any iOS app and use.</description>
     </item>
-    
     <item>
       <title>Four Sided Fidget Loader: SwiftUI</title>
       <link>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</link>
       <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/four-sided-fidget-loader-swiftui/</guid>
       <description>The Four Sided Fidget Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Ripple Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/ripple-loader-swiftui/</link>
       <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/ripple-loader-swiftui/</guid>
       <description>The Ripple Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Ring and Circle Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</link>
       <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/ring-and-circle-loader-swiftui/</guid>
       <description>The Ring and Circle Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Rotating Circular Sticks Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</link>
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/rotating-circular-sticks-loader-swiftui/</guid>
       <description>The Rotating Circular Sticks Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Rotating Square Loader : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/rotating-square-loader-swiftui/</guid>
       <description>The Rotating Square Loader is a dynamic and visually engaging iOS component built using SwiftUI, designed to enhance user experience by providing elegant loading animations within any iOS application.</description>
     </item>
-    
     <item>
       <title>Initializer in Swift</title>
       <link>https://mahigarg.github.io/blogs/initializer-in-swift/</link>
       <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/initializer-in-swift/</guid>
       <description>In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state.</description>
     </item>
-    
     <item>
       <title>Thread Safety in Swift</title>
       <link>https://mahigarg.github.io/blogs/thread-safety-in-swift/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/thread-safety-in-swift/</guid>
       <description>Thread safety refers to a programming concept where data or resources are accessed and modified in a way that ensures correct behavior and prevents conflicts when multiple threads (concurrent execution units) are working with the same data simultaneously.</description>
     </item>
-    
     <item>
       <title>Unowned vs Optional Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</link>
       <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</guid>
       <description>Memory management is a critical consideration in Swift development, and managing references is a key aspect of this. Two reference types that come into play are unowned and optional unowned references.</description>
     </item>
-    
     <item>
       <title>Weak vs Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</link>
       <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</guid>
       <description>Memory management is a vital consideration when developing applications, and Swift provides developers with different reference types to manage memory effectively.</description>
     </item>
-    
     <item>
       <title>Strong vs Weak vs Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</guid>
       <description>In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps.</description>
     </item>
-    
     <item>
       <title>CoreData in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
       <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
     </item>
-    
     <item>
       <title>Conditional Expressions in Swift</title>
       <link>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</guid>
       <description>Conditional expressions lie at the heart of programming, allowing developers to make decisions and control the flow of their code. In Swift, these expressions provide the foundation for branching logic and executing different paths based on conditions.</description>
     </item>
-    
     <item>
       <title>Retain Cycle in Swift</title>
       <link>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</guid>
       <description>Swift&amp;rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&amp;rsquo;s a phenomenon called retain cycle that can sneakily lead to memory leaks.</description>
     </item>
-    
     <item>
       <title>@objc in swift</title>
       <link>https://mahigarg.github.io/blogs/objc-in-swift/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/objc-in-swift/</guid>
       <description>The @objc attribute in Swift facilitates seamless interaction between Swift and Objective-C codebases by exposing Swift declarations to the Objective-C runtime.</description>
     </item>
-    
     <item>
       <title>class vs struct: Swift</title>
       <link>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</guid>
       <description>In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&amp;rsquo;s design, efficiency, and behavior.</description>
     </item>
-    
     <item>
       <title>Nested Methods in swift</title>
       <link>https://mahigarg.github.io/blogs/nested-methods-in-swift/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/nested-methods-in-swift/</guid>
       <description>Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function.</description>
     </item>
-    
     <item>
       <title>Super in Swift</title>
       <link>https://mahigarg.github.io/blogs/super-in-swift/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/super-in-swift/</guid>
       <description>In the dynamic world of Swift programming, the super keyword serves as a bridge connecting the past and present—enabling seamless inheritance and collaboration between parent and child classes.</description>
     </item>
-    
     <item>
       <title>Swift Enum in detail</title>
       <link>https://mahigarg.github.io/blogs/swift-enum-in-detail/</link>
       <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/swift-enum-in-detail/</guid>
       <description>Enumerations, commonly known as enums, are a versatile feature in Swift that allow you to define a group of related values in a structured manner.</description>
     </item>
-    
     <item>
       <title>Self in Swift</title>
       <link>https://mahigarg.github.io/blogs/self-in-swift/</link>
       <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/self-in-swift/</guid>
       <description>In the realm of Swift programming, mastering the self keyword is essential for crafting clean and efficient code. This small but mighty keyword plays a significant role in object-oriented design, allowing developers to access and manipulate instance-specific properties and methods.</description>
     </item>
-    
     <item>
       <title>Error Handling with do-catch in Swift</title>
       <link>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</link>
       <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</guid>
       <description>Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.</description>
     </item>
-    
     <item>
       <title>As Operator (as vs as? vs as!) in Swift</title>
       <link>https://mahigarg.github.io/blogs/as-operator-in-swift/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/as-operator-in-swift/</guid>
       <description>Type casting is a fundamental concept in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
     </item>
-    
     <item>
       <title>Bubble Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/bubble-sort-swift/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/bubble-sort-swift/</guid>
       <description>Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted.</description>
     </item>
-    
     <item>
       <title>Is Operator (is vs is? vs is!) in Swift</title>
       <link>https://mahigarg.github.io/blogs/is-operator-in-swift/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/is-operator-in-swift/</guid>
       <description>Type checking is a crucial concept in Swift that allows you to determine the type of an instance or value at runtime.</description>
     </item>
-    
     <item>
       <title>Try Statement (Try vs Try? vs Try!) in SWift</title>
       <link>https://mahigarg.github.io/blogs/try-statement-in-swift/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/try-statement-in-swift/</guid>
       <description>Error handling is an integral part of any programming language, and Swift provides a versatile set of tools to handle errors effectively.</description>
     </item>
-    
     <item>
       <title>Carousel View : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/carousel-view-swiftui/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/carousel-view-swiftui/</guid>
       <description>A carousel view is a user interface component commonly used in mobile and web applications to display a collection of items in a horizontally scrolling manner.</description>
     </item>
-    
     <item>
       <title>Type Casting (as Operator) in Swift</title>
       <link>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</guid>
       <description>Type casting is a powerful feature in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
     </item>
-    
     <item>
       <title>Linked List Implementation: Swift</title>
       <link>https://mahigarg.github.io/gists/linked-list-implementation-swift/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/linked-list-implementation-swift/</guid>
       <description>A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node.</description>
     </item>
-    
     <item>
       <title>Type Checking (is Operator) in Swift</title>
       <link>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</link>
       <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</guid>
       <description>Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.</description>
     </item>
-    
     <item>
       <title>Remove duplicates from array: Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicate-from-array-swift/</link>
       <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/remove-duplicate-from-array-swift/</guid>
       <description>To remove duplicates from an array in Swift using a dictionary, we can create an empty dictionary and iterate through the array.</description>
     </item>
-    
     <item>
       <title>If let vs Guard let in Swift</title>
       <link>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</guid>
       <description>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent.</description>
     </item>
-    
     <item>
       <title>Binary Serach : Swift</title>
       <link>https://mahigarg.github.io/gists/binary-serach-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/binary-serach-swift/</guid>
       <description>Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found.</description>
     </item>
-    
     <item>
       <title>Merge 2 sorted Array: Swift</title>
       <link>https://mahigarg.github.io/gists/merge-2-sorted-array-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/merge-2-sorted-array-swift/</guid>
       <description>Merging two sorted Int arrays in Swift means combining them into a single sorted array while preserving the order. With Swift, you can efficiently implement the merging algorithm.</description>
     </item>
-    
     <item>
       <title>Merge 2 sorted Linked List: Swift</title>
       <link>https://mahigarg.github.io/gists/merge-2-sorted-linked-list-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/merge-2-sorted-linked-list-swift/</guid>
       <description>Merging two sorted linked lists in Swift is like combining two ordered lists into one, while still maintaining the sorted order.</description>
     </item>
-    
     <item>
       <title>Instagram Post : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/instagram-post-swiftui/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/instagram-post-swiftui/</guid>
       <description>Coding an Instagram post in SwiftUI is an engaging project. You can use various components like images, text, and buttons to design a post layout.</description>
     </item>
-    
     <item>
       <title>Lazy Property in Swift</title>
       <link>https://mahigarg.github.io/blogs/lazy-property-in-swift/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/lazy-property-in-swift/</guid>
       <description>Swift&amp;rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed.</description>
     </item>
-    
     <item>
       <title>Instagarm Logo : SwiftUI</title>
       <link>https://mahigarg.github.io/gists/instagram-logo-swiftui/</link>
       <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/instagram-logo-swiftui/</guid>
       <description>Creating the Instagram logo in SwiftUI is an exciting task. Using basic shapes like circles, squares, and colors, you can piece together the iconic camera symbol and colorful gradient background.</description>
     </item>
-    
     <item>
       <title>Computed Property in Swift</title>
       <link>https://mahigarg.github.io/blogs/computed-property-in-swift/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/computed-property-in-swift/</guid>
       <description>In Swift, computed properties are a powerful and elegant feature that allows developers to define custom accessors for their properties. Unlike stored properties, computed properties do not store a value directly.</description>
     </item>
-    
     <item>
       <title>Insertion Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/insertion-sort-swift/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/insertion-sort-swift/</guid>
       <description>Insertion sort is a simple sorting algorithm in Swift that builds the final sorted array one element at a time. It iterates through the array, comparing each element with the sorted portion and placing it in the correct position.</description>
     </item>
-    
     <item>
       <title>guard let in Swift</title>
       <link>https://mahigarg.github.io/blogs/guard-let-in-swift/</link>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/guard-let-in-swift/</guid>
       <description>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.</description>
     </item>
-    
     <item>
       <title>Selection Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/selection-sort-swift/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/selection-sort-swift/</guid>
       <description>Selection sort is a sorting algorithm in Swift that works by repeatedly finding the minimum element from the unsorted portion of an array and swapping it with the element in the correct position.</description>
     </item>
-    
     <item>
       <title>Default Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/default-statement-in-swift/</link>
       <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/default-statement-in-swift/</guid>
       <description>When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully.</description>
     </item>
-    
     <item>
       <title>Sort Int Array of 0, 1 and 2 : Swift (Dutch National Flag )</title>
       <link>https://mahigarg.github.io/gists/sort-int-array-0-1-2-swift/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/sort-int-array-0-1-2-swift/</guid>
       <description>The Dutch National Flag algorithm is a sorting algorithm that partitions an array into three sections: elements less than a given pivot, elements equal to the pivot, and elements greater than the pivot.</description>
     </item>
-    
     <item>
       <title>List: SwiftUI</title>
       <link>https://mahigarg.github.io/gists/list-swiftui/</link>
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/gists/list-swiftui/</guid>
       <description>In SwiftUI, the List is a powerful tool for creating neat and organized scrolling lists in apps. Imagine it as a virtual scrollable sheet of paper where you can display various items, like names, messages, or to-do tasks.</description>
     </item>
-    
     <item>
       <title>if let in Swift</title>
       <link>https://mahigarg.github.io/blogs/if-let-in-swift/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/if-let-in-swift/</guid>
       <description>Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
     </item>
-    
     <item>
       <title>Continue Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/continue-statement-in-swift/</link>
       <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/continue-statement-in-swift/</guid>
       <description>Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action.</description>
     </item>
-    
     <item>
       <title>Swift Functions: Single and Multiple Value Returns</title>
       <link>https://mahigarg.github.io/blogs/swift-functions-single-and-multiple-value-returns/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/swift-functions-single-and-multiple-value-returns/</guid>
       <description>In Swift, functions are the building blocks of code that encapsulate logic and perform specific tasks. They can return values to the caller, either as a single value or as multiple values using tuples.</description>
     </item>
-    
     <item>
       <title>Switch Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/switch-statement-in-swift/</link>
       <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/switch-statement-in-swift/</guid>
       <description>Swift&amp;rsquo;s powerful switch statement is a versatile control flow construct that enables developers to handle complex conditions and pattern matching with ease.</description>
     </item>
-    
     <item>
       <title>Closures: Swift</title>
       <link>https://mahigarg.github.io/blogs/closures-swift/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/closures-swift/</guid>
       <description>Closures are a powerful feature of the Swift programming language that allows you to write code that can be passed around and executed at a later time.</description>
     </item>
-    
     <item>
       <title>Break Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/break-statement-in-swift/</link>
       <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/break-statement-in-swift/</guid>
       <description>Control flow is an essential aspect of any programming language, and Swift is no exception. Swift provides a powerful and flexible control flow mechanism that allows developers to direct the flow of their code execution based on certain conditions.</description>
     </item>
-    
     <item>
       <title>Ternary Conditional Operator in Swift</title>
       <link>https://mahigarg.github.io/blogs/ternary-conditional-operator-in-swift/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/ternary-conditional-operator-in-swift/</guid>
       <description>Swift&amp;rsquo;s Ternary Conditional Operator is a concise and powerful tool that allows developers to write compact conditional expressions. It provides a more concise alternative to traditional if-else statements, making code more readable and expressive.</description>
     </item>
-    
     <item>
       <title>Enums in Swift</title>
       <link>https://mahigarg.github.io/blogs/enums-in-swift/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/enums-in-swift/</guid>
       <description>When it comes to writing clean, maintainable, and bug-free code, Swift provides a powerful feature called enums or enumerations. Enums are a fundamental data type that allows developers to define a set of related values in a type-safe manner.</description>
     </item>
-    
     <item>
       <title>Inout in Swift</title>
       <link>https://mahigarg.github.io/blogs/inout-in-swift/</link>
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/inout-in-swift/</guid>
       <description>Swift, being a modern and versatile programming language, offers various features to enhance code functionality and readability. One such powerful feature is the inout parameter, which allows two-way communication between a function and its caller.</description>
     </item>
-    
     <item>
       <title>Structs in Swift</title>
       <link>https://mahigarg.github.io/blogs/structs-in-swift/</link>
       <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/structs-in-swift/</guid>
       <description>When it comes to designing data structures in Swift, one of the fundamental building blocks you&amp;rsquo;ll encounter is the struct. A struct, short for structure, is a versatile and lightweight data type that allows you to encapsulate related properties and behaviors together.</description>
     </item>
-    
     <item>
       <title>Tuple in Swift</title>
       <link>https://mahigarg.github.io/blogs/tuple-in-swift/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/tuple-in-swift/</guid>
       <description>In Swift, tuples are lightweight data structures that provide a simple and elegant way to group multiple values together. They offer great versatility and are widely used in various scenarios to pass around related pieces of data effortlessly.</description>
     </item>
-    
     <item>
       <title>Classes in Swift</title>
       <link>https://mahigarg.github.io/blogs/classes-in-swift/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/classes-in-swift/</guid>
       <description>In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.</description>
     </item>
-    
     <item>
       <title>NavigationView in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</guid>
       <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
     </item>
-    
     <item>
       <title>Dictionary: Swift</title>
       <link>https://mahigarg.github.io/blogs/dictionary-swift/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/dictionary-swift/</guid>
       <description>Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys.</description>
     </item>
-    
     <item>
       <title>Protocols in Swift</title>
       <link>https://mahigarg.github.io/blogs/protocols-in-swift/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/protocols-in-swift/</guid>
       <description>In Swift, protocols are a powerful tool that empowers developers to create flexible, reusable, and scalable code. They play a pivotal role in achieving abstraction and enabling polymorphism, essential principles of object-oriented programming (OOP).</description>
     </item>
-    
     <item>
       <title>Extensions in Swift</title>
       <link>https://mahigarg.github.io/blogs/extensions-in-swift/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/extensions-in-swift/</guid>
       <description>Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity.</description>
     </item>
-    
     <item>
       <title>Generics in Swift</title>
       <link>https://mahigarg.github.io/blogs/generics-in-swift/</link>
       <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/generics-in-swift/</guid>
       <description>Generics allow us to write functions, structures, and classes that can work with different types while maintaining type safety. Rather than specifying concrete types, we use placeholders (type parameters) that get substituted with actual types when the code is used.</description>
     </item>
-    
     <item>
       <title>Variable Types in Swift</title>
       <link>https://mahigarg.github.io/blogs/variable-types-in-swift/</link>
       <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/variable-types-in-swift/</guid>
       <description>Swift is a powerful and versatile programming language that allows developers to create robust and efficient applications across various platforms. One of the fundamental aspects of Swift is its strong type system, which ensures safety and reliability in code.</description>
     </item>
-    
     <item>
       <title>let vs var: Mutability in Swift</title>
       <link>https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/</link>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/</guid>
       <description>Swift is a powerful and modern programming language that allows developers to build robust and efficient applications for various platforms. One of the key features of Swift is its support for both immutable constants and mutable variables through the use of let and var declarations, respectively.</description>
     </item>
-    
     <item>
       <title>Optional Type in Swift</title>
       <link>https://mahigarg.github.io/blogs/optional-type-in-swift/</link>
       <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/optional-type-in-swift/</guid>
       <description>Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&amp;rsquo;s safety is its handling of optional types.</description>
     </item>
-    
     <item>
       <title>Do While (Repeat While) Loop in Swift</title>
       <link>https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/</link>
       <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/</guid>
       <description>Swift is a powerful and expressive programming language that offers a variety of loop structures to handle repetitive tasks efficiently. Among these, the do-while loop stands out as a loop that ensures the code inside the loop executes at least once, regardless of the loop&amp;rsquo;s condition.</description>
     </item>
-    
     <item>
       <title>While Loop in Swift</title>
       <link>https://mahigarg.github.io/blogs/while-loop-in-swift/</link>
       <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/while-loop-in-swift/</guid>
       <description>In any programming language, loops are essential for performing repetitive tasks efficiently. Swift offers a variety of loop structures, and one of the most versatile ones is the while loop.</description>
     </item>
-    
     <item>
       <title>@State: SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
       <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
     </item>
-    
     <item>
       <title>For loop with where clause: Swift</title>
       <link>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</guid>
       <description>For loop is an inevitable part of any programming language. It iterates over every element of the collection type data including array, set, and dictionary, and does the operation as per the code.</description>
     </item>
-    
     <item>
       <title>Round up to n Decimal Digit: Swift</title>
       <link>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</link>
       <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</guid>
       <description>We sometimes in our calculation get results with more than 4 decimal digits or even more. But as a developer, we can’t use the same to display to users.</description>
     </item>
-    
     <item>
       <title>Set: Swift</title>
       <link>https://mahigarg.github.io/blogs/set-swift/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
       <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
     </item>
-    
     <item>
       <title>Setup Firebase RemoteConfig</title>
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
       <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
     </item>
-    
     <item>
       <title>Map Operator: Swift</title>
       <link>https://mahigarg.github.io/blogs/map-operator-swift/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/map-operator-swift/</guid>
       <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
     </item>
-    
     <item>
       <title>$0, $1 … $n in Swift</title>
       <link>https://mahigarg.github.io/blogs/0-1-n-in-swift/</link>
       <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/0-1-n-in-swift/</guid>
       <description>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</description>
     </item>
-    
     <item>
       <title>Named and Unnamed Parameters: Swift</title>
       <link>https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/</link>
       <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/</guid>
       <description>Functions are something that every developer uses daily. A function can of with or without parameters. Swift has multiple ways of passing the parameters to a function.</description>
     </item>
-    
     <item>
       <title>Filter Operator: Swift</title>
       <link>https://mahigarg.github.io/blogs/filter-operator-swift/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/filter-operator-swift/</guid>
       <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
     </item>
-    
     <item>
       <title>Enumerated in Swift</title>
       <link>https://mahigarg.github.io/blogs/enumerated-in-swift/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/enumerated-in-swift/</guid>
       <description>Enumerated is used to iterate over a collection along with the position access. It returns a sequence of Pairs where the first element in the Pair is the index and the second element is the element itself of the collection.</description>
     </item>
-    
     <item>
       <title>RemoteConfig in Firebase</title>
       <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</guid>
       <description>In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates.</description>
     </item>
-    
     <item>
       <title>Labeled Statement : Swift</title>
       <link>https://mahigarg.github.io/blogs/labeled-statement-swift/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://mahigarg.github.io/blogs/labeled-statement-swift/</guid>
       <description>Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them. It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DSA on Mahi Garg</title>
+    <link>https://mahigarg.github.io/tags/dsa/</link>
+    <description>Recent content in DSA on Mahi Garg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mahigarg.github.io/tags/dsa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find K Closest Elements - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/find-k-closest-elements-leetcode/</link>
+      <pubDate>Sat, 17 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/find-k-closest-elements-leetcode/</guid>
+      <description>Find K Closest Elements - LeetCode&#xA;Given a sorted integer array arr, two integers k and x, return the k closest integers to x in the array.</description>
+    </item>
+    <item>
+      <title>Intersection of Two Arrays - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/intersection-of-two-arrays-leetcode/</link>
+      <pubDate>Thu, 15 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/intersection-of-two-arrays-leetcode/</guid>
+      <description>Intersection of Two Arrays - LeetCode&#xA;Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.</description>
+    </item>
+    <item>
+      <title>Contains Duplicate II - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/contains-duplicate-ii-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/contains-duplicate-ii-leetcode/</guid>
+      <description>Contains Duplicate II - LeetCode&#xA;Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) &amp;lt;= k.</description>
+    </item>
+    <item>
+      <title>Minimum Size Subarray Sum - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/minimum-size-subarray-sum-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/minimum-size-subarray-sum-leetcode/</guid>
+      <description>Minimum Size Subarray Sum - LeetCode&#xA;Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target.</description>
+    </item>
+    <item>
+      <title>Repeated DNA Sequences - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/repeated-dna-sequences-leetcode/</link>
+      <pubDate>Fri, 09 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/repeated-dna-sequences-leetcode/</guid>
+      <description>Repeated DNA Sequences - LeetCode&#xA;The DNA sequence is composed of a series of nucleotides abbreviated as &#39;A&#39;, &#39;C&#39;, &#39;G&#39;, and &#39;T&#39;.</description>
+    </item>
+    <item>
+      <title>Longest Substring Without Repeating Characters - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/longest-substring-without-repeating-characters-leetcode/</link>
+      <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/longest-substring-without-repeating-characters-leetcode/</guid>
+      <description>Longest Substring Without Repeating Characters - LeetCode&#xA;Given a string s, find the length of the longest substring without repeating characters.</description>
+    </item>
+    <item>
+      <title>Majority Element - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/majority-element-leetcode/</link>
+      <pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/majority-element-leetcode/</guid>
+      <description>Majority Element - LeetCode&#xA;Given an array nums of size n, return the majority element.&#xA;The majority element is the element that appears more than [n / 2] times.</description>
+    </item>
+    <item>
+      <title>Longest Substring with At Least K Repeating Characters - LeetCode : Swift</title>
+      <link>https://mahigarg.github.io/gists/longest-substring-with-at-least-k-repeating-characters-leetcode/</link>
+      <pubDate>Thu, 25 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/gists/longest-substring-with-at-least-k-repeating-characters-leetcode/</guid>
+      <description>Longest Substring with At Least K Repeating Characters - LeetCode&#xA;Given a string s and an integer k, return the length of the longest substring of s such that the frequency of each character in this substring is greater than or equal to k.</description>
+    </item>
+  </channel>
+</rss>
