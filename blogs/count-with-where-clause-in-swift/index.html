@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Initializer in Swift &middot; Mahi Garg</title>
+  <title>Count with where clause (count(where:)) in Swift &middot; Mahi Garg</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,18 +13,18 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Initializer in Swift">
-    <meta name="description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta property="og:description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta property="twitter:description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta name="abstract" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta name="summary" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation."> 
+  <meta name="topic" content="Count with where clause (count(where:)) in Swift">
+    <meta name="description" content="In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&#39;s extensions to Sequence and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.">
+    <meta property="og:description" content="In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&#39;s extensions to Sequence and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.">
+    <meta property="twitter:description" content="In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&#39;s extensions to Sequence and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.">
+    <meta name="abstract" content="In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&#39;s extensions to Sequence and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.">
+    <meta name="summary" content="In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&#39;s extensions to Sequence and allows for a concise and expressive way to determine how many elements in a collection match a given predicate."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-08-19 "> 
+    <meta property="article:published_time" content=" 2024-08-25 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
@@ -32,10 +32,10 @@
     <meta name="robots" content="max-image-preview:large">
     
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="initializer in Swift,initializer swift,swift,ios">
+    <meta name="keywords" content="count function,count where,sequence,swift,ios">
     
     
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/initializer-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -255,10 +255,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ August 19, 2023 / 3 mins read / By Mahi Garg
+				/ August 25, 2024 / 4 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Initializer in Swift
+				Count with where clause (count(where:)) in Swift
 			</h1>
 		</div>
 
@@ -278,93 +278,73 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&rsquo;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.</p>
-<h3 id="what-are-initializers">What are Initializers?</h3>
-<p>Initializers in Swift are special methods that prepare an instance of a class, structure, or enumeration for use. They set up the initial values of properties and perform any necessary setup. Default initializers are provided by Swift for types that don&rsquo;t have any initializers defined explicitly.</p>
-<div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="initializer-syntax">Initializer Syntax:</h3>
-<h4 id="parameterized-initializers">Parameterized Initializers</h4>
-<p>These allow you to customize the initialization process by accepting parameters.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> x: Double
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> y: Double
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(x: Double, y: Double) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.x = x
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.y = y
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="convenience-initializers">Convenience Initializers</h4>
-<p>These are secondary initializers that call designated initializers and provide a more convenient way to initialize an instance.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">Point</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.<span style="color:#66d9ef">init</span>(x: <span style="color:#ae81ff">0.0</span>, y: <span style="color:#ae81ff">0.0</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="initializer-delegation">Initializer Delegation:</h3>
-<ul>
-<li>Designated Initializers: These are the primary initializers of a class or structure that initialize all properties introduced by that class or structure.</li>
-<li>Convenience Initializers Calling Designated Initializers: Convenience initializers can call designated initializers to ensure that initialization is properly delegated.</li>
-</ul>
-<h3 id="failable-initializers">Failable Initializers:</h3>
-<p>Handling Initialization Failure: Failable initializers are initializers that can return nil if initialization fails due to invalid input.</p>
-<p>Returning nil from Failable Initializers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">PositiveNumber</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> value: Int
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>?(value: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.value = value
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="required-initializers">Required Initializers:</h3>
-<p>When a class inherits from another class and the superclass has a designated initializer that needs to be overridden in the subclass, you can mark that initializer as &ldquo;required.&rdquo; This means that any subclass must provide an implementation for that initializer, ensuring that the initialization requirements are met throughout the inheritance chain.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vehicle</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> wheels: Int
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">init</span>(no: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.wheels = no
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+						<p>In Swift, the <code>count(where:)</code> method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&rsquo;s extensions to <code>Sequence</code> and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.</p>
+<p><code>count(where:)</code> method is introduced in Swift 6.0 that performs the equivalent of a <code>filter()</code> and count in a single pass. This saves the creation of a new array that gets immediately discarded, and provides a clear and concise solution to a common problem. Keep in mind this is only available from Swift 6.0 only.</p>
+<h3 id="what-is-countwhere">What is <code>count(where:)</code>?</h3>
+<p>The count(where:) method returns the number of elements in a collection that satisfy a specified condition (predicate). It&rsquo;s a convenient way to count elements without having to filter the collection first and then count the resulting array, which makes the code both more readable and efficient.</p>
+<h3 id="syntax">Syntax</h3>
+<p>The general syntax for <code>count(where:)</code> is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Swift" data-lang="Swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> count = collection.count(<span style="color:#66d9ef">where</span>: { predicate })
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//or </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> count = collection.count { predicate }
+</span></span></code></pre></div><p>Here, collection is the sequence you are working with, and <code>{ predicate }</code> is a closure that takes an element of the sequence and returns a Bool indicating whether the element should be counted.</p>
+<h3 id="examples-using-different-types-of-sequences">Examples Using Different Types of Sequences</h3>
+<h4 id="1-array">1. Array</h4>
+<p>An array is an ordered collection that can contain duplicates and allows random access.</p>
+<p>Example: Count Odd Numbers in an Array</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> oddCount = numbers.count { $0 <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> }
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>: Vehicle {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> color: String
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(color: String){
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.color = color
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#66d9ef">init</span>(no: <span style="color:#ae81ff">4</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">init</span>(no: Int) {
-</span></span><span style="display:flex;"><span>        fatalError(<span style="color:#e6db74">&#34;init(no:) has not been implemented&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="initializer-inheritance">Initializer Inheritance:</h3>
-<p>Overriding Initializers in Subclasses: You can override designated initializers in subclasses using the override keyword.</p>
-<p>Automatic Inheritance of Required Initializers: Required initializers defined in protocols are automatically inherited by conforming classes.</p>
-<h3 id="conclusion">Conclusion:</h3>
-<p>Initializers in Swift are vital for creating instances with proper initial state. Whether you&rsquo;re defining custom initializers, handling failure cases, or working with inheritance, understanding Swift&rsquo;s initializer system is essential for writing robust and well-structured code. By mastering initializers, you&rsquo;ll be better equipped to create flexible and reliable Swift applications.</p>
-<p>Remember to refer to official Swift documentation and experiment with code to deepen your understanding of initializers and their various nuances. Happy coding!</p>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>oddCount<span style="color:#e6db74">)</span><span style="color:#e6db74"> odd numbers.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: There are 5 odd numbers.</span>
+</span></span></code></pre></div><p>Here, we use an array of integers and count how many of them are odd using the predicate <code>{ $0 % 2 != 0 }</code>.</p>
+<h4 id="2-set">2. Set</h4>
+<p>A set is an unordered collection of unique elements.</p>
+<p>Example: Count Strings with More Than Three Characters in a Set</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> fruits: Set&lt;String&gt; = [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;kiwi&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;pear&#34;</span>, <span style="color:#e6db74">&#34;fig&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> longFruitCount = fruits.count { $0.count <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>longFruitCount<span style="color:#e6db74">)</span><span style="color:#e6db74"> fruits with more than three characters.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: There are 4 fruits with more than three characters.</span>
+</span></span></code></pre></div><p>This example uses a set of strings and counts how many strings have more than three characters.</p>
+<h4 id="3-dictionary">3. Dictionary</h4>
+<p>A dictionary is a collection of key-value pairs where each key is unique.</p>
+<p>Example: Count Dictionary Values That Are True</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numberAvailability: [String: Bool] = [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;One&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Two&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Three&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Four&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Five&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> availableNumbersCount = numberAvailability.count { $0.value }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>availableNumbersCount<span style="color:#e6db74">)</span><span style="color:#e6db74"> available numbers.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: There are 3 available numbers.</span>
+</span></span></code></pre></div><p>In this case, we have a dictionary of number spot and their availability (as a Bool). The predicate { $0.value } checks if the number is available.</p>
+<h4 id="4-range">4. Range</h4>
+<p>A range is a sequence of numbers, often used to generate numbers in a specific interval.</p>
+<p>Example: Count Numbers Greater Than 50 in a Range</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numberRange = <span style="color:#ae81ff">1.</span>..<span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> greaterThanFiftyCount = numberRange.count { $0 <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>greaterThanFiftyCount<span style="color:#e6db74">)</span><span style="color:#e6db74"> numbers greater than 50.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: There are 50 numbers greater than 50.</span>
+</span></span></code></pre></div><p>Here, we use a closed range from 1 to 100 and count how many numbers are greater than 50.</p>
+<h4 id="5-string">5. String</h4>
+<p>A string in Swift is a collection of characters, and it conforms to Sequence.</p>
+<p>Example: Count Vowels in a String</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> text = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> vowels = <span style="color:#e6db74">&#34;aeiouAEIOU&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> vowelCount = text.count { vowels.contains($0) }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">\(</span>vowelCount<span style="color:#e6db74">)</span><span style="color:#e6db74"> vowels in the text.&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: There are 3 vowels in the text.</span>
+</span></span></code></pre></div><p>In this example, we count the number of vowels in a string using a predicate that checks if each character is a vowel.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The <code>count(where:)</code> method in Swift is a built-in utility that provides a concise, readable, and efficient way to count elements in a collection that meet a specific condition. It can be used with any type that conforms to the Sequence protocol, such as arrays, sets, dictionaries, ranges, and strings. While it is powerful and expressive, it&rsquo;s essential to consider performance and suitability when using it, especially in cases involving large collections or complex predicates.</p>
+<p>By understanding these limitations and using <code>count(where:)</code> appropriately, you can write cleaner and more efficient Swift code that leverages the capabilities of the Swift standard library.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
@@ -465,26 +445,17 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/thread-safety-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/initializer-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Thread Safety in Swift
+							Initializer in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
-					
-					<a href="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
-						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
-							Next Post
-						</span>
-						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Count with where clause (count(where:)) in Swift
-						</span>
-					</a>
 					
 				</div>
 			</div>

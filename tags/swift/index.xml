@@ -6,8 +6,15 @@
     <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Count with where clause (count(where:)) in Swift</title>
+      <link>https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/</link>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/</guid>
+      <description>In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria.</description>
+    </item>
     <item>
       <title>Initializer in Swift</title>
       <link>https://mahigarg.github.io/blogs/initializer-in-swift/</link>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Initializer in Swift &middot; Mahi Garg</title>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>$0, $1 … $n in Swift &middot; Mahi Garg</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,18 +13,18 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Initializer in Swift">
-    <meta name="description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta property="og:description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta property="twitter:description" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta name="abstract" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.">
-    <meta name="summary" content="In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&#39;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation."> 
+  <meta name="topic" content="$0, $1 … $n in Swift">
+    <meta name="description" content="In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.">
+    <meta property="og:description" content="In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.">
+    <meta property="twitter:description" content="In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.">
+    <meta name="abstract" content="In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.">
+    <meta name="summary" content="In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2023-08-19 "> 
+    <meta property="article:published_time" content=" 2022-06-11 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/initializer-in-swift/">
+    <meta name="url" content="http://localhost:1313/blogs/0-1-n-in-swift-copy/">
+    <meta property="og:url" content="http://localhost:1313/blogs/0-1-n-in-swift-copy/">
+    <meta property="al:web:url" content="http://localhost:1313/blogs/0-1-n-in-swift-copy/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
@@ -32,10 +32,10 @@
     <meta name="robots" content="max-image-preview:large">
     
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="initializer in Swift,initializer swift,swift,ios">
+    <meta name="keywords" content="function parameters,numbered paraterms,swift,ios">
     
     
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/initializer-in-swift/">
+    <link rel="canonical" href="http://localhost:1313/blogs/0-1-n-in-swift-copy/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -69,22 +69,22 @@
   
 
   <!-- Plugins Stylesheets -->
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/font-awesome/css/font-awesome.css" />
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.css" />
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/splitting/splitting.css" />
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/swiper/swiper.min.css" />
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/animate/animate.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/magnific-popup/magnific-popup.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/splitting/splitting.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/swiper/swiper.min.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/animate/animate.css" />
 
   <!-- Main Stylesheets -->
   
-  <link rel="stylesheet" href="https://mahigarg.github.io/scss/style.min.css" />
+  <link rel="stylesheet" href="http://localhost:1313/scss/style.min.css" />
 
-  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/template-dark/dark.css" />
+  <link rel="stylesheet" href="http://localhost:1313/plugins/template-dark/dark.css" />
   
   <!-- Favicon -->
-  <link rel="shortcut icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
-  <link rel="icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="http://localhost:1313/images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="http://localhost:1313/images/favicon/favicon.ico" type="image/x-icon" />
 
   
   <!-- Google Analytics -->
@@ -109,7 +109,7 @@
     <div class="vertical-center">
       <div class="spinner-logo">
 		
-        <img src="https://mahigarg.github.io/images/mahi.webp" alt="https://mahigarg.github.io/Mahi%20Garg" />
+        <img src="http://localhost:1313/images/mahi.webp" alt="http://localhost:1313/Mahi%20Garg" />
         <div class="spinner-dot"></div>
         <div class="spinner spinner-line"></div>
       </div>
@@ -127,9 +127,9 @@
 
 				
 				<div class="logo">
-					<a href="https://mahigarg.github.io/">
+					<a href="http://localhost:1313/">
             			
-						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
+						<img src="http://localhost:1313/images/mahi.webp" alt="Mahi Garg" />
 					</a>
 				</div>
 
@@ -172,7 +172,7 @@
                       
                       
                       <li class="menu-item">
-                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//">Home</a>
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="http://localhost:1313//">Home</a>
                         
                       </li>
                       
@@ -180,7 +180,7 @@
                       
                       
                       <li class="menu-item menu-item-has-children has-children">
-                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//publications">Publications</a>
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="http://localhost:1313//publications">Publications</a>
                         
                         <ul class="sub-menu">
                           
@@ -200,7 +200,7 @@
                       
                       
                       <li class="menu-item">
-                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//opensourcecontribution">Open Source Contribution</a>
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="http://localhost:1313//opensourcecontribution">Open Source Contribution</a>
                         
                       </li>
                       
@@ -252,13 +252,13 @@
 			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
 				
 				
-				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				<a href="http://localhost:1313/categories/blog/">Blog</a>
 				
 				
-				/ August 19, 2023 / 3 mins read / By Mahi Garg
+				/ June 11, 2022 / 2 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Initializer in Swift
+				$0, $1 … $n in Swift
 			</h1>
 		</div>
 
@@ -278,97 +278,45 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&rsquo;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.</p>
-<h3 id="what-are-initializers">What are Initializers?</h3>
-<p>Initializers in Swift are special methods that prepare an instance of a class, structure, or enumeration for use. They set up the initial values of properties and perform any necessary setup. Default initializers are provided by Swift for types that don&rsquo;t have any initializers defined explicitly.</p>
+						<p>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</p>
+<p>The syntax looks like the below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> evenNumbers = array.filter { item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(evenNumbers)
+</span></span></code></pre></div><p>This filter function takes a single argument which is another function that is of <code>(Int) -&gt; Bool</code> type. The inner function takes every element of the array one by one and checks if that is an even number or not. It returns true if the condition is <code>true</code> else it returns <code>false</code>.</p>
+<p>The parameter passed inside the function can be replaced with <code>$0</code>.</p>
+<p><code>$0</code> represents the first parameter of closure or higher-order function.</p>
+<p>It can be used with both closers or higher-order functions.</p>
+<p>The same syntax will look like below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> evenNumbers = array.filter {
+</span></span><span style="display:flex;"><span>    $0 <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(evenNumbers)
+</span></span></code></pre></div><hr>
+<p>In case the number of parameters are more than one,</p>
+<p><code>$0</code>, <code>$1</code> up to <code>$n</code> can be used.</p>
+<p>For example, look at the below case where there are two parameters passed to the higher-order function namely <code>index</code> and <code>item</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filterArray = array.enumerated().filter {index, item <span style="color:#66d9ef">in</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I am doing some rocket science here</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Item at </span><span style="color:#e6db74">\(</span>index<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>item<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> index <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> item <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filterArray)
+</span></span></code></pre></div><p>We can use <code>$0</code> for <code>index</code> and <code>$1</code> for <code>item</code> in the same example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> array = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> filterArray = array.enumerated().filter {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//I am doing some rocket science here</span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Item at </span><span style="color:#e6db74">\(</span>$0<span style="color:#e6db74">)</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">\(</span>$1<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $0 <span style="color:#f92672">!=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> $1 <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>print(filterArray)
+</span></span></code></pre></div><p>These numbers can go up to any number of parameters passed to the inner function.</p>
+<p>I’ll personally suggest using named parameters if the parameters are more than three as it&rsquo;s difficult to remember which $ variable is what. Up to three is really helpful.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="initializer-syntax">Initializer Syntax:</h3>
-<h4 id="parameterized-initializers">Parameterized Initializers</h4>
-<p>These allow you to customize the initialization process by accepting parameters.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Point</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> x: Double
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> y: Double
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(x: Double, y: Double) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.x = x
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.y = y
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h4 id="convenience-initializers">Convenience Initializers</h4>
-<p>These are secondary initializers that call designated initializers and provide a more convenient way to initialize an instance.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">Point</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.<span style="color:#66d9ef">init</span>(x: <span style="color:#ae81ff">0.0</span>, y: <span style="color:#ae81ff">0.0</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="initializer-delegation">Initializer Delegation:</h3>
-<ul>
-<li>Designated Initializers: These are the primary initializers of a class or structure that initialize all properties introduced by that class or structure.</li>
-<li>Convenience Initializers Calling Designated Initializers: Convenience initializers can call designated initializers to ensure that initialization is properly delegated.</li>
-</ul>
-<h3 id="failable-initializers">Failable Initializers:</h3>
-<p>Handling Initialization Failure: Failable initializers are initializers that can return nil if initialization fails due to invalid input.</p>
-<p>Returning nil from Failable Initializers:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">PositiveNumber</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> value: Int
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>?(value: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> value <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.value = value
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
-<h3 id="required-initializers">Required Initializers:</h3>
-<p>When a class inherits from another class and the superclass has a designated initializer that needs to be overridden in the subclass, you can mark that initializer as &ldquo;required.&rdquo; This means that any subclass must provide an implementation for that initializer, ensuring that the initialization requirements are met throughout the inheritance chain.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vehicle</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> wheels: Int
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">init</span>(no: Int) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.wheels = no
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>: Vehicle {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> color: String
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(color: String){
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.color = color
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">super</span>.<span style="color:#66d9ef">init</span>(no: <span style="color:#ae81ff">4</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">required</span> <span style="color:#66d9ef">init</span>(no: Int) {
-</span></span><span style="display:flex;"><span>        fatalError(<span style="color:#e6db74">&#34;init(no:) has not been implemented&#34;</span>)
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="initializer-inheritance">Initializer Inheritance:</h3>
-<p>Overriding Initializers in Subclasses: You can override designated initializers in subclasses using the override keyword.</p>
-<p>Automatic Inheritance of Required Initializers: Required initializers defined in protocols are automatically inherited by conforming classes.</p>
-<h3 id="conclusion">Conclusion:</h3>
-<p>Initializers in Swift are vital for creating instances with proper initial state. Whether you&rsquo;re defining custom initializers, handling failure cases, or working with inheritance, understanding Swift&rsquo;s initializer system is essential for writing robust and well-structured code. By mastering initializers, you&rsquo;ll be better equipped to create flexible and reliable Swift applications.</p>
-<p>Remember to refer to official Swift documentation and experiment with code to deepen your understanding of initializers and their various nuances. Happy coding!</p>
-<div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
     
 </div>
 
@@ -377,7 +325,7 @@
 						<div class="tags-links">
 							<span>Tags:</span>
 							
-							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							<a href="http://localhost:1313/tags/swift/" rel="tag">Swift</a>
 							
 						</div>
 						
@@ -465,24 +413,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/thread-safety-in-swift/">
+					<a href="http://localhost:1313/blogs/0-1-n-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Thread Safety in Swift
+							$0, $1 … $n in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
+					<a href="http://localhost:1313/blogs/map-operator-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Count with where clause (count(where:)) in Swift
+							Map Operator: Swift
 						</span>
 					</a>
 					
@@ -542,32 +490,32 @@
 	<div class="cursor"></div>
 
   <!-- Scripts -->
-  <script src="https://mahigarg.github.io/plugins/jQuery/jquery.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/validate/jquery.validate.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/swiper/swiper.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/splitting/splitting.js"></script>
-<script src="https://mahigarg.github.io/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/isotope/isotope.pkgd.js"></script>
-<script src="https://mahigarg.github.io/plugins/jarallax/jarallax.min.js"></script>
-<script src="https://mahigarg.github.io/plugins/scrolla/jquery.scrolla.js"></script>
-<script src="https://mahigarg.github.io/plugins/skrollr/skrollr.js"></script>
-<script src="https://mahigarg.github.io/plugins/cookie/jquery.cookie.js"></script>
-<script src="https://mahigarg.github.io/plugins/typed/typed.js"></script>
-<script src="https://mahigarg.github.io/plugins/rrssb/rrssb.js"></script>
+  <script src="http://localhost:1313/plugins/jQuery/jquery.min.js"></script>
+<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="http://localhost:1313/plugins/validate/jquery.validate.min.js"></script>
+<script src="http://localhost:1313/plugins/swiper/swiper.min.js"></script>
+<script src="http://localhost:1313/plugins/magnific-popup/magnific-popup.min.js"></script>
+<script src="http://localhost:1313/plugins/splitting/splitting.js"></script>
+<script src="http://localhost:1313/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="http://localhost:1313/plugins/isotope/isotope.pkgd.js"></script>
+<script src="http://localhost:1313/plugins/jarallax/jarallax.min.js"></script>
+<script src="http://localhost:1313/plugins/scrolla/jquery.scrolla.js"></script>
+<script src="http://localhost:1313/plugins/skrollr/skrollr.js"></script>
+<script src="http://localhost:1313/plugins/cookie/jquery.cookie.js"></script>
+<script src="http://localhost:1313/plugins/typed/typed.js"></script>
+<script src="http://localhost:1313/plugins/rrssb/rrssb.js"></script>
 
 
-<script src="https://mahigarg.github.io/plugins/mark/mark.js"></script>
-<script src="https://mahigarg.github.io/plugins/fuse/fuse.js"></script>
-<script src="https://mahigarg.github.io/plugins/search/simple-search.js"></script>
+<script src="http://localhost:1313/plugins/mark/mark.js"></script>
+<script src="http://localhost:1313/plugins/fuse/fuse.js"></script>
+<script src="http://localhost:1313/plugins/search/simple-search.js"></script>
 
 
 
-<script src="https://mahigarg.github.io/js/form-handler.min.js"></script>
+<script src="http://localhost:1313/js/form-handler.min.js"></script>
 
 
-<script src="https://mahigarg.github.io/js/common.min.js"></script>
+<script src="http://localhost:1313/js/common.min.js"></script>
 
 </body>
 
