@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Property Observers (WillSet &amp; DidSet) in Swift &middot; Mahi Garg</title>
+
+  <!-- Meta -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <meta name="author" content="Mahi Garg" />  
+  <meta name="owner" content="Mahi Garg">
+  <meta property="twitter:title" content="Mahi Garg">
+
+  <meta name="topic" content="Property Observers (WillSet &amp; DidSet) in Swift">
+    <meta name="description" content="Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.">
+    <meta property="og:description" content="Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.">
+    <meta property="twitter:description" content="Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.">
+    <meta name="abstract" content="Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.">
+    <meta name="summary" content="Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic."> 
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content=" 2024-09-21 "> 
+
+    <meta name="url" content="https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/">
+
+    <meta name="site_name" content="Mahi Garg">
+    <meta property="og:site_name" content="Mahi Garg">
+
+    <meta name="robots" content="max-image-preview:large">
+    
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="willset,didset,property observers,swift">
+    
+    
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="target" content="all" />
+    <meta name="audience" content="all" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="safe for kids" /> 
+    <meta property="og:tags" content="Swift"> 
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1093303282603666"
+     crossorigin="anonymous">
+  </script>
+
+  <script>
+  function onErrorLoadingAds() {
+    console.log("AdBlocker blocks the ads")
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" 
+  onerror="onErrorLoadingAds()">
+  </script>
+  
+
+  
+  <meta name="google-site-verification" content="WsYlsB659Cuy0GKk82CS1ogZoTK0FIxmdSE759c1rMU" />
+  
+
+  <!-- Plugins Stylesheets -->
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/splitting/splitting.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/swiper/swiper.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/animate/animate.css" />
+
+  <!-- Main Stylesheets -->
+  
+  <link rel="stylesheet" href="https://mahigarg.github.io/scss/style.min.css" />
+
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/template-dark/dark.css" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLR31QSF3N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GLR31QSF3N');
+  </script>
+  
+
+  </head>
+
+<body class="page dark-skin">
+  <div class="container-page ">
+    <!-- Preloader -->
+    
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="spinner-logo">
+		
+        <img src="https://mahigarg.github.io/images/mahi.webp" alt="https://mahigarg.github.io/Mahi%20Garg" />
+        <div class="spinner-dot"></div>
+        <div class="spinner spinner-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Header -->
+    
+<header class="header">
+	<div class="header__builder">
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+				
+				<div class="logo">
+					<a href="https://mahigarg.github.io/">
+            			
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
+					</a>
+				</div>
+
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+
+				
+				<a href="#" class="switcher-btn" aria-label="switcher-button">
+					<span class="sw-before">
+						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+							<path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+						</svg>
+					</span>
+					<span class="sw-after">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+							<path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+						</svg>
+					</span>
+				</a>
+
+				
+				<a href="#" class="menu-btn" aria-label="menu-button">
+					<span></span>
+					<span></span>
+				</a>
+
+				
+				<div class="menu-full-overlay">
+					<div class="menu-full-container">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+									
+									<div class="menu-full">
+										<ul class="menu-full">
+											
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//">Home</a>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item menu-item-has-children has-children">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//publications">Publications</a>
+                        
+                        <ul class="sub-menu">
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/blogs/">Blogs</a></li>
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/gists/">Gists</a></li>
+                          
+                        </ul>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//opensourcecontribution">Open Source Contribution</a>
+                        
+                      </li>
+                      
+										</ul>
+									</div>
+
+									
+									<div class="menu-social-links">
+                    
+                    <a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Linkedin">
+                      <i aria-hidden="true" class="fab fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Github">
+                      <i aria-hidden="true" class="fab fa-github"></i>
+                    </a>
+                    
+                    <a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Medium">
+                      <i aria-hidden="true" class="fab fa-medium"></i>
+                    </a>
+                    
+									</div>
+
+									<div class="v-line-block"><span></span></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-overlay"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+    <!-- Wrapper -->
+		<div class="wrapper single-post">
+      
+
+
+
+<section class="section section-inner started-heading">
+	<div class="container">
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ September 21, 2024 / 8 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Property Observers (WillSet &amp; DidSet) in Swift
+			</h1>
+		</div>
+
+	</div>
+</section>
+
+
+
+
+
+<section class="section section-inner m-archive">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.</p>
+<p>In this blog, we&rsquo;ll dive into what property observers are, how they work, and how to use them in your Swift code with practical examples.</p>
+<h3 id="what-are-property-observers">What are Property Observers?</h3>
+<p>Property observers observe and respond to changes in a property’s value. You can define property observers for both stored properties (properties with an initial value) and computed properties. Property observers do not trigger for the initial assignment (when the property is first initialized); they only react when the property’s value is explicitly set.</p>
+<h4 id="swift-provides-two-kinds-of-property-observers">Swift provides two kinds of property observers:</h4>
+<ul>
+<li><code>willSet</code>: Called just before the value is set.</li>
+<li><code>didSet</code>: Called immediately after the value has been set.</li>
+</ul>
+<h3 id="syntax-for-property-observers">Syntax for Property Observers</h3>
+<p>Here is the basic syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> property: <span style="color:#66d9ef">Type</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code executed just before the property is set</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Code executed immediately after the property is set</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Let’s now explore these observers with examples.</p>
+<h3 id="using-didset-to-track-property-changes">Using didSet to Track Property Changes</h3>
+<p>Suppose we have a class that represents a <code>UserProfile</code> where we want to keep track of the user&rsquo;s age. We can use the <code>didSet</code> observer to react whenever the age property changes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProfile</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int = <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;User&#39;s age changed from </span><span style="color:#e6db74">\(</span>oldValue<span style="color:#e6db74">)</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> profile = UserProfile()
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">25</span>   <span style="color:#75715e">// Output: User&#39;s age changed from 0 to 25</span>
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">30</span>   <span style="color:#75715e">// Output: User&#39;s age changed from 25 to 30</span>
+</span></span></code></pre></div><p>In the above example:</p>
+<p>The <code>didSet</code> observer is called every time the age property is updated.
+The <code>oldValue</code> constant holds the property’s previous value.</p>
+<h3 id="using-willset-to-perform-actions-before-changing-a-property">Using willSet to Perform Actions Before Changing a Property</h3>
+<p>Let’s modify the previous example to use the <code>willSet</code> observer. This will allow us to perform some action just before the property is updated.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProfile</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int = <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;About to change user&#39;s age from </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">\(</span>newValue<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> profile = UserProfile()
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">25</span>   <span style="color:#75715e">// Output: About to change user&#39;s age from 0 to 25</span>
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">30</span>   <span style="color:#75715e">// Output: About to change user&#39;s age from 25 to 30</span>
+</span></span></code></pre></div><p>In this case:</p>
+<p>The <code>willSet</code> observer is called just before the property’s value changes.
+The <code>newValue</code> constant holds the property’s future value.</p>
+<h3 id="combining-willset-and-didset">Combining willSet and didSet</h3>
+<p>You can combine both <code>willSet</code> and <code>didSet</code> in the same property if you want to perform actions before and after the change:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProfile</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int = <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;About to change age from </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">\(</span>newValue<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;User&#39;s age changed from </span><span style="color:#e6db74">\(</span>oldValue<span style="color:#e6db74">)</span><span style="color:#e6db74"> to </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> profile = UserProfile()
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">25</span>   
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: About to change age from 0 to 25</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: User&#39;s age changed from 0 to 25</span>
+</span></span></code></pre></div><p>In this example, both <code>willSet</code> and <code>didSet</code> observers are triggered when the <code>age</code> property is updated.</p>
+<h3 id="applying-property-observers-in-real-world-scenarios">Applying Property Observers in Real-world Scenarios</h3>
+<p>Imagine you are building a temperature sensor for a weather app, where you need to display a warning if the temperature exceeds a certain threshold.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemperatureSensor</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> temperature: Double = <span style="color:#ae81ff">0.0</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> temperature <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">30.0</span> {
+</span></span><span style="display:flex;"><span>                print(<span style="color:#e6db74">&#34;Warning: High temperature!&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> sensor = TemperatureSensor()
+</span></span><span style="display:flex;"><span>sensor.temperature = <span style="color:#ae81ff">25.0</span>   <span style="color:#75715e">// No output</span>
+</span></span><span style="display:flex;"><span>sensor.temperature = <span style="color:#ae81ff">32.0</span>   <span style="color:#75715e">// Output: Warning: High temperature!</span>
+</span></span></code></pre></div><p>In this example, we monitor the <code>temperature</code> property and print a warning if the value exceeds 30 degrees.</p>
+<h3 id="property-observers-and-computed-properties">Property Observers and Computed Properties</h3>
+<p>You cannot directly attach property observers (<code>willSet</code> and <code>didSet</code>) to computed properties. However, you can achieve similar behavior by adding the logic directly inside the getter or setter of a computed property.</p>
+<p>Here&rsquo;s an example using a computed property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Rectangle</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> width: Double = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> height: Double = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> area: Double {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">get</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> width <span style="color:#f92672">*</span> height
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">set</span> {
+</span></span><span style="display:flex;"><span>            width = newValue <span style="color:#f92672">/</span> height
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Area updated, new width is </span><span style="color:#e6db74">\(</span>width<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> rectangle = Rectangle()
+</span></span><span style="display:flex;"><span>rectangle.height = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>rectangle.area = <span style="color:#ae81ff">50</span>   <span style="color:#75715e">// Output: Area updated, new width is 5.0</span>
+</span></span></code></pre></div><p>In this example, the <code>area</code> property is a computed property, and its setter contains logic to update the width when the area is set.</p>
+<h3 id="limitations-of-willset-and-didset-in-swift">Limitations of willSet and didSet in Swift</h3>
+<p>While <code>willSet</code> and <code>didSet</code> are powerful features in Swift, there are a few limitations and nuances you should be aware of when using them. These limitations can affect how and when you can apply property observers effectively in your projects.</p>
+<h5 id="1-not-available-for-let-constants">1. Not Available for let Constants</h5>
+<p>You can only use property observers with var (mutable) properties. If a property is declared as a constant using let, you cannot attach <code>willSet</code> or <code>didSet</code> observers to it because constants cannot be modified after their initial value is set.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> someValue = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// You cannot add willSet or didSet to a constant property like this</span>
+</span></span></code></pre></div><h5 id="2-no-support-for-computed-properties">2. No Support for Computed Properties</h5>
+<p>You cannot directly use <code>willSet</code> and <code>didSet</code> on computed properties. Computed properties already have a getter and setter, and their value is determined dynamically. Instead, if you want to observe changes in a computed property, you need to add logic inside the computed property’s setter.</p>
+<p>Example (not allowed):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> value: Int {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// This is not allowed for computed properties</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// This is also not allowed for computed properties</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Instead, you would handle changes in the computed property’s setter like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> value: Int {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">get</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> someStoredValue
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">set</span> {
+</span></span><span style="display:flex;"><span>        someStoredValue = newValue
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle change here</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="3-cannot-use-with-lazy-properties">3. Cannot Use with Lazy Properties</h5>
+<p>Lazy properties are initialized only when they are accessed for the first time. Since property observers depend on knowing when the property value changes, you cannot use <code>willSet</code> and <code>didSet</code> with lazy properties. The reasoning is that a lazy property might not even be initialized by the time you want to observe its changes.</p>
+<p>Example (not allowed):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">lazy</span> <span style="color:#66d9ef">var</span> someProperty: Int = <span style="color:#ae81ff">10</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;This won&#39;t work&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="4-initial-value-setting-doesnt-trigger-observers">4. Initial Value Setting Doesn’t Trigger Observers</h5>
+<p>Property observers are not triggered when the initial value of a property is set during initialization. They only get triggered when the property value is explicitly changed after the object has been initialized.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProfile</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> age: Int = <span style="color:#ae81ff">20</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Age changed to </span><span style="color:#e6db74">\(</span>age<span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> profile = UserProfile()
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// No output since didSet is not called on initialization</span>
+</span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">25</span>  <span style="color:#75715e">// Output: Age changed to 25</span>
+</span></span></code></pre></div><p>In this example, the <code>didSet</code> observer is not called when age is initialized with 20, only when it is changed to 25 later.</p>
+<h5 id="5-risk-of-infinite-loops">5. Risk of Infinite Loops</h5>
+<p>If you modify a property inside its own <code>didSet</code> or <code>willSet</code> observer, you may accidentally trigger an infinite loop. This happens when the observer modifies the property, which triggers the observer again, and so on.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> count: Int = <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>        count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>  <span style="color:#75715e">// This will trigger didSet again, causing an infinite loop</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this case, the <code>didSet</code> observer modifies <code>count</code>, which causes the observer to run again, leading to an infinite loop and eventually a crash.</p>
+<h5 id="6-no-observers-for-global-and-local-variables">6. No Observers for Global and Local Variables</h5>
+<p>Property observers work only for <code>class</code>, <code>struct</code>, or <code>enum</code> instance properties. You cannot attach <code>willSet</code> or <code>didSet</code> to global or local variables outside the scope of these types.</p>
+<p>Example (not allowed):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> someGlobalValue: Int = <span style="color:#ae81ff">10</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">willSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Will not work on global variables</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Will not work on global variables</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="7-cannot-use-with-property-wrappers">7. Cannot Use with Property Wrappers</h5>
+<p>If you’re using Swift’s property wrappers (<code>@propertyWrapper</code>), you cannot directly combine them with <code>willSet</code> and <code>didSet</code> observers. This is because property wrappers themselves manage the storage and behavior of the property, overriding the need for traditional observers. However, you can often achieve the desired behavior inside the wrapper.</p>
+<p>Example (not allowed):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>@propertyWrapper
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Lowercase</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> wrappedValue: String {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">didSet</span> {
+</span></span><span style="display:flex;"><span>            wrappedValue = wrappedValue.lowercased() <span style="color:#75715e">// This does not work directly with observers</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You would need to implement such behavior within the property wrapper’s logic.</p>
+<h3 id="summary-of-limitations">Summary of Limitations</h3>
+<p>Here’s a quick overview of the limitations:</p>
+<ul>
+<li>No support for let constants: <code>willSet</code> and <code>didSet</code> only work with var properties.</li>
+<li>No direct use with computed properties: Use logic inside the getter and setter instead.</li>
+<li>Cannot use with lazy properties: Lazy properties defer initialization, making property observers incompatible.</li>
+<li>No observers on initialization: Property observers are not triggered when the property is first initialized.</li>
+<li>Risk of infinite loops: Be cautious when modifying a property inside its own observer.</li>
+<li>No observers for global or local variables: They only work for properties within classes, structs, or enums.</li>
+<li>Cannot combine with property wrappers: Direct use of <code>willSet</code> and <code>didSet</code> with property wrappers is not allowed.</li>
+<li>Despite these limitations, property observers remain a powerful feature for managing state changes in Swift, especially when used appropriately within the constraints mentioned.</li>
+</ul>
+<h3 id="best-practices-for-using-property-observers">Best Practices for Using Property Observers</h3>
+<ul>
+<li>Avoid Complex Logic in Observers: Property observers should be lightweight. If you need to perform complex operations, consider moving that logic to a separate function.</li>
+<li>Use <code>willSet</code> Sparingly: In many cases, you’ll only need the <code>didSet</code> observer, which is more useful for validating or reacting to a change that has already occurred.</li>
+<li>Avoid Infinite Loops: Be cautious of updating a property inside its own <code>didSet</code> or <code>willSet</code> observer. Doing so can cause an infinite loop if you’re not careful.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Property observers (<code>willSet</code> and <code>didSet</code>) are powerful tools in Swift that allow you to monitor and respond to changes in property values efficiently. They make it easy to track data changes, enforce rules, or update other parts of your application, such as the UI. Whether you’re developing simple applications or complex systems, mastering property observers can help you write cleaner, more reactive Swift code.</p>
+<p>Understanding when and how to use property observers will enable you to handle state changes more effectively and build more dynamic, responsive applications.</p>
+<p>Happy coding!</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
+</section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Count with where clause (count(where:)) in Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    
+<div class="footer">
+	<div class="footer__builder">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				<a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" title="Linkedin">
+				  <i aria-hidden="true" class="fab fa-linkedin"></i>
+				</a>
+				
+				<a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" title="Github">
+				  <i aria-hidden="true" class="fab fa-github"></i>
+				</a>
+				
+				<a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" title="Medium">
+				  <i aria-hidden="true" class="fab fa-medium"></i>
+				</a>
+				
+			</div>
+		  </div>
+
+		  
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
+				© 2024 <strong>Mahi</strong>. All rights reserved
+			</div>
+		  </div>
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-right scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Developed by <strong>Mahi Garg</strong>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+  </div>
+
+  <!-- Cursor -->
+	<div class="cursor"></div>
+
+  <!-- Scripts -->
+  <script src="https://mahigarg.github.io/plugins/jQuery/jquery.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/validate/jquery.validate.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/swiper/swiper.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/splitting/splitting.js"></script>
+<script src="https://mahigarg.github.io/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/isotope/isotope.pkgd.js"></script>
+<script src="https://mahigarg.github.io/plugins/jarallax/jarallax.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/scrolla/jquery.scrolla.js"></script>
+<script src="https://mahigarg.github.io/plugins/skrollr/skrollr.js"></script>
+<script src="https://mahigarg.github.io/plugins/cookie/jquery.cookie.js"></script>
+<script src="https://mahigarg.github.io/plugins/typed/typed.js"></script>
+<script src="https://mahigarg.github.io/plugins/rrssb/rrssb.js"></script>
+
+
+<script src="https://mahigarg.github.io/plugins/mark/mark.js"></script>
+<script src="https://mahigarg.github.io/plugins/fuse/fuse.js"></script>
+<script src="https://mahigarg.github.io/plugins/search/simple-search.js"></script>
+
+
+
+<script src="https://mahigarg.github.io/js/form-handler.min.js"></script>
+
+
+<script src="https://mahigarg.github.io/js/common.min.js"></script>
+
+</body>
+
+</html>
