@@ -282,6 +282,12 @@
 <p>In this blog, we&rsquo;ll dive into what property observers are, how they work, and how to use them in your Swift code with practical examples.</p>
 <h3 id="what-are-property-observers">What are Property Observers?</h3>
 <p>Property observers observe and respond to changes in a property’s value. You can define property observers for both stored properties (properties with an initial value) and computed properties. Property observers do not trigger for the initial assignment (when the property is first initialized); they only react when the property’s value is explicitly set.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h4 id="swift-provides-two-kinds-of-property-observers">Swift provides two kinds of property observers:</h4>
 <ul>
 <li><code>willSet</code>: Called just before the value is set.</li>
@@ -314,6 +320,12 @@
 </span></span></code></pre></div><p>In the above example:</p>
 <p>The <code>didSet</code> observer is called every time the age property is updated.
 The <code>oldValue</code> constant holds the property’s previous value.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h3 id="using-willset-to-perform-actions-before-changing-a-property">Using willSet to Perform Actions Before Changing a Property</h3>
 <p>Let’s modify the previous example to use the <code>willSet</code> observer. This will allow us to perform some action just before the property is updated.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserProfile</span> {
@@ -348,6 +360,12 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: About to change age from 0 to 25</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Output: User&#39;s age changed from 0 to 25</span>
 </span></span></code></pre></div><p>In this example, both <code>willSet</code> and <code>didSet</code> observers are triggered when the <code>age</code> property is updated.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h3 id="applying-property-observers-in-real-world-scenarios">Applying Property Observers in Real-world Scenarios</h3>
 <p>Imagine you are building a temperature sensor for a weather app, where you need to display a warning if the temperature exceeds a certain threshold.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TemperatureSensor</span> {
@@ -386,6 +404,12 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 </span></span><span style="display:flex;"><span>rectangle.height = <span style="color:#ae81ff">10</span>
 </span></span><span style="display:flex;"><span>rectangle.area = <span style="color:#ae81ff">50</span>   <span style="color:#75715e">// Output: Area updated, new width is 5.0</span>
 </span></span></code></pre></div><p>In this example, the <code>area</code> property is a computed property, and its setter contains logic to update the width when the area is set.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h3 id="limitations-of-willset-and-didset-in-swift">Limitations of willSet and didSet in Swift</h3>
 <p>While <code>willSet</code> and <code>didSet</code> are powerful features in Swift, there are a few limitations and nuances you should be aware of when using them. These limitations can affect how and when you can apply property observers effectively in your projects.</p>
 <h5 id="1-not-available-for-let-constants">1. Not Available for let Constants</h5>
@@ -414,7 +438,13 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Handle change here</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h5 id="3-cannot-use-with-lazy-properties">3. Cannot Use with Lazy Properties</h5>
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h5 id="3-cannot-use-with-lazy-properties">3. Cannot Use with Lazy Properties</h5>
 <p>Lazy properties are initialized only when they are accessed for the first time. Since property observers depend on knowing when the property value changes, you cannot use <code>willSet</code> and <code>didSet</code> with lazy properties. The reasoning is that a lazy property might not even be initialized by the time you want to observe its changes.</p>
 <p>Example (not allowed):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">lazy</span> <span style="color:#66d9ef">var</span> someProperty: Int = <span style="color:#ae81ff">10</span> {
@@ -437,6 +467,12 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// No output since didSet is not called on initialization</span>
 </span></span><span style="display:flex;"><span>profile.age = <span style="color:#ae81ff">25</span>  <span style="color:#75715e">// Output: Age changed to 25</span>
 </span></span></code></pre></div><p>In this example, the <code>didSet</code> observer is not called when age is initialized with 20, only when it is changed to 25 later.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h5 id="5-risk-of-infinite-loops">5. Risk of Infinite Loops</h5>
 <p>If you modify a property inside its own <code>didSet</code> or <code>willSet</code> observer, you may accidentally trigger an infinite loop. This happens when the observer modifies the property, which triggers the observer again, and so on.</p>
 <p>Example:</p>
@@ -457,7 +493,13 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Will not work on global variables</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h5 id="7-cannot-use-with-property-wrappers">7. Cannot Use with Property Wrappers</h5>
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h5 id="7-cannot-use-with-property-wrappers">7. Cannot Use with Property Wrappers</h5>
 <p>If you’re using Swift’s property wrappers (<code>@propertyWrapper</code>), you cannot directly combine them with <code>willSet</code> and <code>didSet</code> observers. This is because property wrappers themselves manage the storage and behavior of the property, overriding the need for traditional observers. However, you can often achieve the desired behavior inside the wrapper.</p>
 <p>Example (not allowed):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span>@propertyWrapper
@@ -481,6 +523,12 @@ The <code>newValue</code> constant holds the property’s future value.</p>
 <li>Cannot combine with property wrappers: Direct use of <code>willSet</code> and <code>didSet</code> with property wrappers is not allowed.</li>
 <li>Despite these limitations, property observers remain a powerful feature for managing state changes in Swift, especially when used appropriately within the constraints mentioned.</li>
 </ul>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
 <h3 id="best-practices-for-using-property-observers">Best Practices for Using Property Observers</h3>
 <ul>
 <li>Avoid Complex Logic in Observers: Property observers should be lightweight. If you need to perform complex operations, consider moving that logic to a separate function.</li>
