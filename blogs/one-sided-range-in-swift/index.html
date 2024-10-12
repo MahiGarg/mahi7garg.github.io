@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>One Sided Range in Swift &middot; Mahi Garg</title>
+
+  <!-- Meta -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <meta name="author" content="Mahi Garg" />  
+  <meta name="owner" content="Mahi Garg">
+  <meta property="twitter:title" content="Mahi Garg">
+
+  <meta name="topic" content="One Sided Range in Swift">
+    <meta name="description" content="Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (...) and half-open (..&lt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.">
+    <meta property="og:description" content="Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (...) and half-open (..&lt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.">
+    <meta property="twitter:description" content="Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (...) and half-open (..&lt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.">
+    <meta name="abstract" content="Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (...) and half-open (..&lt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.">
+    <meta name="summary" content="Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (...) and half-open (..&lt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise."> 
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content=" 2024-10-11 "> 
+
+    <meta name="url" content="https://mahigarg.github.io/blogs/one-sided-range-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/one-sided-range-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/one-sided-range-in-swift/">
+
+    <meta name="site_name" content="Mahi Garg">
+    <meta property="og:site_name" content="Mahi Garg">
+
+    <meta name="robots" content="max-image-preview:large">
+    
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="one sided range,range,ranges in swift">
+    
+    
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/one-sided-range-in-swift/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="target" content="all" />
+    <meta name="audience" content="all" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="safe for kids" /> 
+    <meta property="og:tags" content="Swift"> 
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1093303282603666"
+     crossorigin="anonymous">
+  </script>
+
+  <script>
+  function onErrorLoadingAds() {
+    console.log("AdBlocker blocks the ads")
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" 
+  onerror="onErrorLoadingAds()">
+  </script>
+  
+
+  
+  <meta name="google-site-verification" content="WsYlsB659Cuy0GKk82CS1ogZoTK0FIxmdSE759c1rMU" />
+  
+
+  <!-- Plugins Stylesheets -->
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/splitting/splitting.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/swiper/swiper.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/animate/animate.css" />
+
+  <!-- Main Stylesheets -->
+  
+  <link rel="stylesheet" href="https://mahigarg.github.io/scss/style.min.css" />
+
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/template-dark/dark.css" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLR31QSF3N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GLR31QSF3N');
+  </script>
+  
+
+  </head>
+
+<body class="page dark-skin">
+  <div class="container-page ">
+    <!-- Preloader -->
+    
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="spinner-logo">
+		
+        <img src="https://mahigarg.github.io/images/mahi.webp" alt="https://mahigarg.github.io/Mahi%20Garg" />
+        <div class="spinner-dot"></div>
+        <div class="spinner spinner-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Header -->
+    
+<header class="header">
+	<div class="header__builder">
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+				
+				<div class="logo">
+					<a href="https://mahigarg.github.io/">
+            			
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
+					</a>
+				</div>
+
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+
+				
+				<a href="#" class="switcher-btn" aria-label="switcher-button">
+					<span class="sw-before">
+						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+							<path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+						</svg>
+					</span>
+					<span class="sw-after">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+							<path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+						</svg>
+					</span>
+				</a>
+
+				
+				<a href="#" class="menu-btn" aria-label="menu-button">
+					<span></span>
+					<span></span>
+				</a>
+
+				
+				<div class="menu-full-overlay">
+					<div class="menu-full-container">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+									
+									<div class="menu-full">
+										<ul class="menu-full">
+											
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//">Home</a>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item menu-item-has-children has-children">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//publications">Publications</a>
+                        
+                        <ul class="sub-menu">
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/blogs/">Blogs</a></li>
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/gists/">Gists</a></li>
+                          
+                        </ul>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//opensourcecontribution">Open Source Contribution</a>
+                        
+                      </li>
+                      
+										</ul>
+									</div>
+
+									
+									<div class="menu-social-links">
+                    
+                    <a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Linkedin">
+                      <i aria-hidden="true" class="fab fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Github">
+                      <i aria-hidden="true" class="fab fa-github"></i>
+                    </a>
+                    
+                    <a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Medium">
+                      <i aria-hidden="true" class="fab fa-medium"></i>
+                    </a>
+                    
+									</div>
+
+									<div class="v-line-block"><span></span></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-overlay"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+    <!-- Wrapper -->
+		<div class="wrapper single-post">
+      
+
+
+
+<section class="section section-inner started-heading">
+	<div class="container">
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ October 11, 2024 / 4 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				One Sided Range in Swift
+			</h1>
+		</div>
+
+	</div>
+</section>
+
+
+
+
+
+<section class="section section-inner m-archive">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (<code>...</code>) and half-open (<code>..&lt;</code>) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.</p>
+<p>In this post, we&rsquo;ll explore what one-sided ranges are, how to use them, and some practical examples to demonstrate their power.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="what-is-a-one-sided-range">What is a One-Sided Range?</h3>
+<p>In Swift, ranges typically have both a start and an end. However, there are scenarios where you might only care about one side of the range — either the starting point or the endpoint. That&rsquo;s where one-sided ranges come in.</p>
+<h5 id="types-of-one-sided-ranges">Types of One-Sided Ranges</h5>
+<p>There are two types of one-sided ranges in Swift:</p>
+<ol>
+<li>From a starting index to the end: <code>start...</code></li>
+<li>From the beginning to an ending index: <code>...end</code></li>
+</ol>
+<p>These ranges don&rsquo;t require both a starting and an ending index, allowing you to specify only one side.</p>
+<h3 id="one-sided-range-syntax">One-Sided Range Syntax</h3>
+<h5 id="from-a-starting-index-to-the-end-start">From a Starting Index to the End (start&hellip;)</h5>
+<p>The one-sided range <code>start...</code> starts at the specified <code>start</code> index and goes all the way to the end of the collection.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> subset = numbers[<span style="color:#ae81ff">3.</span>..] <span style="color:#75715e">// Starts from index 3 to the end</span>
+</span></span><span style="display:flex;"><span>print(subset)  <span style="color:#75715e">// Output: [4, 5, 6, 7, 8, 9, 10]</span>
+</span></span></code></pre></div><p>In this example, <code>3...</code> is a one-sided range that starts at index 3 (which is the number 4 in the <code>numbers</code> array) and goes to the end of the array.</p>
+<h5 id="from-the-beginning-to-an-ending-index-end">From the Beginning to an Ending Index (&hellip;end)</h5>
+<p>The one-sided range <code>...end</code> starts from the beginning of the collection and goes up to the specified <code>end</code> index.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> subset = numbers[...<span style="color:#ae81ff">4</span>]  <span style="color:#75715e">// Ends at index 4 (inclusive)</span>
+</span></span><span style="display:flex;"><span>print(subset)  <span style="color:#75715e">// Output: [1, 2, 3, 4, 5]</span>
+</span></span></code></pre></div><p>Here, the range <code>...4</code> means &ldquo;from the beginning to index 4&rdquo;, and it includes the value at index 4, which is the number 5.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="practical-examples-of-one-sided-ranges">Practical Examples of One-Sided Ranges</h3>
+<h5 id="1-slicing-an-array">1. Slicing an Array</h5>
+<p>One-sided ranges are especially useful for slicing arrays. You can grab either the &ldquo;tail&rdquo; or &ldquo;head&rdquo; of an array in a very concise way.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> letters = [<span style="color:#e6db74">&#34;a&#34;</span>, <span style="color:#e6db74">&#34;b&#34;</span>, <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#e6db74">&#34;d&#34;</span>, <span style="color:#e6db74">&#34;e&#34;</span>, <span style="color:#e6db74">&#34;f&#34;</span>, <span style="color:#e6db74">&#34;g&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Extract the tail from index 3 to the end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> tail = letters[<span style="color:#ae81ff">3.</span>..]
+</span></span><span style="display:flex;"><span>print(tail)  <span style="color:#75715e">// Output: [&#34;d&#34;, &#34;e&#34;, &#34;f&#34;, &#34;g&#34;]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Extract the head from the beginning to index 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> head = letters[...<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span>print(head)  <span style="color:#75715e">// Output: [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;]</span>
+</span></span></code></pre></div><p>This approach is cleaner than using explicit ranges like <code>3..&lt;letters.count</code> or <code>0...2</code>.</p>
+<h5 id="2-using-one-sided-ranges-with-strings">2. Using One-Sided Ranges with Strings</h5>
+<p>You can also use one-sided ranges with strings, which allows you to efficiently extract parts of the string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> text = <span style="color:#e6db74">&#34;Hello, Swift!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// From the 7th character to the end</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> substring = text[text.index(text.startIndex, offsetBy: <span style="color:#ae81ff">7</span>)...]
+</span></span><span style="display:flex;"><span>print(substring)  <span style="color:#75715e">// Output: &#34;Swift!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// From the beginning to the 5th character</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> prefix = text[...text.index(text.startIndex, offsetBy: <span style="color:#ae81ff">4</span>)]
+</span></span><span style="display:flex;"><span>print(<span style="color:#66d9ef">prefix</span>)  <span style="color:#75715e">// Output: &#34;Hello&#34;</span>
+</span></span></code></pre></div><p>This allows you to work with strings in a way that doesn&rsquo;t require you to manually compute the range.</p>
+<h5 id="3-custom-ranges-in-loops">3. Custom Ranges in Loops</h5>
+<p>One-sided ranges can also be used in loops, where you might want to iterate from or up to a certain point in a collection.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Loop from index 2 to the end of the array</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> number <span style="color:#66d9ef">in</span> numbers[<span style="color:#ae81ff">2.</span>..] {
+</span></span><span style="display:flex;"><span>    print(number)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 30</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 40</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 50</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 60</span>
+</span></span></code></pre></div><p>This is a more readable way to iterate through a slice of a collection, compared to manually computing the range.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="combining-one-sided-ranges-with-other-ranges">Combining One-Sided Ranges with Other Ranges</h3>
+<p>You can mix one-sided ranges with other ranges for even more flexibility. For example, combining a one-sided range with the <code>prefix</code> or <code>suffix</code> methods of a collection:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> numbers = [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">10</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Use a one-sided range with prefix to get the first 4 elements</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> firstFour = numbers.<span style="color:#66d9ef">prefix</span>(<span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>print(firstFour)  <span style="color:#75715e">// Output: [1, 2, 3, 4]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Use a one-sided range with suffix to get the last 3 elements</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> lastThree = numbers.suffix(<span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>print(lastThree)  <span style="color:#75715e">// Output: [8, 9, 10]</span>
+</span></span></code></pre></div><p>This helps create concise and readable code when working with array slices.</p>
+<h3 id="benefits-of-one-sided-ranges">Benefits of One-Sided Ranges</h3>
+<ul>
+<li><strong>Concise</strong>: One-sided ranges make code cleaner by removing the need to manually calculate indices or define both endpoints.</li>
+<li><strong>Expressive</strong>: They clearly express the intent to either &ldquo;go from here to the end&rdquo; or &ldquo;from the start up to here&rdquo;, improving code readability.</li>
+<li><strong>Flexible</strong>: One-sided ranges can be used across different types like arrays, strings, and even in loops.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>One-sided ranges in Swift are a simple yet powerful tool that allows developers to work more effectively with sequences and collections. They provide cleaner syntax for slicing arrays, strings, and other collections, and are especially useful when you only need to define one side of a range.</p>
+<p>By understanding how to use one-sided ranges, you can write more concise and expressive Swift code, reducing the complexity of index calculations and improving readability.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+						</div>
+						
+
+						
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
+</section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Property Observers (WillSet &amp; DidSet) in Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/sum-vs-any-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Sum vs Any in Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    
+<div class="footer">
+	<div class="footer__builder">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				<a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" title="Linkedin">
+				  <i aria-hidden="true" class="fab fa-linkedin"></i>
+				</a>
+				
+				<a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" title="Github">
+				  <i aria-hidden="true" class="fab fa-github"></i>
+				</a>
+				
+				<a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" title="Medium">
+				  <i aria-hidden="true" class="fab fa-medium"></i>
+				</a>
+				
+			</div>
+		  </div>
+
+		  
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
+				© 2024 <strong>Mahi</strong>. All rights reserved
+			</div>
+		  </div>
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-right scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Developed by <strong>Mahi Garg</strong>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+  </div>
+
+  <!-- Cursor -->
+	<div class="cursor"></div>
+
+  <!-- Scripts -->
+  <script src="https://mahigarg.github.io/plugins/jQuery/jquery.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/validate/jquery.validate.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/swiper/swiper.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/splitting/splitting.js"></script>
+<script src="https://mahigarg.github.io/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/isotope/isotope.pkgd.js"></script>
+<script src="https://mahigarg.github.io/plugins/jarallax/jarallax.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/scrolla/jquery.scrolla.js"></script>
+<script src="https://mahigarg.github.io/plugins/skrollr/skrollr.js"></script>
+<script src="https://mahigarg.github.io/plugins/cookie/jquery.cookie.js"></script>
+<script src="https://mahigarg.github.io/plugins/typed/typed.js"></script>
+<script src="https://mahigarg.github.io/plugins/rrssb/rrssb.js"></script>
+
+
+<script src="https://mahigarg.github.io/plugins/mark/mark.js"></script>
+<script src="https://mahigarg.github.io/plugins/fuse/fuse.js"></script>
+<script src="https://mahigarg.github.io/plugins/search/simple-search.js"></script>
+
+
+
+<script src="https://mahigarg.github.io/js/form-handler.min.js"></script>
+
+
+<script src="https://mahigarg.github.io/js/common.min.js"></script>
+
+</body>
+
+</html>

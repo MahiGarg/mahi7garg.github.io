@@ -6,8 +6,22 @@
     <description>Recent content in Blogs on Mahi Garg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sum vs Any in Swift</title>
+      <link>https://mahigarg.github.io/blogs/sum-vs-any-in-swift/</link>
+      <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/sum-vs-any-in-swift/</guid>
+      <description>Swift 5.7 introduced two powerful keywords, some and any, to work with protocols in generic programming. Although they serve different purposes, they both deal with protocols and types.</description>
+    </item>
+    <item>
+      <title>One Sided Range in Swift</title>
+      <link>https://mahigarg.github.io/blogs/one-sided-range-in-swift/</link>
+      <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/one-sided-range-in-swift/</guid>
+      <description>Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end.</description>
+    </item>
     <item>
       <title>Property Observers (WillSet &amp; DidSet) in Swift</title>
       <link>https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/</link>
