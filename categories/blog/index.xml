@@ -23,6 +23,13 @@
       <description>Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end.</description>
     </item>
     <item>
+      <title>Class Heirarchy of UIButton, UILabel and UIImageView in Swift</title>
+      <link>https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/</link>
+      <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/</guid>
+      <description>When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.</description>
+    </item>
+    <item>
       <title>Property Observers (WillSet &amp; DidSet) in Swift</title>
       <link>https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
