@@ -37,6 +37,20 @@
       <description>When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.</description>
     </item>
     <item>
+      <title>Try Catch and Throws: Error Handling in Swift</title>
+      <link>https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/</link>
+      <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/</guid>
+      <description>Error handling is an essential feature of modern programming languages, allowing developers to gracefully manage runtime issues without crashing an app.</description>
+    </item>
+    <item>
+      <title>Round vs Floor vs Ceil : Swift</title>
+      <link>https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/</guid>
+      <description>In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding.</description>
+    </item>
+    <item>
       <title>Associated Types in Swift</title>
       <link>https://mahigarg.github.io/blogs/associated-types-in-swift/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>

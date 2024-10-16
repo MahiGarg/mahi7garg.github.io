@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Class Heirarchy of UIButton, UILabel and UIImageView in Swift &middot; Mahi Garg</title>
+  <title>Round vs Floor vs Ceil : Swift &middot; Mahi Garg</title>
 
   <!-- Meta -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -13,18 +13,18 @@
   <meta name="owner" content="Mahi Garg">
   <meta property="twitter:title" content="Mahi Garg">
 
-  <meta name="topic" content="Class Heirarchy of UIButton, UILabel and UIImageView in Swift">
-    <meta name="description" content="When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.">
-    <meta property="og:description" content="When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.">
-    <meta property="twitter:description" content="When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.">
-    <meta name="abstract" content="When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.">
-    <meta name="summary" content="When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView."> 
+  <meta name="topic" content="Round vs Floor vs Ceil : Swift">
+    <meta name="description" content="In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this.">
+    <meta property="og:description" content="In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this.">
+    <meta property="twitter:description" content="In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this.">
+    <meta name="abstract" content="In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this.">
+    <meta name="summary" content="In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this."> 
     <meta property="og:type" content="article">
-    <meta property="article:published_time" content=" 2024-10-06 "> 
+    <meta property="article:published_time" content=" 2024-09-28 "> 
 
-    <meta name="url" content="https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/">
-    <meta property="og:url" content="https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/">
-    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/">
+    <meta name="url" content="https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/">
 
     <meta name="site_name" content="Mahi Garg">
     <meta property="og:site_name" content="Mahi Garg">
@@ -32,10 +32,10 @@
     <meta name="robots" content="max-image-preview:large">
     
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="class hierarchy,uibutton,uilabel,uiimageview,swift">
+    <meta name="keywords" content="round function,floor function,ceil function,swift rounding">
     
     
-    <link rel="canonical" href="https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/">
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="target" content="all" />
     <meta name="audience" content="all" />
@@ -255,10 +255,10 @@
 				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
 				
 				
-				/ October 6, 2024 / 4 mins read / By Mahi Garg
+				/ September 28, 2024 / 4 mins read / By Mahi Garg
 			</div>
 			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
-				Class Heirarchy of UIButton, UILabel and UIImageView in Swift
+				Round vs Floor vs Ceil : Swift
 			</h1>
 		</div>
 
@@ -278,201 +278,159 @@
 				
 				<div class="description">
 					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
-						<p>When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are <code>UIButton</code>, <code>UILabel</code>, and <code>UIImageView</code>. These components share a common ancestor in the UIKit class hierarchy but serve different purposes and exhibit different behaviors.</p>
-<p>In this blog, we will explore and compare the class hierarchy of these three key UIKit elements, starting from their root superclass and understanding the differences in their inheritance trees.</p>
+						<p>In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this are:</p>
+<ul>
+<li><code>round()</code>: Rounds a number to the nearest integer.</li>
+<li><code>floor()</code>: Rounds a number down to the largest integer less than or equal to the number.</li>
+<li><code>ceil()</code>: Rounds a number up to the smallest integer greater than or equal to the number.</li>
+</ul>
+<p>In this blog post, we&rsquo;ll break down the differences between these functions, how and when to use each one, and show practical examples for real-world applications.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
     
     
 </div>
-<h3 id="1-uibutton-class-hierarchy">1. UIButton Class Hierarchy</h3>
-<p><code>UIButton</code> is a user-interactive component that triggers actions in response to user events such as taps. As a subclass of <code>UIControl</code>, it provides various control-specific behaviors such as touch handling and event generation. Let’s break down its class hierarchy:</p>
+<h3 id="the-round-function">The round() Function</h3>
+<p>The <code>round()</code> function in Swift rounds a floating-point number to the nearest integer. If the decimal part of the number is 0.5 or greater, <code>round()</code> will round up; otherwise, it rounds down.</p>
+<h5 id="example">Example:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value1 = <span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> roundedValue1 = value1.rounded()
+</span></span><span style="display:flex;"><span>print(roundedValue1)  <span style="color:#75715e">// Output: 5.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value2 = <span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> roundedValue2 = value2.rounded()
+</span></span><span style="display:flex;"><span>print(roundedValue2)  <span style="color:#75715e">// Output: 6.0</span>
+</span></span></code></pre></div><h5 id="key-points">Key points:</h5>
 <ul>
-<li>NSObject
-<ul>
-<li>UIResponder
-<ul>
-<li>UIView
-<ul>
-<li>UIControl
-<ul>
-<li>UIButton</li>
+<li><strong>Rounding down</strong>: Numbers less than 0.5 will round down to the nearest whole number.</li>
+<li><strong>Rounding up</strong>: Numbers greater than or equal to 0.5 will round up to the nearest whole number.</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="explanation">Explanation:</h5>
-<ul>
-<li><strong>NSObject</strong>: The root class of most Objective-C and Swift classes, it provides fundamental behavior such as memory management.</li>
-<li><strong>UIResponder</strong>: Inherited from <code>NSObject</code>, it enables event handling, including touch events, gestures, and motion events. Every UI element that can handle user interactions is a subclass of UIResponder.</li>
-<li><strong>UIView</strong>: As a subclass of <code>UIView</code>, <code>UIButton</code> gains the ability to render itself on the screen, manage layout, and respond to touch events.</li>
-<li><strong>UIControl</strong>: <code>UIControl</code> introduces event-handling features specific to user controls, such as buttons, sliders, or switches. It enables the <code>UIButton</code> to trigger actions and handle UI events like touches and taps.</li>
-<li><strong>UIButton</strong>: The final class in the hierarchy, <code>UIButton</code>, adds additional functionality for handling user taps, configuring titles, images, and styling.</li>
-</ul>
-<h5 id="key-features">Key Features:</h5>
-<ul>
-<li>User interaction enabled.</li>
-<li>Supports customizable titles, images, and states (e.g., highlighted, disabled).</li>
-<li>Triggers events when tapped.</li>
-</ul>
+<h5 id="example-with-negative-numbers">Example with negative numbers:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue1 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span>print(negativeValue1.rounded())  <span style="color:#75715e">// Output: -5.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue2 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span>print(negativeValue2.rounded())  <span style="color:#75715e">// Output: -6.0</span>
+</span></span></code></pre></div><p>With negative numbers, <code>round()</code> behaves similarly: if the decimal part is less than -0.5, it rounds away from zero (down in magnitude); otherwise, it rounds toward zero.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
     
     
 </div>
-<h3 id="2-uilabel-class-hierarchy">2. UILabel Class Hierarchy</h3>
-<p><code>UILabel</code> is a non-interactive UI element primarily used for displaying static or dynamic text. It provides text styling and layout options, but it doesn’t inherit from <code>UIControl</code> as it doesn’t handle user events.</p>
+<h3 id="the-floor-function">The floor() Function</h3>
+<p>The <code>floor()</code> function always rounds a floating-point number down to the largest integer less than or equal to the number. This behavior remains consistent regardless of the decimal part of the number.</p>
+<h5 id="example-1">Example:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value1 = <span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> flooredValue1 = floor(value1)
+</span></span><span style="display:flex;"><span>print(flooredValue1)  <span style="color:#75715e">// Output: 5.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value2 = <span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> flooredValue2 = floor(value2)
+</span></span><span style="display:flex;"><span>print(flooredValue2)  <span style="color:#75715e">// Output: 5.0</span>
+</span></span></code></pre></div><h5 id="key-points-1">Key points:</h5>
 <ul>
-<li>NSObject
-<ul>
-<li>UIResponder
-<ul>
-<li>UIView
-<ul>
-<li>UILabel</li>
+<li><strong>Always rounds down</strong>: Even if the decimal part is above 0.5, it rounds down to the nearest integer.</li>
+<li><strong>Negative numbers</strong>: For negative numbers, it rounds further away from zero.</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="explanation-1">Explanation:</h5>
-<ul>
-<li>The first three superclasses are the same as those of <code>UIButton</code>, meaning <code>UILabel</code> also inherits fundamental behaviors such as memory management (<code>NSObject</code>), event handling (<code>UIResponder</code>), and rendering capabilities (<code>UIView</code>).</li>
-<li>However, unlike <code>UIButton</code>, <code>UILabel</code> does not inherit from <code>UIControl</code>, as it is not intended for direct user interaction. Its primary function is to display text without responding to user taps or gestures.</li>
-<li>UILabel: The subclass that specializes in rendering and managing text. It supports various text styles, alignment, truncation, and multi-line capabilities.</li>
-</ul>
-<h5 id="key-features-1">Key Features:</h5>
-<ul>
-<li>Displays text with various font, color, and alignment options.</li>
-<li>Non-interactive; primarily used for read-only text.</li>
-<li>Can display attributed text for rich styling.</li>
-</ul>
+<h5 id="example-with-negative-numbers-1">Example with negative numbers:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue1 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span>print(floor(negativeValue1))  <span style="color:#75715e">// Output: -6.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue2 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span>print(floor(negativeValue2))  <span style="color:#75715e">// Output: -6.0</span>
+</span></span></code></pre></div><p>For negative numbers, <code>floor()</code> moves the value away from zero, making the number more negative.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
     
     
 </div>
-<h3 id="3-uiimageview-class-hierarchy">3. UIImageView Class Hierarchy</h3>
-<p><code>UIImageView</code> is another non-interactive UI component, used for displaying images. It offers a simple way to render an image or a series of images (for animations). Like <code>UILabel</code>, it doesn’t inherit from <code>UIControl</code>, as it doesn’t need to handle user interaction by default.</p>
+<h3 id="the-ceil-function">The ceil() Function</h3>
+<p>The <code>ceil()</code> function always rounds a floating-point number up to the smallest integer greater than or equal to the number. Just like <code>floor()</code>, <code>ceil()</code> works irrespective of the decimal part.</p>
+<h5 id="example-2">Example:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value1 = <span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> ceiledValue1 = ceil(value1)
+</span></span><span style="display:flex;"><span>print(ceiledValue1)  <span style="color:#75715e">// Output: 6.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> value2 = <span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> ceiledValue2 = ceil(value2)
+</span></span><span style="display:flex;"><span>print(ceiledValue2)  <span style="color:#75715e">// Output: 6.0</span>
+</span></span></code></pre></div><h5 id="key-points-2">Key points:</h5>
 <ul>
-<li>NSObject
-<ul>
-<li>UIResponder
-<ul>
-<li>UIView
-<ul>
-<li>UIImageView</li>
+<li><strong>Always rounds up</strong>: No matter the decimal part, it rounds up to the nearest whole number.</li>
+<li><strong>Negative numbers</strong>: For negative numbers, it rounds closer to zero.</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h5 id="explanation-2">Explanation:</h5>
-<ul>
-<li>Again, the first three superclasses are identical to those of <code>UIButton</code> and <code>UILabel</code>, which provide fundamental object behavior, event handling, and rendering on the screen.</li>
-<li>UIImageView: A specialized subclass of <code>UIView</code> that is optimized for displaying images. It can be configured with a single image, or a sequence of images to create simple animations. While <code>UIImageView</code> is typically not user-interactive, it can be made interactive by adding gesture recognizers or making it part of a control structure.</li>
-</ul>
-<h5 id="key-features-2">Key Features:</h5>
-<ul>
-<li>Displays images or animates a sequence of images.</li>
-<li>Non-interactive by default, but can support user interaction when required.</li>
-<li>Efficient memory management for large image assets.</li>
-</ul>
+<h5 id="example-with-negative-numbers-2">Example with negative numbers:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue1 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.4</span>
+</span></span><span style="display:flex;"><span>print(ceil(negativeValue1))  <span style="color:#75715e">// Output: -5.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> negativeValue2 = <span style="color:#f92672">-</span><span style="color:#ae81ff">5.6</span>
+</span></span><span style="display:flex;"><span>print(ceil(negativeValue2))  <span style="color:#75715e">// Output: -5.0</span>
+</span></span></code></pre></div><p>For negative numbers, <code>ceil()</code> rounds the value toward zero, making it less negative.</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
     
     
 </div>
-<h3 id="class-hierarchy-comparison">Class Hierarchy Comparison</h3>
-<div style="overflow-x: auto">
+<h3 id="when-to-use-round-floor-and-ceil">When to Use round(), floor(), and ceil()</h3>
+<p>Understanding when to use each function depends on your specific use case.</p>
+<ul>
+<li><strong>round()</strong>: Use <code>round()</code> when you want to round a value to the nearest whole number, following the standard rounding rules (half up).</li>
+</ul>
+<p>Example use case: Rounding prices, weights, or any measurement to the nearest whole number.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> price = <span style="color:#ae81ff">99.99</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> roundedPrice = price.rounded()  <span style="color:#75715e">// 100.0</span>
+</span></span></code></pre></div><ul>
+<li><strong>floor()</strong>: Use <code>floor()</code> when you need to round a value down to the nearest integer, regardless of the decimal part.</li>
+</ul>
+<p>Example use case: You might use <code>floor()</code> in a game or physics engine to move a character to the nearest whole coordinate below the current position.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> playerPosition = <span style="color:#ae81ff">3.8</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> flooredPosition = floor(playerPosition)  <span style="color:#75715e">// 3.0</span>
+</span></span></code></pre></div><ul>
+<li><strong>ceil()</strong>: Use <code>ceil()</code> when you need to round a value up to the nearest integer, irrespective of the decimal part.</li>
+</ul>
+<p>Example use case: Allocating memory blocks or tasks where you need to ensure that a certain amount of resources is always sufficient and not less than what’s required.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> requiredBlocks = <span style="color:#ae81ff">4.2</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> allocatedBlocks = ceil(requiredBlocks)  <span style="color:#75715e">// 5.0</span>
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="round-vs-floor-vs-ceil">Round vs Floor vs Ceil</h3>
 <table>
 <thead>
 <tr>
-<th style="text-align:left"><strong>Class</strong></th>
-<th style="text-align:center"><strong>UIButton</strong></th>
-<th style="text-align:center"><strong>UILabel</strong></th>
-<th style="text-align:center"><strong>UIImageView</strong></th>
+<th style="text-align:center"><strong>Function</strong></th>
+<th style="text-align:center"><strong>Behavior (Positive Numbers)</strong></th>
+<th style="text-align:center"><strong>Behavior (Negative Numbers)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">NSObject</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
+<td style="text-align:center">round()</td>
+<td style="text-align:center">Rounds to the nearest integer (0.5 and above rounds up)</td>
+<td style="text-align:center">Same rule, rounds away from zero if &gt;= -0.5, else toward zero</td>
 </tr>
 <tr>
-<td style="text-align:left">UIResponder</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
+<td style="text-align:center">floor()</td>
+<td style="text-align:center">Always rounds down to the nearest whole number</td>
+<td style="text-align:center">Always rounds down (away from zero)</td>
 </tr>
 <tr>
-<td style="text-align:left">UIView</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-</tr>
-<tr>
-<td style="text-align:left">UIControl</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✘</td>
-<td style="text-align:center">✘</td>
-</tr>
-<tr>
-<td style="text-align:left">Final Class</td>
-<td style="text-align:center">UIButton</td>
-<td style="text-align:center">UILabel</td>
-<td style="text-align:center">UIImageView</td>
-</tr>
-<tr>
-<td style="text-align:left">Primary Purpose</td>
-<td style="text-align:center">Interactive button that responds to user taps.</td>
-<td style="text-align:center">Non-interactive label for displaying text.</td>
-<td style="text-align:center">Non-interactive view for displaying images.</td>
+<td style="text-align:center">ceil()</td>
+<td style="text-align:center">Always rounds up to the nearest whole number</td>
+<td style="text-align:center">Always rounds up (toward zero)</td>
 </tr>
 </tbody>
 </table>
-</div>
-### Key Differences
-<h5 id="inheritance-of-uicontrol">Inheritance of UIControl:</h5>
-<ul>
-<li><code>UIButton</code> inherits from <code>UIControl</code>, which gives it the ability to handle user interaction and trigger events such as taps. This makes it an active UI element.</li>
-<li><code>UILabel</code> and <code>UIImageView</code> are passive elements that do not handle user interaction by default, as they do not inherit from <code>UIControl</code>.</li>
-</ul>
-<h5 id="interactivity">Interactivity:</h5>
-<ul>
-<li><code>UIButton</code> is designed for user interaction. It responds to user taps, can be enabled or disabled, and changes state based on user interaction.</li>
-<li><code>UILabel</code> is purely for text display and does not interact with users, while UIImageView focuses on rendering images with no default interaction.</li>
-</ul>
-<h5 id="use-case-focus">Use Case Focus:</h5>
-<ul>
-<li><code>UIButton</code> is for interactive elements that require user input.</li>
-<li><code>UILabel</code> is used for text display.</li>
-<li><code>UIImageView</code> is used for image display or animation.</li>
-</ul>
-<div class="col-xs-12 googleads" aria-hidden="true">
-    
-    
-    
-    
-</div>
 <h3 id="conclusion">Conclusion</h3>
-<p>The class hierarchy of <code>UIButton</code>, <code>UILabel</code>, and <code>UIImageView</code> in Swift reflects their roles within the UIKit framework. <code>UIButton</code>, being interactive, inherits from <code>UIControl</code>, while <code>UILabel</code> and <code>UIImageView</code> are non-interactive, inheriting only from <code>UIView</code>. This hierarchy structure provides each class with its specific functionality, allowing developers to use these components according to their application&rsquo;s needs.</p>
-<p>Understanding these class hierarchies helps you leverage the capabilities of these UIKit elements more effectively in your iOS development projects. Whether you&rsquo;re building buttons, displaying text, or rendering images, UIKit&rsquo;s well-structured class hierarchy ensures that you have the right tools for the job.</p>
+<p>In Swift, <code>round()</code>, <code>floor()</code>, and <code>ceil()</code> provide powerful tools for managing floating-point numbers in different contexts. Understanding when and how to use each function can significantly impact the precision and correctness of your calculations. Whether you&rsquo;re working with prices, positions in a game, or even resource allocation, these rounding functions help ensure your numbers are handled properly.</p>
+<p>By using these functions effectively, you can write more robust and error-free code that deals with floating-point rounding issues gracefully!</p>
 <div class="col-xs-12 googleads" aria-hidden="true">
     
     
@@ -573,24 +531,24 @@
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
 				<div class="h-titles h-navs">
 					
-					<a href="https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/associated-types-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Previous Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							Try Catch and Throws: Error Handling in Swift
+							Associated Types in Swift
 						</span>
 					</a>
 					
 					</br>
 					</br>
 					
-					<a href="https://mahigarg.github.io/blogs/one-sided-range-in-swift/">
+					<a href="https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/">
 						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
 							Next Post
 						</span>
 						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
-							One Sided Range in Swift
+							Try Catch and Throws: Error Handling in Swift
 						</span>
 					</a>
 					
