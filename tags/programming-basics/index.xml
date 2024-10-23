@@ -4,7 +4,7 @@
     <title>Programming-Basics on Mahi Garg</title>
     <link>https://mahigarg.github.io/tags/programming-basics/</link>
     <description>Recent content in Programming-Basics on Mahi Garg</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/programming-basics/index.xml" rel="self" type="application/rss+xml" />
@@ -13,161 +13,161 @@
       <link>https://mahigarg.github.io/gists/search-insert-position-leetcode/</link>
       <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/search-insert-position-leetcode/</guid>
-      <description>Search Insert Position - LeetCode&#xA;Given a sorted array of distinct integers and a target value, return the index if the target is found.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-insert-position/description/&#34;&gt;Search Insert Position - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Find Peak Element - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/find-peak-element-leetcode/</link>
       <pubDate>Thu, 14 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/find-peak-element-leetcode/</guid>
-      <description>Find Peak Element - LeetCode&#xA;A peak element is an element that is strictly greater than its neighbors.&#xA;Given a 0-indexed integer array nums, find a peak element, and return its index.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/find-peak-element/description/&#34;&gt;Find Peak Element - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;A peak element is an element that is strictly greater than its neighbors.&lt;/p&gt;&#xA;&lt;p&gt;Given a 0-indexed integer array &lt;code&gt;nums&lt;/code&gt;, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Search a 2D Matrix - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode/</link>
       <pubDate>Wed, 13 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/search-a-2d-matrix-leetcode/</guid>
-      <description>Search a 2D Matrix - LeetCode&#xA;You are given an m x n integer matrix matrix with the following two properties:</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/search-a-2d-matrix/description/&#34;&gt;Search a 2D Matrix - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;You are given an &lt;code&gt;m x n&lt;/code&gt; integer matrix &lt;code&gt;matrix&lt;/code&gt; with the following two properties:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Length of Last Word - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/length-of-last-word-leetcode/</link>
       <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/length-of-last-word-leetcode/</guid>
-      <description>Length of Last Word - LeetCode&#xA;Given a string s consisting of words and spaces, return the length of the last word in the string.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/length-of-last-word/description/&#34;&gt;Length of Last Word - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given a string &lt;code&gt;s&lt;/code&gt; consisting of words and spaces, return the length of the last word in the string.&#xA;A word is a maximal substring consisting of non-space characters only.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Roman to Integer - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/roman-to-integer-leetcode/</link>
       <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/roman-to-integer-leetcode/</guid>
-      <description>Roman to Integer - LeetCode&#xA;Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/roman-to-integer/description/&#34;&gt;Roman to Integer - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Roman numerals are represented by seven different symbols: &lt;code&gt;I&lt;/code&gt;, &lt;code&gt;V&lt;/code&gt;, &lt;code&gt;X&lt;/code&gt;, &lt;code&gt;L&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt;, &lt;code&gt;D&lt;/code&gt; and &lt;code&gt;M&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remove Duplicates from Sorted Array II - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode/</link>
       <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-ii-leetcode/</guid>
-      <description>Remove Duplicates from Sorted Array || - LeetCode&#xA;Given an integer array nums sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/description/&#34;&gt;Remove Duplicates from Sorted Array || - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt; sorted in non-decreasing order, remove some duplicates in-place such that each unique element appears at most twice. The relative order of the elements should be kept the same.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Best Time to Buy and Sell Stock - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode/</link>
       <pubDate>Sat, 09 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/best-time-to-buy-and-sell-stock-leetcode/</guid>
-      <description>Best Time to Buy and Sell Stock - LeetCode&#xA;You are given an array prices where prices[i] is the price of a given stock on the ith day.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/&#34;&gt;Best Time to Buy and Sell Stock - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;You are given an array &lt;code&gt;prices&lt;/code&gt; where &lt;code&gt;prices[i]&lt;/code&gt; is the price of a given stock on the &lt;code&gt;ith&lt;/code&gt; day.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rotate Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</link>
       <pubDate>Fri, 08 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/rotate-array-leetcode-swift/</guid>
-      <description>Rotate Array - LeetCode&#xA;Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/rotate-array/description/&#34;&gt;Rotate Array - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, rotate the array to the right by &lt;code&gt;k&lt;/code&gt; steps, where &lt;code&gt;k&lt;/code&gt; is non-negative.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remove Duplicates from Sorted Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode/</link>
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/remove-duplicates-from-sorted-array-leetcode/</guid>
-      <description>Remove Duplicates from Sorted Array - LeetCode&#xA;Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/&#34;&gt;Remove Duplicates from Sorted Array - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt; sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in &lt;code&gt;nums&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remove Element - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/remove-element-leetcode/</link>
       <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/remove-element-leetcode/</guid>
-      <description>Remove Element - LeetCode&#xA;Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/remove-element/description/&#34;&gt;Remove Element - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;val&lt;/code&gt;, remove all occurrences of &lt;code&gt;val&lt;/code&gt; in &lt;code&gt;nums&lt;/code&gt; in-place. The order of the elements may be changed. Then return the number of elements in &lt;code&gt;nums&lt;/code&gt; which are not equal to &lt;code&gt;val&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Merge Sorted Array - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/merge-sorted-array-leetcode-swift/</link>
       <pubDate>Mon, 04 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/merge-sorted-array-leetcode-swift/</guid>
-      <description>Merge Sorted Array - LeetCode&#xA;You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/merge-sorted-array/description/&#34;&gt;Merge Sorted Array - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;You are given two integer arrays &lt;code&gt;nums1&lt;/code&gt; and &lt;code&gt;nums2&lt;/code&gt;, sorted in non-decreasing order, and two integers &lt;code&gt;m&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;, representing the number of elements in nums1 and nums2 respectively.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Next Greater Element I - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/next-greater-element-i-leetcode/</link>
       <pubDate>Sun, 03 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/next-greater-element-i-leetcode/</guid>
-      <description>Next Greater Element I - LeetCode&#xA;The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/next-greater-element-i/description/&#34;&gt;Next Greater Element I - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The next greater element of some element &lt;code&gt;x&lt;/code&gt; in an array is the first greater element that is to the right of x in the same array.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Longest Common Prefix - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/longest-common-prefix-leetcode/</link>
       <pubDate>Sat, 02 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/longest-common-prefix-leetcode/</guid>
-      <description>Longest Common Prefix - LeetCode&#xA;Write a function to find the longest common prefix string amongst an array of strings.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/longest-common-prefix/description/&#34;&gt;Longest Common Prefix - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Write a function to find the longest common prefix string amongst an array of strings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Two Sum - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/two-sum-leetcode-swift/</link>
       <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/two-sum-leetcode-swift/</guid>
-      <description>Two Sum - LeetCode&#xA;Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/two-sum/description/&#34;&gt;Two Sum - LeetCode&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Given an array of integers &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;target&lt;/code&gt;, return indices of the two numbers such that they add up to &lt;code&gt;target&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bubble Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/bubble-sort-swift/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/bubble-sort-swift/</guid>
-      <description>Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted.</description>
+      <description>&lt;p&gt;Bubble sort is a simple and straightforward sorting algorithm commonly used in computer science. In Swift language, Bubble sort works by repeatedly swapping adjacent elements if they are in the wrong order until the entire list is sorted. It has a time complexity of O(n^2), making it inefficient for large data sets. The algorithm iterates through the list multiple times, comparing and swapping elements. However, it is easy to understand and implement, making it suitable for small or nearly sorted arrays where simplicity is prioritized over efficiency. For larger data sets, more efficient sorting algorithms like QuickSort or MergeSort are preferred.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linked List Implementation: Swift</title>
       <link>https://mahigarg.github.io/gists/linked-list-implementation-swift/</link>
       <pubDate>Thu, 13 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/linked-list-implementation-swift/</guid>
-      <description>A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node.</description>
+      <description>&lt;p&gt;A linked list is a data structure in Swift that consists of nodes linked together via pointers or references. Each node contains data and a reference to the next node. Unlike an array, a linked list does not require contiguous memory allocation. Insertions and deletions can be performed efficiently in a linked list by updating the pointers, but accessing elements requires traversing the list linearly. Linked lists are useful when frequent insertions or deletions are expected, and their time complexity for most operations is O(1) or O(n) depending on the operation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Remove duplicates from array: Swift</title>
       <link>https://mahigarg.github.io/gists/remove-duplicate-from-array-swift/</link>
       <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/remove-duplicate-from-array-swift/</guid>
-      <description>To remove duplicates from an array in Swift using a dictionary, we can create an empty dictionary and iterate through the array.</description>
+      <description>&lt;p&gt;To remove duplicates from an array in Swift using a dictionary, we can create an empty dictionary and iterate through the array. For each element, we use it as a key in the dictionary and assign a dummy value. The dictionary automatically removes duplicate keys, so we end up with only unique elements. The time complexity of this approach is O(n), where n is the number of elements in the array, making it an efficient solution for removing duplicates..&lt;/p&gt;</description>
     </item>
     <item>
       <title>Binary Serach : Swift</title>
       <link>https://mahigarg.github.io/gists/binary-serach-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/binary-serach-swift/</guid>
-      <description>Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found.</description>
+      <description>&lt;p&gt;Binary search is an efficient search algorithm used to locate a specific element in a sorted array or list. It works by repeatedly dividing the search space in half until the target element is found. In Swift, binary search is typically implemented recursively or iteratively. The time complexity of binary search is O(log n), where n is the number of elements in the array. This makes it highly efficient for large data sets as it eliminates half of the remaining search space at each step, significantly reducing the search time.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Merge 2 sorted Array: Swift</title>
       <link>https://mahigarg.github.io/gists/merge-2-sorted-array-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/merge-2-sorted-array-swift/</guid>
-      <description>Merging two sorted Int arrays in Swift means combining them into a single sorted array while preserving the order. With Swift, you can efficiently implement the merging algorithm.</description>
+      <description>&lt;p&gt;Merging two sorted Int arrays in Swift means combining them into a single sorted array while preserving the order. With Swift, you can efficiently implement the merging algorithm. By comparing elements in both arrays and arranging them accordingly, you&amp;rsquo;ll obtain a new sorted array. This process ensures that the elements from both arrays are in ascending order, allowing you to organize your data effectively. The merged sorted Int array can be readily used in your Swift app for various purposes like displaying sorted lists or conducting efficient searches.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Merge 2 sorted Linked List: Swift</title>
       <link>https://mahigarg.github.io/gists/merge-2-sorted-linked-list-swift/</link>
       <pubDate>Sat, 08 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/merge-2-sorted-linked-list-swift/</guid>
-      <description>Merging two sorted linked lists in Swift is like combining two ordered lists into one, while still maintaining the sorted order.</description>
+      <description>&lt;p&gt;Merging two sorted linked lists in Swift is like combining two ordered lists into one, while still maintaining the sorted order. You can use Swift to define the linked list structure and implement a merging algorithm. By comparing the elements in both lists and arranging them accordingly, you&amp;rsquo;ll create a new sorted linked list. This process ensures that the elements from both lists are in ascending order, resulting in a single, sorted, and merged linked list that you can use in your Swift app for efficient data organization.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Insertion Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/insertion-sort-swift/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/insertion-sort-swift/</guid>
-      <description>Insertion sort is a simple sorting algorithm in Swift that builds the final sorted array one element at a time. It iterates through the array, comparing each element with the sorted portion and placing it in the correct position.</description>
+      <description>&lt;p&gt;Insertion sort is a simple sorting algorithm in Swift that builds the final sorted array one element at a time. It iterates through the array, comparing each element with the sorted portion and placing it in the correct position. This process continues until all elements are sorted. Insertion sort has a time complexity of O(n^2) in the worst case, but it performs well on small data sets or partially sorted arrays. It also has an advantage in that it can efficiently sort elements in real-time as they are received or generated.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Selection Sort : Swift</title>
       <link>https://mahigarg.github.io/gists/selection-sort-swift/</link>
       <pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/selection-sort-swift/</guid>
-      <description>Selection sort is a sorting algorithm in Swift that works by repeatedly finding the minimum element from the unsorted portion of an array and swapping it with the element in the correct position.</description>
+      <description>&lt;p&gt;Selection sort is a sorting algorithm in Swift that works by repeatedly finding the minimum element from the unsorted portion of an array and swapping it with the element in the correct position. This process is iterated until the entire array is sorted. While simple to understand and implement, selection sort has a time complexity of O(n^2), making it inefficient for large data sets. However, it has the advantage of having a minimal number of swaps, which can be beneficial in certain memory-constrained scenarios.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Sort Int Array of 0, 1 and 2 : Swift (Dutch National Flag )</title>
       <link>https://mahigarg.github.io/gists/sort-int-array-0-1-2-swift/</link>
       <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/gists/sort-int-array-0-1-2-swift/</guid>
-      <description>The Dutch National Flag algorithm is a sorting algorithm that partitions an array into three sections: elements less than a given pivot, elements equal to the pivot, and elements greater than the pivot.</description>
+      <description>&lt;p&gt;The Dutch National Flag algorithm is a sorting algorithm that partitions an array into three sections: elements less than a given pivot, elements equal to the pivot, and elements greater than the pivot. In Swift, we can implement this algorithm by maintaining three pointers and swapping elements accordingly. The time complexity of the Dutch National Flag algorithm is O(n), where n is the number of elements in the array. It is an efficient algorithm for sorting arrays with a limited range of values, like sorting colors or other categorical data.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>Firebase on Mahi Garg</title>
     <link>https://mahigarg.github.io/tags/firebase/</link>
     <description>Recent content in Firebase on Mahi Garg</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/firebase/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
+      <description>&lt;p&gt;In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step. Additionally, it will tell you how to configure the remoteConfig Parameter and fetch and Apply the configuration to your app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RemoteConfig in Firebase</title>
       <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</guid>
-      <description>In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates.</description>
+      <description>&lt;p&gt;In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates. Firebase RemoteConfig is a powerful tool offered by Google Firebase. It enables developers to dynamically update app settings, content, and feature flags from a centralized console, allowing them to deliver a personalized and tailored experience to the users.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

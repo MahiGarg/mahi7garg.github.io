@@ -4,485 +4,492 @@
     <title>Blog on Mahi Garg</title>
     <link>https://mahigarg.github.io/categories/blog/</link>
     <description>Recent content in Blog on Mahi Garg</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Modifiers in Swift</title>
+      <link>https://mahigarg.github.io/blogs/access-modifiers-in-swift/</link>
+      <pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/access-modifiers-in-swift/</guid>
+      <description>&lt;p&gt;Access control is a fundamental feature in Swift that allows you to define the visibility and accessibility of various parts of your code. By using access modifiers, you can encapsulate implementation details and restrict unintended access to your code, ensuring safety and modularity.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Opaque in Swift</title>
       <link>https://mahigarg.github.io/blogs/opaque-in-swift/</link>
       <pubDate>Tue, 15 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/opaque-in-swift/</guid>
-      <description>Swift is known for its powerful type system and support for generics, which allows you to write flexible and reusable code.</description>
+      <description>&lt;p&gt;Swift is known for its powerful type system and support for generics, which allows you to write flexible and reusable code. However, there are situations where generics can become overly complex or expose too much internal detail. To help with this, Swift introduced opaque types (using the some keyword) in Swift 5.1. Opaque types allow us to hide the underlying type while still maintaining strong type safety.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Some vs Any in Swift</title>
       <link>https://mahigarg.github.io/blogs/some-vs-any-in-swift/</link>
       <pubDate>Sat, 12 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/some-vs-any-in-swift/</guid>
-      <description>Swift 5.7 introduced two powerful keywords, some and any, to work with protocols in generic programming. Although they serve different purposes, they both deal with protocols and types.</description>
+      <description>&lt;p&gt;Swift 5.7 introduced two powerful keywords, &lt;code&gt;some&lt;/code&gt; and &lt;code&gt;any&lt;/code&gt;, to work with protocols in generic programming. Although they serve different purposes, they both deal with protocols and types. If you&amp;rsquo;re unfamiliar with how to use them or what sets them apart, this blog post will clarify their differences and show you practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>One Sided Range in Swift</title>
       <link>https://mahigarg.github.io/blogs/one-sided-range-in-swift/</link>
       <pubDate>Fri, 11 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/one-sided-range-in-swift/</guid>
-      <description>Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end.</description>
+      <description>&lt;p&gt;Swift provides a powerful way to work with collections through ranges, which define a sequence of values with a start and an end. In addition to the traditional closed (&lt;code&gt;...&lt;/code&gt;) and half-open (&lt;code&gt;..&amp;lt;&lt;/code&gt;) ranges, Swift introduces one-sided ranges, a feature that makes working with sequences and collections more flexible and concise.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Class Heirarchy of UIButton, UILabel and UIImageView in Swift</title>
       <link>https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/</link>
       <pubDate>Sun, 06 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/class-hierarchy-of-uibutton-uilabel-and-uiimageview-in-swift/</guid>
-      <description>When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are UIButton, UILabel, and UIImageView.</description>
+      <description>&lt;p&gt;When building user interfaces in iOS applications, UIKit provides a wide array of components, each designed for specific use cases. Three of the most commonly used UI components are &lt;code&gt;UIButton&lt;/code&gt;, &lt;code&gt;UILabel&lt;/code&gt;, and &lt;code&gt;UIImageView&lt;/code&gt;. These components share a common ancestor in the UIKit class hierarchy but serve different purposes and exhibit different behaviors.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Try Catch and Throws: Error Handling in Swift</title>
       <link>https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/</link>
       <pubDate>Tue, 01 Oct 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/try-catch-and-throws-error-handling-in-swift/</guid>
-      <description>Error handling is an essential feature of modern programming languages, allowing developers to gracefully manage runtime issues without crashing an app.</description>
+      <description>&lt;p&gt;Error handling is an essential feature of modern programming languages, allowing developers to gracefully manage runtime issues without crashing an app. Swift has a robust error-handling system based on the concepts of throwing, catching, propagating, and handling errors. In this blog, we will explore how error handling works in Swift using &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;, and &lt;code&gt;throws&lt;/code&gt; with detailed explanations and practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Round vs Floor vs Ceil : Swift</title>
       <link>https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/</link>
       <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/round-vs-floor-vs-ceil-swift/</guid>
-      <description>In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding.</description>
+      <description>&lt;p&gt;In Swift, working with floating-point numbers often requires you to round values to their nearest whole number or perform specific types of rounding. The three primary functions that help with this are:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Associated Types in Swift</title>
       <link>https://mahigarg.github.io/blogs/associated-types-in-swift/</link>
       <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/associated-types-in-swift/</guid>
-      <description>Swift&amp;rsquo;s powerful generics system allows developers to write flexible and reusable code. One of the core features of generics is associated types, which are used in protocols to define placeholder types that get specified later when the protocol is adopted by a class, struct, or enum.</description>
+      <description>&lt;p&gt;Swift&amp;rsquo;s powerful generics system allows developers to write flexible and reusable code. One of the core features of generics is associated types, which are used in protocols to define placeholder types that get specified later when the protocol is adopted by a class, struct, or enum. Understanding associated types is crucial when working with Swift’s protocols, and in this blog, we&amp;rsquo;ll explore their concept, usage, and real-world examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Property Observers (WillSet &amp; DidSet) in Swift</title>
       <link>https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/</link>
       <pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/property-observers-willset-didset-in-swift/</guid>
-      <description>Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value.</description>
+      <description>&lt;p&gt;Property observers in Swift are an incredibly useful feature that allows you to monitor and respond to changes in a property’s value. They are especially handy when you want to perform additional tasks whenever a property is set or updated, such as updating the UI, logging data, or enforcing business logic.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Count with where clause (count(where:)) in Swift</title>
       <link>https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/</link>
       <pubDate>Sun, 25 Aug 2024 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/count-with-where-clause-in-swift/</guid>
-      <description>In Swift, the count(where:) method is a powerful tool for filtering and counting elements in a collection that meet specific criteria.</description>
+      <description>&lt;p&gt;In Swift, the &lt;code&gt;count(where:)&lt;/code&gt; method is a powerful tool for filtering and counting elements in a collection that meet specific criteria. This method is part of the Swift Standard Library&amp;rsquo;s extensions to &lt;code&gt;Sequence&lt;/code&gt; and allows for a concise and expressive way to determine how many elements in a collection match a given predicate.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Initializer in Swift</title>
       <link>https://mahigarg.github.io/blogs/initializer-in-swift/</link>
       <pubDate>Sat, 19 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/initializer-in-swift/</guid>
-      <description>In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state.</description>
+      <description>&lt;p&gt;In Swift, initializers are fundamental building blocks that allow you to create instances of classes, structures, and enumerations by setting up their initial state. Swift&amp;rsquo;s initializer syntax is expressive and versatile, offering a variety of ways to customize instance creation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Thread Safety in Swift</title>
       <link>https://mahigarg.github.io/blogs/thread-safety-in-swift/</link>
       <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/thread-safety-in-swift/</guid>
-      <description>Thread safety refers to a programming concept where data or resources are accessed and modified in a way that ensures correct behavior and prevents conflicts when multiple threads (concurrent execution units) are working with the same data simultaneously.</description>
+      <description>&lt;p&gt;Thread safety refers to a programming concept where data or resources are accessed and modified in a way that ensures correct behavior and prevents conflicts when multiple threads (concurrent execution units) are working with the same data simultaneously. In multi-threaded environments, without proper thread safety measures, unpredictable and erroneous behavior can occur due to race conditions and data inconsistencies.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unowned vs Optional Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</link>
       <pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/unowned-vs-optional-unowned-references-in-swift/</guid>
-      <description>Memory management is a critical consideration in Swift development, and managing references is a key aspect of this. Two reference types that come into play are unowned and optional unowned references.</description>
+      <description>&lt;p&gt;Memory management is a critical consideration in Swift development, and managing references is a key aspect of this. Two reference types that come into play are unowned and optional unowned references. Both are used to prevent strong reference cycles and manage memory efficiently. In this blog, we&amp;rsquo;ll delve into the differences between unowned and optional unowned references with examples to help you understand their applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Weak vs Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</link>
       <pubDate>Sat, 12 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/weak-vs-unowned-references-in-swift/</guid>
-      <description>Memory management is a vital consideration when developing applications, and Swift provides developers with different reference types to manage memory effectively.</description>
+      <description>&lt;p&gt;Memory management is a vital consideration when developing applications, and Swift provides developers with different reference types to manage memory effectively. Two of these reference types, weak and unowned, are essential in preventing memory leaks and managing object lifetimes. In this blog, we&amp;rsquo;ll explore the differences between weak and unowned references through examples, helping you understand when to use each type.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Strong vs Weak vs Unowned References in Swift</title>
       <link>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</guid>
-      <description>In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps.</description>
+      <description>&lt;p&gt;In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps. One of the core concepts in memory management is the use of references to objects, which determine how objects are retained and released in memory. In Swift, there are three types of references that play a crucial role: strong, weak, and unowned references. In this blog, we will explore these three types of references with clear examples to help you understand their significance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CoreData in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/coredata-swiftui/</link>
       <pubDate>Tue, 08 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/coredata-swiftui/</guid>
-      <description>Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience.</description>
+      <description>&lt;p&gt;Merge data management seamlessly with UI. Model, persist, and update app data effortlessly using declarative syntax. Fetch, sort, and filter data effortlessly, ensuring a responsive and engaging user experience. Simplify synchronization between data and UI layers for efficient, scalable app development.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Conditional Expressions in Swift</title>
       <link>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/conditional-expressions-in-swift/</guid>
-      <description>Conditional expressions lie at the heart of programming, allowing developers to make decisions and control the flow of their code. In Swift, these expressions provide the foundation for branching logic and executing different paths based on conditions.</description>
+      <description>&lt;p&gt;Conditional expressions lie at the heart of programming, allowing developers to make decisions and control the flow of their code. In Swift, these expressions provide the foundation for branching logic and executing different paths based on conditions. In this blog, we&amp;rsquo;ll delve into the world of conditional expressions in Swift, exploring their syntax, various constructs, and providing practical examples to demonstrate their power and versatility.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Retain Cycle in Swift</title>
       <link>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</link>
       <pubDate>Sun, 06 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/retain-cycle-in-swift/</guid>
-      <description>Swift&amp;rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&amp;rsquo;s a phenomenon called retain cycle that can sneakily lead to memory leaks.</description>
+      <description>&lt;p&gt;Swift&amp;rsquo;s automatic reference counting (ARC) system does a great job of managing memory, there&amp;rsquo;s a phenomenon called &lt;code&gt;retain cycle&lt;/code&gt; that can sneakily lead to memory leaks. In this blog post, we&amp;rsquo;ll delve into the world of retain cycles, understand how they occur, and learn effective strategies to prevent them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>@objc in swift</title>
       <link>https://mahigarg.github.io/blogs/objc-in-swift/</link>
       <pubDate>Fri, 04 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/objc-in-swift/</guid>
-      <description>The @objc attribute in Swift facilitates seamless interaction between Swift and Objective-C codebases by exposing Swift declarations to the Objective-C runtime.</description>
+      <description>&lt;p&gt;The &lt;code&gt;@objc&lt;/code&gt; attribute in Swift facilitates seamless interaction between Swift and Objective-C codebases by exposing Swift declarations to the Objective-C runtime. It&amp;rsquo;s used to bridge the gap when working with Objective-C frameworks, allowing Swift properties, methods, and classes to be recognized by the Objective-C world. This attribute plays a crucial role in achieving interoperability and integration between the two languages.&lt;/p&gt;</description>
     </item>
     <item>
       <title>class vs struct: Swift</title>
       <link>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</link>
       <pubDate>Wed, 02 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/classes-vs-struct-swift/</guid>
-      <description>In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&amp;rsquo;s design, efficiency, and behavior.</description>
+      <description>&lt;p&gt;In the realm of Swift programming, the choice between using classes or structs can significantly impact your code&amp;rsquo;s design, efficiency, and behavior. In this blog, we&amp;rsquo;ll embark on a journey through class and struct differences, focusing on scenarios where classes outshine structs. By exploring practical examples, we&amp;rsquo;ll illuminate the unique capabilities that classes bring to the table.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nested Methods in swift</title>
       <link>https://mahigarg.github.io/blogs/nested-methods-in-swift/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/nested-methods-in-swift/</guid>
-      <description>Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function.</description>
+      <description>&lt;p&gt;Nested methods in Swift allow you to define a function within the body of another function. This inner function is only accessible within the enclosing function. It&amp;rsquo;s a powerful mechanism for modularizing code and keeping related functionality together.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Super in Swift</title>
       <link>https://mahigarg.github.io/blogs/super-in-swift/</link>
       <pubDate>Fri, 28 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/super-in-swift/</guid>
-      <description>In the dynamic world of Swift programming, the super keyword serves as a bridge connecting the past and present—enabling seamless inheritance and collaboration between parent and child classes.</description>
+      <description>&lt;p&gt;In the dynamic world of Swift programming, the &lt;code&gt;super&lt;/code&gt; keyword serves as a bridge connecting the past and present—enabling seamless inheritance and collaboration between parent and child classes. Understanding the capabilities of the &lt;code&gt;super&lt;/code&gt; keyword is essential for effective object-oriented design and maintaining code coherence. In this blog, we&amp;rsquo;ll dive deep into the intricacies of the &lt;code&gt;super&lt;/code&gt; keyword in Swift, illustrated through practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift Enum in detail</title>
       <link>https://mahigarg.github.io/blogs/swift-enum-in-detail/</link>
       <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/swift-enum-in-detail/</guid>
-      <description>Enumerations, commonly known as enums, are a versatile feature in Swift that allow you to define a group of related values in a structured manner.</description>
+      <description>&lt;p&gt;Enumerations, commonly known as enums, are a versatile feature in Swift that allow you to define a group of related values in a structured manner. Enums provide a way to define a type with a limited set of related values. They help make code more readable, self-documenting, and type-safe by enforcing specific cases.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Self in Swift</title>
       <link>https://mahigarg.github.io/blogs/self-in-swift/</link>
       <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/self-in-swift/</guid>
-      <description>In the realm of Swift programming, mastering the self keyword is essential for crafting clean and efficient code. This small but mighty keyword plays a significant role in object-oriented design, allowing developers to access and manipulate instance-specific properties and methods.</description>
+      <description>&lt;p&gt;In the realm of Swift programming, mastering the &lt;code&gt;self&lt;/code&gt; keyword is essential for crafting clean and efficient code. This small but mighty keyword plays a significant role in object-oriented design, allowing developers to access and manipulate instance-specific properties and methods. In this blog, we&amp;rsquo;ll embark on a journey to unravel the mysteries of the &lt;code&gt;self&lt;/code&gt; keyword in Swift, complete with real-world examples that showcase its versatility and importance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Error Handling with do-catch in Swift</title>
       <link>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</link>
       <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/error-handling-with-do-catch-in-swift/</guid>
-      <description>Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the do-catch construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations.</description>
+      <description>&lt;p&gt;Error handling is a crucial aspect of writing robust and reliable software applications. In Swift, the &lt;code&gt;do-catch&lt;/code&gt; construct provides a powerful mechanism for handling errors and gracefully recovering from unexpected situations. In this blog post, we&amp;rsquo;ll delve into the world of &lt;code&gt;do-catch&lt;/code&gt; in Swift, exploring its syntax, best practices, and real-world examples to help you master this essential feature.&lt;/p&gt;</description>
     </item>
     <item>
       <title>As Operator (as vs as? vs as!) in Swift</title>
       <link>https://mahigarg.github.io/blogs/as-operator-in-swift/</link>
       <pubDate>Thu, 20 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/as-operator-in-swift/</guid>
-      <description>Type casting is a fundamental concept in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
+      <description>&lt;p&gt;Type casting is a fundamental concept in Swift that allows you to work with instances of different types in a flexible and safe manner. Swift provides three distinct type casting operators: &lt;code&gt;as&lt;/code&gt;, &lt;code&gt;as?&lt;/code&gt;, and &lt;code&gt;as!&lt;/code&gt;. In this blog post, we&amp;rsquo;ll delve into the differences between these operators, when to use each one, and provide real-world examples to illustrate their usage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Is Operator (is vs is? vs is!) in Swift</title>
       <link>https://mahigarg.github.io/blogs/is-operator-in-swift/</link>
       <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/is-operator-in-swift/</guid>
-      <description>Type checking is a crucial concept in Swift that allows you to determine the type of an instance or value at runtime.</description>
+      <description>&lt;p&gt;Type checking is a crucial concept in Swift that allows you to determine the type of an instance or value at runtime. Swift offers three distinct type checking mechanisms: &lt;code&gt;is&lt;/code&gt;, &lt;code&gt;is?&lt;/code&gt;, and &lt;code&gt;is!&lt;/code&gt;. In this blog post, we&amp;rsquo;ll delve into the nuances of these operators, when to use each one, and provide real-world examples to illustrate their functionality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Try Statement (Try vs Try? vs Try!) in SWift</title>
       <link>https://mahigarg.github.io/blogs/try-statement-in-swift/</link>
       <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/try-statement-in-swift/</guid>
-      <description>Error handling is an integral part of any programming language, and Swift provides a versatile set of tools to handle errors effectively.</description>
+      <description>&lt;p&gt;Error handling is an integral part of any programming language, and Swift provides a versatile set of tools to handle errors effectively. In this blog post, we will unravel the differences between &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;try?&lt;/code&gt;, and &lt;code&gt;try!&lt;/code&gt; in Swift. We&amp;rsquo;ll explore the scenarios where each variant is most appropriate and provide real-world examples to illustrate their usage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Type Casting (as Operator) in Swift</title>
       <link>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</link>
       <pubDate>Fri, 14 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/type-casting-as-operator-in-swift/</guid>
-      <description>Type casting is a powerful feature in Swift that allows you to work with instances of different types in a flexible and safe manner.</description>
+      <description>&lt;p&gt;Type casting is a powerful feature in Swift that allows you to work with instances of different types in a flexible and safe manner. Whether you&amp;rsquo;re dealing with class hierarchies or protocol conformances, type casting provides the tools to convert and manipulate instances effectively. In this blog post, we&amp;rsquo;ll explore the intricacies of type casting in Swift, complete with syntax explanations and real-world examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Type Checking (is Operator) in Swift</title>
       <link>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</link>
       <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/type-checking-is-operator-in-swift/</guid>
-      <description>Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code.</description>
+      <description>&lt;p&gt;Type checking is a fundamental concept in programming languages, including Swift. It enables you to determine the type of a value or an instance at runtime, facilitating dynamic behavior and robust code. In this blog post, we&amp;rsquo;ll delve into the world of type checking in Swift, exploring its syntax, use cases, and providing real-world examples to help you grasp this essential concept.&lt;/p&gt;</description>
     </item>
     <item>
       <title>If let vs Guard let in Swift</title>
       <link>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</link>
       <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/if-let-vs-guard-let-in-swift/</guid>
-      <description>Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent.</description>
+      <description>&lt;p&gt;Working with optionals is a common scenario in Swift, allowing us to handle situations where a value might be present or absent. Swift provides two powerful constructs, if let and guard let, to safely unwrap optional values. In this blog post, we&amp;rsquo;ll explore the differences between if let and guard let, understand their best use cases, and provide practical examples to demonstrate their elegance and safety.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lazy Property in Swift</title>
       <link>https://mahigarg.github.io/blogs/lazy-property-in-swift/</link>
       <pubDate>Wed, 05 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/lazy-property-in-swift/</guid>
-      <description>Swift&amp;rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed.</description>
+      <description>&lt;p&gt;Swift&amp;rsquo;s lazy properties are a remarkable feature that allows developers to defer the initialization of a property until it is first accessed. This delayed initialization can greatly improve performance, especially when dealing with resource-intensive or time-consuming operations. In this blog, we&amp;rsquo;ll explore lazy properties in Swift, understand how they work, and dive into practical examples where they can significantly enhance the efficiency of your code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Computed Property in Swift</title>
       <link>https://mahigarg.github.io/blogs/computed-property-in-swift/</link>
       <pubDate>Sun, 02 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/computed-property-in-swift/</guid>
-      <description>In Swift, computed properties are a powerful and elegant feature that allows developers to define custom accessors for their properties. Unlike stored properties, computed properties do not store a value directly.</description>
+      <description>&lt;p&gt;In Swift, computed properties are a powerful and elegant feature that allows developers to define custom accessors for their properties. Unlike stored properties, computed properties do not store a value directly. Instead, they calculate their value on-the-fly based on the getter and, if needed, the setter logic provided by the developer. This flexibility opens up numerous possibilities for streamlining code, encapsulating complex logic, and creating more readable and maintainable code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>guard let in Swift</title>
       <link>https://mahigarg.github.io/blogs/guard-let-in-swift/</link>
       <pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/guard-let-in-swift/</guid>
-      <description>In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement.</description>
+      <description>&lt;p&gt;In the realm of Swift programming, handling optionals with precision is of paramount importance to ensure code safety and maintainability. One of the most elegant constructs for handling optionals is the guard let statement. In this blog, we will delve into the world of guard let and explore how it enables developers to gracefully exit functions early when dealing with optional values. By the end of this blog, you will understand why guard let is a powerful tool in your Swift programming arsenal.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Default Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/default-statement-in-swift/</link>
       <pubDate>Sat, 24 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/default-statement-in-swift/</guid>
-      <description>When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully.</description>
+      <description>&lt;p&gt;When working with switch statements in Swift, we often encounter situations where we need to handle known cases explicitly. However, there are times when we also want to handle unknown or unexpected cases gracefully. Swift provides us with a powerful tool, the default statement, to manage such scenarios. In this blog post, we&amp;rsquo;ll explore the default statement in Swift and learn how to effectively handle unknown cases with elegance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>if let in Swift</title>
       <link>https://mahigarg.github.io/blogs/if-let-in-swift/</link>
       <pubDate>Fri, 16 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/if-let-in-swift/</guid>
-      <description>Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals.</description>
+      <description>&lt;p&gt;Swift is known for its safety and strong typing, and one of its most powerful features is its handling of optionals. Optionals allow developers to express the possibility of a value being absent, preventing runtime crashes due to nil values. One of the key constructs used in Swift to work with optionals is the if let statement. In this blog, we will explore how if let can make your code cleaner and safer by safely unwrapping optionals in a concise manner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Continue Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/continue-statement-in-swift/</link>
       <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/continue-statement-in-swift/</guid>
-      <description>Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action.</description>
+      <description>&lt;p&gt;Loop control is a fundamental aspect of programming, allowing developers to iterate over collections and execute specific tasks. However, in real-world scenarios, not every iteration requires the same action. Swift provides a powerful tool called the continue statement, which allows you to skip specific iterations and continue to the next one within a loop. In this blog post, we&amp;rsquo;ll explore the continue statement in Swift, along with practical examples to demonstrate its usefulness.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift Functions: Single and Multiple Value Returns</title>
       <link>https://mahigarg.github.io/blogs/swift-functions-single-and-multiple-value-returns/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/swift-functions-single-and-multiple-value-returns/</guid>
-      <description>In Swift, functions are the building blocks of code that encapsulate logic and perform specific tasks. They can return values to the caller, either as a single value or as multiple values using tuples.</description>
+      <description>&lt;p&gt;In Swift, functions are the building blocks of code that encapsulate logic and perform specific tasks. They can return values to the caller, either as a single value or as multiple values using tuples. In this blog, we&amp;rsquo;ll explore how Swift functions can efficiently return single and multiple values, and how these powerful features can improve code organization and enhance code reuse.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Switch Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/switch-statement-in-swift/</link>
       <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/switch-statement-in-swift/</guid>
-      <description>Swift&amp;rsquo;s powerful switch statement is a versatile control flow construct that enables developers to handle complex conditions and pattern matching with ease.</description>
+      <description>&lt;p&gt;Swift&amp;rsquo;s powerful switch statement is a versatile control flow construct that enables developers to handle complex conditions and pattern matching with ease. Far beyond the conventional use cases, the switch statement in Swift boasts several features that make it an indispensable tool in every developer&amp;rsquo;s toolkit. In this blog, we will explore the various facets of Swift&amp;rsquo;s switch statement, discuss its unique capabilities, and delve into real-world examples to illustrate its flexibility and efficiency.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Closures: Swift</title>
       <link>https://mahigarg.github.io/blogs/closures-swift/</link>
       <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/closures-swift/</guid>
-      <description>Closures are a powerful feature of the Swift programming language that allows you to write code that can be passed around and executed at a later time.</description>
+      <description>&lt;p&gt;Closures are a powerful feature of the Swift programming language that allows you to write code that can be passed around and executed at a later time. They are self-contained blocks of functionality.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Break Statement in Swift</title>
       <link>https://mahigarg.github.io/blogs/break-statement-in-swift/</link>
       <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/break-statement-in-swift/</guid>
-      <description>Control flow is an essential aspect of any programming language, and Swift is no exception. Swift provides a powerful and flexible control flow mechanism that allows developers to direct the flow of their code execution based on certain conditions.</description>
+      <description>&lt;p&gt;Control flow is an essential aspect of any programming language, and Swift is no exception. Swift provides a powerful and flexible control flow mechanism that allows developers to direct the flow of their code execution based on certain conditions. One such tool in the Swift developer&amp;rsquo;s toolbox is the break statement.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ternary Conditional Operator in Swift</title>
       <link>https://mahigarg.github.io/blogs/ternary-conditional-operator-in-swift/</link>
       <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/ternary-conditional-operator-in-swift/</guid>
-      <description>Swift&amp;rsquo;s Ternary Conditional Operator is a concise and powerful tool that allows developers to write compact conditional expressions. It provides a more concise alternative to traditional if-else statements, making code more readable and expressive.</description>
+      <description>&lt;p&gt;Swift&amp;rsquo;s Ternary Conditional Operator is a concise and powerful tool that allows developers to write compact conditional expressions. It provides a more concise alternative to traditional if-else statements, making code more readable and expressive. In this blog, we&amp;rsquo;ll explore the Ternary Conditional Operator in Swift, understand its syntax and usage, and explore real-world examples to illustrate its efficiency and elegance.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enums in Swift</title>
       <link>https://mahigarg.github.io/blogs/enums-in-swift/</link>
       <pubDate>Mon, 17 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/enums-in-swift/</guid>
-      <description>When it comes to writing clean, maintainable, and bug-free code, Swift provides a powerful feature called enums or enumerations. Enums are a fundamental data type that allows developers to define a set of related values in a type-safe manner.</description>
+      <description>&lt;p&gt;When it comes to writing clean, maintainable, and bug-free code, Swift provides a powerful feature called &lt;code&gt;enums&lt;/code&gt; or enumerations. Enums are a fundamental data type that allows developers to define a set of related values in a type-safe manner. They play a significant role in improving code readability, eliminating runtime errors, and enhancing overall code quality. In this blog, we&amp;rsquo;ll delve into the world of enums in Swift and explore how they can level up your coding game with some practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Inout in Swift</title>
       <link>https://mahigarg.github.io/blogs/inout-in-swift/</link>
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/inout-in-swift/</guid>
-      <description>Swift, being a modern and versatile programming language, offers various features to enhance code functionality and readability. One such powerful feature is the inout parameter, which allows two-way communication between a function and its caller.</description>
+      <description>&lt;p&gt;Swift, being a modern and versatile programming language, offers various features to enhance code functionality and readability. One such powerful feature is the inout parameter, which allows two-way communication between a function and its caller. In this blog post, we&amp;rsquo;ll dive into the world of inout parameters in Swift, understand how they work, and explore practical examples of their usage.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Structs in Swift</title>
       <link>https://mahigarg.github.io/blogs/structs-in-swift/</link>
       <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/structs-in-swift/</guid>
-      <description>When it comes to designing data structures in Swift, one of the fundamental building blocks you&amp;rsquo;ll encounter is the struct. A struct, short for structure, is a versatile and lightweight data type that allows you to encapsulate related properties and behaviors together.</description>
+      <description>&lt;p&gt;When it comes to designing data structures in Swift, one of the fundamental building blocks you&amp;rsquo;ll encounter is the &lt;code&gt;struct&lt;/code&gt;. A struct, short for structure, is a versatile and lightweight data type that allows you to encapsulate related properties and behaviors together. In this blog, we&amp;rsquo;ll delve into the world of structs in Swift, explore their features, benefits, and demonstrate how they can be used to create robust and maintainable code with practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tuple in Swift</title>
       <link>https://mahigarg.github.io/blogs/tuple-in-swift/</link>
       <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/tuple-in-swift/</guid>
-      <description>In Swift, tuples are lightweight data structures that provide a simple and elegant way to group multiple values together. They offer great versatility and are widely used in various scenarios to pass around related pieces of data effortlessly.</description>
+      <description>&lt;p&gt;In Swift, tuples are lightweight data structures that provide a simple and elegant way to group multiple values together. They offer great versatility and are widely used in various scenarios to pass around related pieces of data effortlessly. In this blog, we&amp;rsquo;ll explore the power of tuples in Swift, understand their syntax and usage, and dive into real-world examples to showcase their flexibility and usefulness.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Classes in Swift</title>
       <link>https://mahigarg.github.io/blogs/classes-in-swift/</link>
       <pubDate>Sun, 26 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/classes-in-swift/</guid>
-      <description>In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner.</description>
+      <description>&lt;p&gt;In the world of Swift, classes form the cornerstone of object-oriented programming (OOP). They provide a powerful mechanism to create blueprints for objects, allowing you to encapsulate data and behaviors together in a structured manner. In this blog, we&amp;rsquo;ll dive into the world of classes in Swift, explore their features, benefits, and demonstrate how they can be used to build sophisticated and reusable code with practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>NavigationView in SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</link>
       <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/navigationview-in-swiftui/</guid>
-      <description>Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly.</description>
+      <description>&lt;p&gt;Navigation involves moving between different screens or views within an app. SwiftUI provides a navigation view hierarchy that allows users to navigate between different views seamlessly. The NavigationView is the container view that manages the navigation stack and provides a NavigationBar at the top to facilitate navigation.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dictionary: Swift</title>
       <link>https://mahigarg.github.io/blogs/dictionary-swift/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/dictionary-swift/</guid>
-      <description>Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys.</description>
+      <description>&lt;p&gt;Dictionaries in Swift provide a key-value pair mechanism for efficient data storage and retrieval. They are implemented using hash tables, allowing fast access and modification of values based on keys. Dictionaries support operations like adding, removing, and iterating over elements. With constant time complexity for most operations, dictionaries are a powerful tool for organizing and managing data in Swift programming.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Protocols in Swift</title>
       <link>https://mahigarg.github.io/blogs/protocols-in-swift/</link>
       <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/protocols-in-swift/</guid>
-      <description>In Swift, protocols are a powerful tool that empowers developers to create flexible, reusable, and scalable code. They play a pivotal role in achieving abstraction and enabling polymorphism, essential principles of object-oriented programming (OOP).</description>
+      <description>&lt;p&gt;In Swift, protocols are a powerful tool that empowers developers to create flexible, reusable, and scalable code. They play a pivotal role in achieving abstraction and enabling polymorphism, essential principles of object-oriented programming (OOP). In this blog, we&amp;rsquo;ll dive into the world of protocols in Swift, explore their features, benefits, and demonstrate how they can be used to design robust and adaptable code with practical examples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Extensions in Swift</title>
       <link>https://mahigarg.github.io/blogs/extensions-in-swift/</link>
       <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/extensions-in-swift/</guid>
-      <description>Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity.</description>
+      <description>&lt;p&gt;Extensions in Swift allow developers to add new functionality to existing classes and protocols without modifying their original implementation. For classes, extensions can include new methods, computed properties, and initializers, promoting code modularity. For protocols, extensions can provide default implementations for methods, enhancing code adaptability. By separating concerns through extensions, developers can achieve cleaner, more organized code, increasing code reusability and maintainability in Swift projects.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Generics in Swift</title>
       <link>https://mahigarg.github.io/blogs/generics-in-swift/</link>
       <pubDate>Wed, 22 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/generics-in-swift/</guid>
-      <description>Generics allow us to write functions, structures, and classes that can work with different types while maintaining type safety. Rather than specifying concrete types, we use placeholders (type parameters) that get substituted with actual types when the code is used.</description>
+      <description>&lt;p&gt;Generics allow us to write functions, structures, and classes that can work with different types while maintaining type safety. Rather than specifying concrete types, we use placeholders (type parameters) that get substituted with actual types when the code is used. This flexibility makes generics a valuable tool for writing versatile and adaptable code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Variable Types in Swift</title>
       <link>https://mahigarg.github.io/blogs/variable-types-in-swift/</link>
       <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/variable-types-in-swift/</guid>
-      <description>Swift is a powerful and versatile programming language that allows developers to create robust and efficient applications across various platforms. One of the fundamental aspects of Swift is its strong type system, which ensures safety and reliability in code.</description>
+      <description>&lt;p&gt;Swift is a powerful and versatile programming language that allows developers to create robust and efficient applications across various platforms. One of the fundamental aspects of Swift is its strong type system, which ensures safety and reliability in code. In this blog, we will dive into the world of variable types in Swift, exploring the various categories and providing examples to enhance your understanding.&lt;/p&gt;</description>
     </item>
     <item>
       <title>let vs var: Mutability in Swift</title>
       <link>https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/</link>
       <pubDate>Fri, 17 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/let-vs-var-mutability-in-swift/</guid>
-      <description>Swift is a powerful and modern programming language that allows developers to build robust and efficient applications for various platforms. One of the key features of Swift is its support for both immutable constants and mutable variables through the use of let and var declarations, respectively.</description>
+      <description>&lt;p&gt;Swift is a powerful and modern programming language that allows developers to build robust and efficient applications for various platforms. One of the key features of Swift is its support for both immutable constants and mutable variables through the use of &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;var&lt;/code&gt; declarations, respectively. In this blog, we will explore the differences between &lt;code&gt;let&lt;/code&gt; and &lt;code&gt;var&lt;/code&gt;, along with examples to illustrate their usage and significance in Swift programming.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optional Type in Swift</title>
       <link>https://mahigarg.github.io/blogs/optional-type-in-swift/</link>
       <pubDate>Mon, 13 Feb 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/optional-type-in-swift/</guid>
-      <description>Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&amp;rsquo;s safety is its handling of optional types.</description>
+      <description>&lt;p&gt;Swift is a robust and modern programming language that prioritizes safety and reliability. One of the key features that contribute to Swift&amp;rsquo;s safety is its handling of optional types. Optional types allow developers to indicate the possible absence of a value, which helps prevent runtime crashes due to unexpected nil values. In this blog, we will explore the concept of optional types in Swift, along with examples to demonstrate how they can be effectively utilized in your code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Do While (Repeat While) Loop in Swift</title>
       <link>https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/</link>
       <pubDate>Tue, 31 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/do-while-repeat-while-loop-in-swift/</guid>
-      <description>Swift is a powerful and expressive programming language that offers a variety of loop structures to handle repetitive tasks efficiently. Among these, the do-while loop stands out as a loop that ensures the code inside the loop executes at least once, regardless of the loop&amp;rsquo;s condition.</description>
+      <description>&lt;p&gt;Swift is a powerful and expressive programming language that offers a variety of loop structures to handle repetitive tasks efficiently. Among these, the do-while loop stands out as a loop that ensures the code inside the loop executes at least once, regardless of the loop&amp;rsquo;s condition. In this blog, we will explore the do-while loop in Swift, its syntax, and examples to showcase its usefulness in different scenarios.&lt;/p&gt;</description>
     </item>
     <item>
       <title>While Loop in Swift</title>
       <link>https://mahigarg.github.io/blogs/while-loop-in-swift/</link>
       <pubDate>Thu, 26 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/while-loop-in-swift/</guid>
-      <description>In any programming language, loops are essential for performing repetitive tasks efficiently. Swift offers a variety of loop structures, and one of the most versatile ones is the while loop.</description>
+      <description>&lt;p&gt;In any programming language, loops are essential for performing repetitive tasks efficiently. Swift offers a variety of loop structures, and one of the most versatile ones is the while loop. In this blog, we will explore the while loop in Swift, its syntax, and various examples to demonstrate how it can be utilized to achieve repetitive operations effectively.&lt;/p&gt;</description>
     </item>
     <item>
       <title>@State: SwiftUI</title>
       <link>https://mahigarg.github.io/blogs/state-swiftui/</link>
       <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/state-swiftui/</guid>
-      <description>In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences.</description>
+      <description>&lt;p&gt;In SwiftUI, a powerful framework for building user interfaces, managing and updating the state of our views is essential for creating dynamic and interactive user experiences. One key tool SwiftUI provides for this purpose is the @State property wrapper.&lt;/p&gt;</description>
     </item>
     <item>
       <title>For loop with where clause: Swift</title>
       <link>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/for-loop-with-where-clause-swift/</guid>
-      <description>For loop is an inevitable part of any programming language. It iterates over every element of the collection type data including array, set, and dictionary, and does the operation as per the code.</description>
+      <description>&lt;p&gt;For loop is an inevitable part of any programming language. It iterates over every element of the collection type data including array, set, and dictionary, and does the operation as per the code.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Round up to n Decimal Digit: Swift</title>
       <link>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</link>
       <pubDate>Tue, 16 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/round-up-to-n-decimal-digit-swift/</guid>
-      <description>We sometimes in our calculation get results with more than 4 decimal digits or even more. But as a developer, we can’t use the same to display to users.</description>
+      <description>&lt;p&gt;We sometimes in our calculation get results with more than 4 decimal digits or even more. But as a developer, we can’t use the same to display to users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Set: Swift</title>
       <link>https://mahigarg.github.io/blogs/set-swift/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
-      <description>A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection.</description>
+      <description>&lt;p&gt;A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection. You can think of sets as a mathematical set, where the order of elements does not matter, and there are no duplicate elements. Swift&amp;rsquo;s Set data type uses hash tables internally to store elements, which allows for fast access and modification. This is the reason time complexity for set operation is much better than array.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setup Firebase RemoteConfig</title>
       <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
       <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step.</description>
+      <description>&lt;p&gt;In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step. Additionally, it will tell you how to configure the remoteConfig Parameter and fetch and Apply the configuration to your app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Map Operator: Swift</title>
       <link>https://mahigarg.github.io/blogs/map-operator-swift/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/map-operator-swift/</guid>
-      <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
+      <description>&lt;p&gt;The collection is something which is used by almost everyone. It makes our life easy. &lt;code&gt;Array&lt;/code&gt;, &lt;code&gt;Set&lt;/code&gt;, and &lt;code&gt;Dictionary&lt;/code&gt; are the best examples of them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>$0, $1 … $n in Swift</title>
       <link>https://mahigarg.github.io/blogs/0-1-n-in-swift/</link>
       <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/0-1-n-in-swift/</guid>
-      <description>In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.</description>
+      <description>&lt;p&gt;In order to use any parameter in a closure or a higher-order function, we need to name the parameter inside the closure or higher-order function.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Named and Unnamed Parameters: Swift</title>
       <link>https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/</link>
       <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/named-and-unnamed-parameters-swift/</guid>
-      <description>Functions are something that every developer uses daily. A function can of with or without parameters. Swift has multiple ways of passing the parameters to a function.</description>
+      <description>&lt;p&gt;Functions are something that every developer uses daily. A function can of with or without parameters. Swift has multiple ways of passing the parameters to a function. we can alias the parameter name or we can even skip the parameter name while calling the function.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Filter Operator: Swift</title>
       <link>https://mahigarg.github.io/blogs/filter-operator-swift/</link>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/filter-operator-swift/</guid>
-      <description>The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.</description>
+      <description>&lt;p&gt;The collection is something which is used by almost everyone. It makes our life easy. Array, Set, and Dictionary are the best examples of them.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Enumerated in Swift</title>
       <link>https://mahigarg.github.io/blogs/enumerated-in-swift/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/enumerated-in-swift/</guid>
-      <description>Enumerated is used to iterate over a collection along with the position access. It returns a sequence of Pairs where the first element in the Pair is the index and the second element is the element itself of the collection.</description>
+      <description>&lt;p&gt;Enumerated is used to iterate over a collection along with the position access. It returns a sequence of Pairs where the first element in the Pair is the index and the second element is the element itself of the collection.&lt;/p&gt;</description>
     </item>
     <item>
       <title>RemoteConfig in Firebase</title>
       <link>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</link>
       <pubDate>Sat, 28 May 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</guid>
-      <description>In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates.</description>
+      <description>&lt;p&gt;In today’s fast-paced world, mobile app developers must adapt quickly to changing user preferences, market demands, and evolving business requirements. To achieve this, developers need a robust mechanism to configure apps remotely without frequent updates. Firebase RemoteConfig is a powerful tool offered by Google Firebase. It enables developers to dynamically update app settings, content, and feature flags from a centralized console, allowing them to deliver a personalized and tailored experience to the users.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Labeled Statement : Swift</title>
       <link>https://mahigarg.github.io/blogs/labeled-statement-swift/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/labeled-statement-swift/</guid>
-      <description>Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them. It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.</description>
+      <description>&lt;p&gt;Swift has a few inbuilt features which make our life super easy. Labeled statements are one of them.&#xA;It allows us to name a statement and later within the scope, that particular statement can be referenced using the label provided.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
