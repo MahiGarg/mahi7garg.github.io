@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LRU Cache Implementation in Swift &middot; Mahi Garg</title>
+
+  <!-- Meta -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="HandheldFriendly" content="true">
+
+  <meta name="author" content="Mahi Garg" />  
+  <meta name="owner" content="Mahi Garg">
+  <meta property="twitter:title" content="Mahi Garg">
+
+  <meta name="topic" content="LRU Cache Implementation in Swift">
+    <meta name="description" content="An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.">
+    <meta property="og:description" content="An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.">
+    <meta property="twitter:description" content="An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.">
+    <meta name="abstract" content="An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.">
+    <meta name="summary" content="An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items."> 
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content=" 2024-10-19 "> 
+
+    <meta name="url" content="https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/">
+    <meta property="og:url" content="https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/">
+    <meta property="al:web:url" content="https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/">
+
+    <meta name="site_name" content="Mahi Garg">
+    <meta property="og:site_name" content="Mahi Garg">
+
+    <meta name="robots" content="max-image-preview:large">
+    
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="lru cache,cache,lru,caching in swift">
+    
+    
+    <link rel="canonical" href="https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="target" content="all" />
+    <meta name="audience" content="all" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="safe for kids" /> 
+    <meta property="og:tags" content="Swift"> 
+    <meta property="og:tags" content="Programming-Basics"> 
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost%3A0%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900%7CCaveat%3A400%3B500%3B600%3B700&#038;display=swap" type="text/css" media="all" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto" type="text/css" media="all" >
+
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1998370107679895"
+     crossorigin="anonymous">
+  </script>
+
+  <script>
+  function onErrorLoadingAds() {
+    console.log("AdBlocker blocks the ads")
+  }
+  </script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" 
+  onerror="onErrorLoadingAds()">
+  </script>
+  
+
+  
+  <meta name="google-site-verification" content="WsYlsB659Cuy0GKk82CS1ogZoTK0FIxmdSE759c1rMU" />
+  
+
+  <!-- Plugins Stylesheets -->
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/splitting/splitting.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/swiper/swiper.min.css" />
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/animate/animate.css" />
+
+  <!-- Main Stylesheets -->
+  
+  <link rel="stylesheet" href="https://mahigarg.github.io/scss/style.min.css" />
+
+  <link rel="stylesheet" href="https://mahigarg.github.io/plugins/template-dark/dark.css" />
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="https://mahigarg.github.io/images/favicon/favicon.ico" type="image/x-icon" />
+
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GLR31QSF3N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GLR31QSF3N');
+  </script>
+  
+
+  </head>
+
+<body class="page dark-skin">
+  <div class="container-page ">
+    <!-- Preloader -->
+    
+<div class="preloader">
+  <div class="centrize full-width">
+    <div class="vertical-center">
+      <div class="spinner-logo">
+		
+        <img src="https://mahigarg.github.io/images/mahi.webp" alt="https://mahigarg.github.io/Mahi%20Garg" />
+        <div class="spinner-dot"></div>
+        <div class="spinner spinner-line"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Header -->
+    
+<header class="header">
+	<div class="header__builder">
+		<div class="row">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+				
+				<div class="logo">
+					<a href="https://mahigarg.github.io/">
+            			
+						<img src="https://mahigarg.github.io/images/mahi.webp" alt="Mahi Garg" />
+					</a>
+				</div>
+
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 align-right">
+
+				
+				<a href="#" class="switcher-btn" aria-label="switcher-button">
+					<span class="sw-before">
+						<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+							<path id="Dark_Theme" data-name="Dark Theme" fill="#000" d="M1759.46,111.076a0.819,0.819,0,0,0-.68.147,8.553,8.553,0,0,1-2.62,1.537,8.167,8.167,0,0,1-2.96.531,8.655,8.655,0,0,1-8.65-8.682,9.247,9.247,0,0,1,.47-2.864,8.038,8.038,0,0,1,1.42-2.54,0.764,0.764,0,0,0-.12-1.063,0.813,0.813,0,0,0-.68-0.148,11.856,11.856,0,0,0-6.23,4.193,11.724,11.724,0,0,0,1,15.387,11.63,11.63,0,0,0,19.55-5.553A0.707,0.707,0,0,0,1759.46,111.076Zm-4.5,6.172a10.137,10.137,0,0,1-14.29-14.145,10.245,10.245,0,0,1,3.38-2.836c-0.14.327-.29,0.651-0.41,1.006a9.908,9.908,0,0,0-.56,3.365,10.162,10.162,0,0,0,10.15,10.189,9.776,9.776,0,0,0,3.49-.62,11.659,11.659,0,0,0,1.12-.473A10.858,10.858,0,0,1,1754.96,117.248Z" transform="translate(-1737 -98)" />
+						</svg>
+					</span>
+					<span class="sw-after">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.22" height="22.313" viewBox="0 0 22.22 22.313">
+							<path id="Light_Theme" data-name="Light Theme" fill="#fff" d="M1752.49,105.511a5.589,5.589,0,0,0-3.94-1.655,5.466,5.466,0,0,0-3.94,1.655,5.61,5.61,0,0,0,3.94,9.566,5.473,5.473,0,0,0,3.94-1.653,5.643,5.643,0,0,0,1.65-3.957A5.516,5.516,0,0,0,1752.49,105.511Zm-1.06,6.85a4.1,4.1,0,0,1-5.76,0,4.164,4.164,0,0,1,0-5.788A4.083,4.083,0,0,1,1751.43,112.361Zm7.47-3.662h-2.27a0.768,0.768,0,0,0,0,1.536h2.27A0.768,0.768,0,0,0,1758.9,108.7Zm-10.35,8.12a0.777,0.777,0,0,0-.76.769v2.274a0.777,0.777,0,0,0,.76.767,0.786,0.786,0,0,0,.77-0.767v-2.274A0.786,0.786,0,0,0,1748.55,116.819Zm7.85-.531-1.62-1.624a0.745,0.745,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.625a0.747,0.747,0,0,0,1.06,0A0.759,0.759,0,0,0,1756.4,116.288ZM1748.55,98.3a0.777,0.777,0,0,0-.76.768v2.273a0.778,0.778,0,0,0,.76.768,0.787,0.787,0,0,0,.77-0.768V99.073A0.786,0.786,0,0,0,1748.55,98.3Zm7.88,3.278a0.744,0.744,0,0,0-1.06,0l-1.62,1.624a0.758,0.758,0,0,0,0,1.063,0.745,0.745,0,0,0,1.06,0l1.62-1.624A0.758,0.758,0,0,0,1756.43,101.583Zm-15.96,7.116h-2.26a0.78,0.78,0,0,0-.77.768,0.76,0.76,0,0,0,.77.768h2.26A0.768,0.768,0,0,0,1740.47,108.7Zm2.88,5.965a0.745,0.745,0,0,0-1.06,0l-1.62,1.624a0.759,0.759,0,0,0,0,1.064,0.747,0.747,0,0,0,1.06,0l1.62-1.625A0.758,0.758,0,0,0,1743.35,114.664Zm0-11.457-1.62-1.624a0.744,0.744,0,0,0-1.06,0,0.758,0.758,0,0,0,0,1.063l1.62,1.624a0.745,0.745,0,0,0,1.06,0A0.758,0.758,0,0,0,1743.35,103.207Z" transform="translate(-1737.44 -98.313)" />
+						</svg>
+					</span>
+				</a>
+
+				
+				<a href="#" class="menu-btn" aria-label="menu-button">
+					<span></span>
+					<span></span>
+				</a>
+
+				
+				<div class="menu-full-overlay">
+					<div class="menu-full-container">
+						<div class="container">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+									
+									<div class="menu-full">
+										<ul class="menu-full">
+											
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//">Home</a>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item menu-item-has-children has-children">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//publications">Publications</a>
+                        
+                        <ul class="sub-menu">
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/blogs/">Blogs</a></li>
+                          
+                          
+                          
+                          <li class="menu-item"><a class="splitting-text-anim-1" data-splitting="chars" href="/gists/">Gists</a></li>
+                          
+                        </ul>
+                        
+                      </li>
+                      
+                      
+                      
+                      
+                      <li class="menu-item">
+                        <a class="splitting-text-anim-2" data-splitting="chars" href="https://mahigarg.github.io//opensourcecontribution">Open Source Contribution</a>
+                        
+                      </li>
+                      
+										</ul>
+									</div>
+
+									
+									<div class="menu-social-links">
+                    
+                    <a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Linkedin">
+                      <i aria-hidden="true" class="fab fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Github">
+                      <i aria-hidden="true" class="fab fa-github"></i>
+                    </a>
+                    
+                    <a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" class="scrolla-element-anim-1" title="Medium">
+                      <i aria-hidden="true" class="fab fa-medium"></i>
+                    </a>
+                    
+									</div>
+
+									<div class="v-line-block"><span></span></div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="menu-overlay"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</header>
+
+    <!-- Wrapper -->
+		<div class="wrapper single-post">
+      
+
+
+
+<section class="section section-inner started-heading">
+	<div class="container">
+
+		
+		<div class="m-titles align-center">
+			<div class="m-category scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				
+				<a href="https://mahigarg.github.io/categories/blog/">Blog</a>
+				
+				
+				/ October 19, 2024 / 5 mins read / By Mahi Garg
+			</div>
+			<h1 class="m-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+				LRU Cache Implementation in Swift
+			</h1>
+		</div>
+
+	</div>
+</section>
+
+
+
+
+
+<section class="section section-inner m-archive">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+
+				
+				<div class="description">
+					<div class="post-content scrolla-element-anim-1 scroll-animate" data-animate="active">
+						<p>An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.</p>
+<p>In this blog, we’ll walk through the key concepts of an LRU Cache and then build it in Swift using <code>Doubly Linked Lists</code> and <code>Dictionaries</code>.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="what-is-an-lru-cache">What is an LRU Cache?</h3>
+<p>An LRU Cache operates on a principle of maintaining the most frequently accessed items while discarding the least accessed ones. It functions with the following behaviors:</p>
+<ul>
+<li><strong>Get</strong>: Retrieve a value based on a key. If the key exists, it’s marked as the most recently used.</li>
+<li><strong>Put</strong>: Insert or update a key-value pair. If the cache exceeds capacity, it removes the least recently used item.</li>
+</ul>
+<p>This allows for a cache where lookup, insertions, and deletions can be done in constant time, <code>O(1)</code>.</p>
+<h3 id="design-of-an-lru-cache">Design of an LRU Cache</h3>
+<p>To implement an LRU Cache, we need two primary components:</p>
+<ul>
+<li><strong>Doubly Linked List</strong>: Helps in constant time removal of the least recently used item.</li>
+<li><strong>Dictionary (Hash Map)</strong>: Maps keys to nodes in the doubly linked list, allowing quick access.</li>
+</ul>
+<p>We’ll be implementing this in Swift, where:</p>
+<ul>
+<li>The dictionary stores key-node pairs.</li>
+<li>The doubly linked list maintains the order of usage, with the most recently used items at the head and the least recently used at the tail.</li>
+</ul>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="step-by-step-implementation-of-an-lru-cache-in-swift">Step-by-Step Implementation of an LRU Cache in Swift</h3>
+<h5 id="step-1-create-the-doubly-linked-list-node">Step 1: Create the Doubly Linked List Node</h5>
+<p>Each node in our doubly linked list will hold a key, value, and pointers to the next and previous nodes.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DoublyLinkedListNode</span>&lt;Key, Value&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> key: Key
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> value: Value
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> next: DoublyLinkedListNode?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> prev: DoublyLinkedListNode?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(key: Key, value: Value) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.key = key
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.value = value
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="step-2-implement-the-doubly-linked-list">Step 2: Implement the Doubly Linked List</h5>
+<p>The doubly linked list will maintain the order of items, with the most recently used items at the head and the least recently used items at the tail. We’ll add functions to add a node to the head and to remove a node from the list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DoublyLinkedList</span>&lt;Key, Value&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> head: DoublyLinkedListNode&lt;Key, Value&gt;?
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> tail: DoublyLinkedListNode&lt;Key, Value&gt;?
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>() {
+</span></span><span style="display:flex;"><span>        head = DoublyLinkedListNode(key: <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#66d9ef">as</span>! Key, value: <span style="color:#e6db74">&#34;head&#34;</span> <span style="color:#66d9ef">as</span>! Value)
+</span></span><span style="display:flex;"><span>        tail = DoublyLinkedListNode(key: <span style="color:#e6db74">&#34;tail&#34;</span> <span style="color:#66d9ef">as</span>! Key, value: <span style="color:#e6db74">&#34;tail&#34;</span> <span style="color:#66d9ef">as</span>! Value)
+</span></span><span style="display:flex;"><span>        head?.next = tail
+</span></span><span style="display:flex;"><span>        tail?.prev = head
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">addNodeToHead</span>(<span style="color:#66d9ef">_</span> node: DoublyLinkedListNode&lt;Key, Value&gt;) {
+</span></span><span style="display:flex;"><span>        node.next = head?.next
+</span></span><span style="display:flex;"><span>        node.prev = head
+</span></span><span style="display:flex;"><span>        head?.next?.prev = node
+</span></span><span style="display:flex;"><span>        head?.next = node
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">removeNode</span>(<span style="color:#66d9ef">_</span> node: DoublyLinkedListNode&lt;Key, Value&gt;) {
+</span></span><span style="display:flex;"><span>        node.prev?.next = node.next
+</span></span><span style="display:flex;"><span>        node.next?.prev = node.prev
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">removeTail</span>() -&gt; DoublyLinkedListNode&lt;Key, Value&gt;? {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> tailNode = tail?.prev, tailNode <span style="color:#f92672">!==</span> head {
+</span></span><span style="display:flex;"><span>            removeNode(tailNode)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> tailNode
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="step-3-implement-the-lru-cache">Step 3: Implement the LRU Cache</h5>
+<p>With the linked list structure in place, we can now implement the main <code>LRUCache</code> class. This class will contain methods for <code>get</code> and <code>put</code>, as well as a dictionary to store the cache entries.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LRUCache</span>&lt;Key: Hashable, Value&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> capacity: Int
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> cache: [Key: DoublyLinkedListNode&lt;Key, Value&gt;]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">var</span> linkedList: DoublyLinkedList&lt;Key, Value&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">init</span>(capacity: Int) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.capacity = capacity
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.cache = [Key: DoublyLinkedListNode&lt;Key, Value&gt;]()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">self</span>.linkedList = DoublyLinkedList&lt;Key, Value&gt;()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">get</span>(<span style="color:#66d9ef">_</span> key: Key) -&gt; Value? {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> node = cache[key] {
+</span></span><span style="display:flex;"><span>            linkedList.removeNode(node)
+</span></span><span style="display:flex;"><span>            linkedList.addNodeToHead(node)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> node.value
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">put</span>(<span style="color:#66d9ef">_</span> key: Key, <span style="color:#66d9ef">_</span> value: Value) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> node = cache[key] {
+</span></span><span style="display:flex;"><span>            linkedList.removeNode(node)
+</span></span><span style="display:flex;"><span>            node.value = value
+</span></span><span style="display:flex;"><span>            linkedList.addNodeToHead(node)
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> cache.count <span style="color:#f92672">&gt;=</span> capacity, <span style="color:#66d9ef">let</span> tailNode = linkedList.removeTail() {
+</span></span><span style="display:flex;"><span>                cache.removeValue(forKey: tailNode.key)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">let</span> newNode = DoublyLinkedListNode(key: key, value: value)
+</span></span><span style="display:flex;"><span>            linkedList.addNodeToHead(newNode)
+</span></span><span style="display:flex;"><span>            cache[key] = newNode
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="explanation-of-get-and-put-methods">Explanation of get and put Methods</h3>
+<h5 id="getkey">get(key):</h5>
+<ul>
+<li>Checks if the key exists in the cache.</li>
+<li>If it does, the node is moved to the head of the linked list (marking it as the most recently used).</li>
+<li>Returns the value if found, or nil if not.</li>
+</ul>
+<h5 id="putkey-value">put(key, value):</h5>
+<ul>
+<li>If the key exists, it updates the node’s value and moves it to the head.</li>
+<li>If the key does not exist:
+<ul>
+<li>If the cache has reached its capacity, it removes the least recently used item from the linked list’s tail and deletes it from the dictionary.</li>
+<li>Then, it creates a new node, adds it to the head of the linked list, and adds it to the dictionary.</li>
+</ul>
+</li>
+</ul>
+<h3 id="example-usage">Example Usage</h3>
+<p>Let’s create an LRU cache with a capacity of 2 and test it out.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> lruCache = LRUCache&lt;String, Int&gt;(capacity: <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adding items</span>
+</span></span><span style="display:flex;"><span>lruCache.put(<span style="color:#e6db74">&#34;A&#34;</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>lruCache.put(<span style="color:#e6db74">&#34;B&#34;</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Accessing an item makes it the most recently used</span>
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;A&#34;</span>)<span style="color:#f92672">!</span>)  <span style="color:#75715e">// Output: 1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adding another item evicts the least recently used (&#34;B&#34;)</span>
+</span></span><span style="display:flex;"><span>lruCache.put(<span style="color:#e6db74">&#34;C&#34;</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;B&#34;</span>))    <span style="color:#75715e">// Output: nil (as &#34;B&#34; is evicted)</span>
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;C&#34;</span>)<span style="color:#f92672">!</span>)   <span style="color:#75715e">// Output: 3</span>
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;A&#34;</span>)<span style="color:#f92672">!</span>)   <span style="color:#75715e">// Output: 1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Adding another item when cache is full, evicts &#34;A&#34; (the LRU)</span>
+</span></span><span style="display:flex;"><span>lruCache.put(<span style="color:#e6db74">&#34;D&#34;</span>, <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;A&#34;</span>))    <span style="color:#75715e">// Output: nil</span>
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;C&#34;</span>)<span style="color:#f92672">!</span>)   <span style="color:#75715e">// Output: 3</span>
+</span></span><span style="display:flex;"><span>print(lruCache.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#34;D&#34;</span>)<span style="color:#f92672">!</span>)   <span style="color:#75715e">// Output: 4</span>
+</span></span></code></pre></div><div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+<h3 id="how-it-works">How It Works</h3>
+<ul>
+<li><strong>Cache Initialization</strong>: The cache starts with a capacity of 2.</li>
+<li><strong>Item Access</strong>: Accessing or adding an item marks it as recently used by moving it to the head of the linked list.</li>
+<li><strong>Capacity Limit</strong>: When the cache reaches capacity, adding a new item removes the least recently used item (from the tail of the list).</li>
+<li><strong>Constant-Time Operations</strong>: With the combination of the doubly linked list and dictionary, lookups, insertions, and deletions are handled in constant time, <code>O(1)</code>.</li>
+</ul>
+<h3 id="advantages-and-use-cases">Advantages and Use Cases</h3>
+<p>The LRU Cache pattern is widely used in performance-critical systems to handle large data by retaining only the most relevant data. Here are some common use cases:</p>
+<ul>
+<li><strong>Web Browsers</strong>: Caching pages that users frequently visit.</li>
+<li><strong>Database Query Caches</strong>: Storing results of frequently run queries.</li>
+<li><strong>Memory Management</strong>: Systems with limited memory that need to evict the least used data to make room for new data.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Implementing an LRU Cache in Swift using a combination of a <code>Doubly Linked List</code> and a <code>Dictionary</code> achieves efficient time complexity and effective memory usage. With this structure, your cache can operate in constant time and manage limited resources effectively, making it an excellent choice for applications that require high-performance data caching.</p>
+<p>This implementation provides a solid foundation for understanding caching principles and can be further extended to support additional features like custom eviction policies and time-to-live (TTL) for items.</p>
+<div class="col-xs-12 googleads" aria-hidden="true">
+    
+    
+    
+    
+</div>
+
+
+						
+						<div class="tags-links">
+							<span>Tags:</span>
+							
+							<a href="https://mahigarg.github.io/tags/swift/" rel="tag">Swift</a>
+							
+							<a href="https://mahigarg.github.io/tags/programming-basics/" rel="tag">Programming-Basics</a>
+							
+						</div>
+						
+
+						
+					</div>
+				</div>
+
+				
+				
+				<div class="comments-post scrolla-element-anim-1 scroll-animate" data-animate="active">
+					<div class="section__comments">
+
+						<div class="m-titles">
+							<div class="m-title align-left">Comments</div>
+						</div>
+
+						<div class="comments">
+							<div id="disqus_trigger" class="load-more">
+								<button onclick="load_disqus()" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+									<span>Load Comments</span>
+								</a>
+							</div>
+							<div id="disqus_thread"></div>
+							<script>
+								function load_disqus() {
+								  
+								  var disqus_trigger = document.getElementById('disqus_trigger'),
+									  disqus_target = document.getElementById('disqus_thread'),
+									  disqus_embed  = document.createElement('script'),
+									  disqus_hook   = (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]);
+								
+								  
+								  if( disqus_target && disqus_trigger ) {
+									disqus_embed.type = 'text/javascript';
+									disqus_embed.async = true;
+									disqus_embed.src = 'https://mahigarg.disqus.com/embed.js';
+									disqus_hook.appendChild(disqus_embed);
+									disqus_trigger.remove();
+									console.log('Disqus loaded');
+
+									
+									let remove_ads = setInterval(() => {
+										console.log('Checking for Disqus Ads');
+
+										let iframes = document.getElementsByTagName('iframe');
+
+										for (var iframe in iframes) {
+											if (iframes[iframe].id.includes("dsq") 
+											&& iframes[iframe].name.includes("dsq") 
+											&& !iframes[iframe].src.includes("disqus.com/embed/comments")) {
+												iframes[iframe].style.display = 'none';
+												clearInterval(remove_ads);
+												console.log('Disqus Ads removed');
+											}
+										}
+									}, 1000);
+
+									setTimeout(function () {
+										clearInterval(remove_ads);
+									}, 5000);
+								  }
+								}
+							</script>
+							
+							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+						</div>
+
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="v-line-left v-line-top"><div class="v-line-block"><span></span></div></div>
+
+	</div>
+</section>
+
+
+
+<div class="section section-inner m-page-navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-1">
+				<div class="h-titles h-navs">
+					
+					<a href="https://mahigarg.github.io/blogs/access-modifiers-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Previous Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Access Modifiers in Swift
+						</span>
+					</a>
+					
+					</br>
+					</br>
+					
+					<a href="https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/">
+						<span class="nav-arrow scrolla-element-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+							Next Post
+						</span>
+						<span class="h-title splitting-text-anim-2 scroll-animate" data-splitting="chars" data-animate="active">
+							Opaque Types vs Generics in Swift
+						</span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    
+<div class="footer">
+	<div class="footer__builder">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="social-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+				
+				<a href="https://www.linkedin.com/in/mahi-garg/" target="_blank" rel="nofollow" title="Linkedin">
+				  <i aria-hidden="true" class="fab fa-linkedin"></i>
+				</a>
+				
+				<a href="https://github.com/MahiGarg" target="_blank" rel="nofollow" title="Github">
+				  <i aria-hidden="true" class="fab fa-github"></i>
+				</a>
+				
+				<a href="https://medium.com/@mahigarg" target="_blank" rel="nofollow" title="Medium">
+				  <i aria-hidden="true" class="fab fa-medium"></i>
+				</a>
+				
+			</div>
+		  </div>
+
+		  
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-center scrolla-element-anim-1 scroll-animate" data-animate="active">
+				© 2024 <strong>Mahi</strong>. All rights reserved
+			</div>
+		  </div>
+		  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+			<div class="copyright-text align-right scrolla-element-anim-1 scroll-animate" data-animate="active">
+				Developed by <strong>Mahi Garg</strong>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+  </div>
+
+  <!-- Cursor -->
+	<div class="cursor"></div>
+
+  <!-- Scripts -->
+  <script src="https://mahigarg.github.io/plugins/jQuery/jquery.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/validate/jquery.validate.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/swiper/swiper.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/magnific-popup/magnific-popup.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/splitting/splitting.js"></script>
+<script src="https://mahigarg.github.io/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/isotope/isotope.pkgd.js"></script>
+<script src="https://mahigarg.github.io/plugins/jarallax/jarallax.min.js"></script>
+<script src="https://mahigarg.github.io/plugins/scrolla/jquery.scrolla.js"></script>
+<script src="https://mahigarg.github.io/plugins/skrollr/skrollr.js"></script>
+<script src="https://mahigarg.github.io/plugins/cookie/jquery.cookie.js"></script>
+<script src="https://mahigarg.github.io/plugins/typed/typed.js"></script>
+<script src="https://mahigarg.github.io/plugins/rrssb/rrssb.js"></script>
+
+
+<script src="https://mahigarg.github.io/plugins/mark/mark.js"></script>
+<script src="https://mahigarg.github.io/plugins/fuse/fuse.js"></script>
+<script src="https://mahigarg.github.io/plugins/search/simple-search.js"></script>
+
+
+
+<script src="https://mahigarg.github.io/js/form-handler.min.js"></script>
+
+
+<script src="https://mahigarg.github.io/js/common.min.js"></script>
+
+</body>
+
+</html>

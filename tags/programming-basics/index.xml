@@ -6,8 +6,15 @@
     <description>Recent content in Programming-Basics on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/programming-basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LRU Cache Implementation in Swift</title>
+      <link>https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/</link>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/</guid>
+      <description>&lt;p&gt;An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Search Insert Position - LeetCode : Swift</title>
       <link>https://mahigarg.github.io/gists/search-insert-position-leetcode/</link>

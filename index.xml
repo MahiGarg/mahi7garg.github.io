@@ -6,8 +6,22 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opaque Types vs Generics in Swift</title>
+      <link>https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/</guid>
+      <description>&lt;p&gt;Swift’s type system offers powerful tools to handle abstraction and flexibility, including Opaque Types and Generics. While both serve to manage and generalize types, they work differently and are used in distinct scenarios. In this post, we’ll explore their differences, use cases, and examples to understand when to use one over the other.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>LRU Cache Implementation in Swift</title>
+      <link>https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/</link>
+      <pubDate>Sat, 19 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/lru-cache-implementation-in-swift/</guid>
+      <description>&lt;p&gt;An LRU (Least Recently Used) Cache is a data structure that keeps track of the most recently used items and efficiently removes the least recently used ones when it reaches capacity. It’s commonly used to optimize memory usage in systems that handle large data sets by retaining only frequently accessed items.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Access Modifiers in Swift</title>
       <link>https://mahigarg.github.io/blogs/access-modifiers-in-swift/</link>
