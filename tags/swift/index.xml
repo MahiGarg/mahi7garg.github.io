@@ -6,8 +6,15 @@
     <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OptionSet in Swift</title>
+      <link>https://mahigarg.github.io/blogs/optionset-in-swift/</link>
+      <pubDate>Wed, 23 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/optionset-in-swift/</guid>
+      <description>&lt;p&gt;In Swift, an &lt;code&gt;OptionSet&lt;/code&gt; is a powerful way to represent a collection of unique options or flags using a bitwise format. &lt;code&gt;OptionSet&lt;/code&gt; works especially well when you need to define multiple independent settings or features, such as configuration options, permissions, or state indicators. This blog post will explore what &lt;code&gt;OptionSet&lt;/code&gt; is, how to use it, and some practical examples to demonstrate its capabilities.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Opaque Types vs Generics in Swift</title>
       <link>https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/</link>

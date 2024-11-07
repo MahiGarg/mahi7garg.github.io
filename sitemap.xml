@@ -3,36 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mahigarg.github.io/categories/blog/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/blogs/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/categories/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <loc>https://mahigarg.github.io/blogs/optionset-in-swift/</loc>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/tags/swift/</loc>
-    <lastmod>2024-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/tags/</loc>
+    <lastmod>2024-10-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://mahigarg.github.io/blogs/opaque-types-vs-generics-in-swift/</loc>
     <lastmod>2024-10-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -628,11 +633,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://mahigarg.github.io/blogs/enumerated-in-swift/</loc>
-    <lastmod>2022-05-28T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://mahigarg.github.io/blogs/remoteconfig-in-firebase/</loc>
     <lastmod>2022-05-28T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
