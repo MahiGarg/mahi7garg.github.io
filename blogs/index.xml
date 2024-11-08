@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OptionSet vs Enum in Swift</title>
+      <link>https://mahigarg.github.io/blogs/optionset-vs-enum-in-swift/</link>
+      <pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/optionset-vs-enum-in-swift/</guid>
+      <description>&lt;p&gt;In Swift, both &lt;code&gt;OptionSet&lt;/code&gt; and &lt;code&gt;enum&lt;/code&gt; are common patterns for representing options or states. While they share some similarities, they serve different purposes and have distinct use cases. In this blog, we’ll explore &lt;code&gt;OptionSet&lt;/code&gt; and &lt;code&gt;enum&lt;/code&gt; in Swift, examine their unique characteristics, and look at practical examples to help clarify when to use each.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OptionSet in Swift</title>
       <link>https://mahigarg.github.io/blogs/optionset-in-swift/</link>
@@ -455,13 +462,6 @@
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/set-swift/</guid>
       <description>&lt;p&gt;A set is an unordered collection of unique elements, meaning it does not allow duplicates. Swift&amp;rsquo;s Set data type ensures that each element occurs only once in the collection. You can think of sets as a mathematical set, where the order of elements does not matter, and there are no duplicate elements. Swift&amp;rsquo;s Set data type uses hash tables internally to store elements, which allows for fast access and modification. This is the reason time complexity for set operation is much better than array.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Setup Firebase RemoteConfig</title>
-      <link>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</link>
-      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://mahigarg.github.io/blogs/setup-firebase-remoteconfig/</guid>
-      <description>&lt;p&gt;In continuation with the previous article stating the benefits and working of Firebase RemoteConfig, this article will help you to set up Firebase step by step. Additionally, it will tell you how to configure the remoteConfig Parameter and fetch and Apply the configuration to your app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Map Operator: Swift</title>
