@@ -6,8 +6,15 @@
     <description>Recent content on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UserDefaults in Swift</title>
+      <link>https://mahigarg.github.io/blogs/userdefaults-in-swift/</link>
+      <pubDate>Sun, 27 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/userdefaults-in-swift/</guid>
+      <description>&lt;p&gt;In Swift, &lt;code&gt;UserDefaults&lt;/code&gt; provides a straightforward way to store small amounts of data that need to persist across app launches, such as user preferences or settings. It’s a great tool for saving simple data types like &lt;code&gt;String&lt;/code&gt;, &lt;code&gt;Int&lt;/code&gt;, &lt;code&gt;Bool&lt;/code&gt;, and even collections such as &lt;code&gt;Array&lt;/code&gt; and &lt;code&gt;Dictionary&lt;/code&gt;. In this blog, we’ll cover the basics of &lt;code&gt;UserDefaults&lt;/code&gt;, how to use it, best practices, and a guide on creating a &lt;code&gt;UserDefaultsManager&lt;/code&gt; to simplify your usage further.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OptionSet vs Enum in Swift</title>
       <link>https://mahigarg.github.io/blogs/optionset-vs-enum-in-swift/</link>
