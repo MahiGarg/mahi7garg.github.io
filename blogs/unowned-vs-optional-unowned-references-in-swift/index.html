@@ -320,10 +320,10 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> person: Person?
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> magazine: Magazine?
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = Person(name: <span style="color:#e6db74">&#34;Alice&#34;</span>)
+</span></span><span style="display:flex;"><span>person = Person(name: <span style="color:#e6db74">&#34;Mahi&#34;</span>)
 </span></span><span style="display:flex;"><span>magazine = Magazine(title: <span style="color:#e6db74">&#34;Tech Today&#34;</span>, subscriber: person!)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span> <span style="color:#75715e">// Person Alice is deallocated</span>
+</span></span><span style="display:flex;"><span>person = <span style="color:#66d9ef">nil</span> <span style="color:#75715e">// Person Mahi is deallocated</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Accessing magazine.subscriber now would lead to a runtime error</span>
 </span></span><span style="display:flex;"><span>magazine = <span style="color:#66d9ef">nil</span> <span style="color:#75715e">// Magazine Tech Today is deallocated</span>
 </span></span></code></pre></div><p>In this example, the unowned reference subscriber in the Magazine class assumes that the referenced subscriber will never be nil as long as the magazine instance exists.</p>
