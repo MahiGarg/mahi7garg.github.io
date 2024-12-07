@@ -6,8 +6,15 @@
     <description>Recent content in Swift on Mahi Garg</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mahigarg.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inheritance in Swift</title>
+      <link>https://mahigarg.github.io/blogs/inheritance-in-swift/</link>
+      <pubDate>Sat, 07 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://mahigarg.github.io/blogs/inheritance-in-swift/</guid>
+      <description>&lt;p&gt;Inheritance is a fundamental concept in many programming languages, including Swift, allowing developers to reuse code efficiently and create hierarchical relationships between types. Swift handles inheritance differently for classes, protocols, and structs, each offering unique features and constraints. In this blog, we’ll explore how inheritance works for these types in Swift, complete with examples and illustrations.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Codable in Swift</title>
       <link>https://mahigarg.github.io/blogs/codable-in-swift/</link>
@@ -160,7 +167,7 @@
       <link>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://mahigarg.github.io/blogs/strong-vs-weak-vs-unowned-references-in-swift/</guid>
-      <description>&lt;p&gt;In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps. One of the core concepts in memory management is the use of references to objects, which determine how objects are retained and released in memory. In Swift, there are three types of references that play a crucial role: strong, weak, and unowned references. In this blog, we will explore these three types of references with clear examples to help you understand their significance.&lt;/p&gt;</description>
+      <description>&lt;p&gt;In the world of Swift programming, memory management is a critical aspect that developers need to consider to create efficient and reliable apps. One of the core concepts in memory management is the use of references to objects, which determine how objects are retained and released in memory.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Conditional Expressions in Swift</title>
